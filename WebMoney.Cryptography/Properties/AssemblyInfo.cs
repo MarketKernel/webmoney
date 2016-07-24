@@ -5,7 +5,6 @@ using System.Security;
 
 [assembly: CLSCompliant(true)]
 
-
 [assembly: AllowPartiallyTrustedCallers]
 
 [assembly: AssemblyTitle("WebMoney.Cryptography")]
