@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F810F3AD-9AC5-4A29-A25E-1F49DC5D621D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebMoney.XmlInterfaces</RootNamespace>
+    <AssemblyName>WebMoney.XmlInterfaces</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net20-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebMoney.Cryptography, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebMoney.Cryptography.3.3.0.0\lib\net20\WebMoney.Cryptography.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcceptorFilter.cs" />
+    <Compile Include="AuthorizationMode.cs" />
+    <Compile Include="BasicObjects\Amount.cs" />
+    <Compile Include="BasicObjects\BankAccount.cs" />
+    <Compile Include="BasicObjects\BankCard.cs" />
+    <Compile Include="BasicObjects\ClientIdType.cs" />
+    <Compile Include="BasicObjects\ConfirmationFlag.cs" />
+    <Compile Include="BasicObjects\ConfirmationType.cs" />
+    <Compile Include="BasicObjects\ContractType.cs" />
+    <Compile Include="BasicObjects\Description.cs" />
+    <Compile Include="BasicObjects\ExchangeType.cs" />
+    <Compile Include="BasicObjects\InvoiceState.cs" />
+    <Compile Include="BasicObjects\Message.cs" />
+    <Compile Include="BasicObjects\PartnerAvailability.cs" />
+    <Compile Include="BasicObjects\PassportAppointment.cs" />
+    <Compile Include="BasicObjects\PassportDegree.cs" />
+    <Compile Include="BasicObjects\PassportStatus.cs" />
+    <Compile Include="BasicObjects\PaymentSystem.cs" />
+    <Compile Include="BasicObjects\PaymerType.cs" />
+    <Compile Include="BasicObjects\Phone.cs" />
+    <Compile Include="BasicObjects\Purse.cs" />
+    <Compile Include="BasicObjects\SmsState.cs" />
+    <Compile Include="BasicObjects\TransferType.cs" />
+    <Compile Include="BasicObjects\WmCurrency.cs" />
+    <Compile Include="BasicObjects\WmDate.cs" />
+    <Compile Include="BasicObjects\WmDateTime.cs" />
+    <Compile Include="BasicObjects\WmId.cs" />
+    <Compile Include="ClientInspector.cs" />
+    <Compile Include="Configuration\AuthorizationSettings.cs" />
+    <Compile Include="Configuration\ConfigurationAccessor.cs" />
+    <Compile Include="Configuration\ConfigurationHandler.cs" />
+    <Compile Include="Configuration\Configurator.cs" />
+    <Compile Include="Configuration\KeeperClassicSettings.cs" />
+    <Compile Include="Configuration\KeeperLightSettings.cs" />
+    <Compile Include="Configuration\MerchantSettings.cs" />
+    <Compile Include="Core\CertificateValidator.cs" />
+    <Compile Include="Core\Client`1.cs" />
+    <Compile Include="Core\Connection.cs" />
+    <Compile Include="Core\Exceptions\FormatException.cs" />
+    <Compile Include="Core\Exceptions\IncorrectFormatException.cs" />
+    <Compile Include="Core\Exceptions\IntegrityException.cs" />
+    <Compile Include="Core\Exceptions\MissingParameterException.cs" />
+    <Compile Include="Core\Exceptions\NotAllowedIpAddressException.cs" />
+    <Compile Include="Core\Exceptions\OutOfRangeException.cs" />
+    <Compile Include="Core\Exceptions\ProtocolException.cs" />
+    <Compile Include="Core\Request`1.cs" />
+    <Compile Include="Core\Response.cs" />
+    <Compile Include="Core\XmlPackage.cs" />
+    <Compile Include="Core\XmlRequestBuilder.cs" />
+    <Compile Include="Core\XmlRequest`1.cs" />
+    <Compile Include="Core\XmlResponse.cs" />
+    <Compile Include="Exceptions\ClientInspectorException.cs" />
+    <Compile Include="Exceptions\OriginalInvoiceException.cs" />
+    <Compile Include="Exceptions\OriginalMessageException.cs" />
+    <Compile Include="Exceptions\OriginalPurseException.cs" />
+    <Compile Include="Exceptions\OriginalTransferException.cs" />
+    <Compile Include="Exceptions\TransferRejectorException.cs" />
+    <Compile Include="Exceptions\WmException.cs" />
+    <Compile Include="ExpressPaymentConfirmation.cs" />
+    <Compile Include="ExpressPaymentRequest.cs" />
+    <Compile Include="ExpressTrustConfirmation.cs" />
+    <Compile Include="ExpressTrustRequest.cs" />
+    <Compile Include="IncomingInvoiceFilter.cs.cs" />
+    <Compile Include="IncomingTrustFilter.cs" />
+    <Compile Include="Initializer.cs" />
+    <Compile Include="InvoiceRefusal.cs" />
+    <Compile Include="MerchantOperationFilter.cs" />
+    <Compile Include="OriginalContract.cs" />
+    <Compile Include="OriginalInvoice.cs" />
+    <Compile Include="OriginalMerchantPayment.cs" />
+    <Compile Include="OriginalMessage.cs" />
+    <Compile Include="OriginalPurse.cs" />
+    <Compile Include="OriginalTransfer.cs" />
+    <Compile Include="OriginalTrust.cs" />
+    <Compile Include="OutgoingInvoiceFilter.cs" />
+    <Compile Include="OutgoingTrustFilter.cs" />
+    <Compile Include="PassportFinder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtectionFinisher.cs" />
+    <Compile Include="ProtectionRejector.cs" />
+    <Compile Include="PurseInfoFilter.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Responses\Acceptor.cs" />
+    <Compile Include="Responses\AcceptorRegister.cs" />
+    <Compile Include="Responses\ClientEvidence.cs" />
+    <Compile Include="Responses\ExpressPaymentReport.cs" />
+    <Compile Include="Responses\ExpressPaymentResponse.cs" />
+    <Compile Include="Responses\ExpressTrustReport.cs" />
+    <Compile Include="Responses\ExpressTrustResponse.cs" />
+    <Compile Include="Responses\IncomingInvoice.cs" />
+    <Compile Include="Responses\IncomingInvoiceRegister.cs" />
+    <Compile Include="Responses\Invoice.cs" />
+    <Compile Include="Responses\InvoiceEnvelope.cs" />
+    <Compile Include="Responses\InvoiceReport.cs" />
+    <Compile Include="Responses\MerchantOperation.cs" />
+    <Compile Include="Responses\MerchantPaymentToken.cs" />
+    <Compile Include="Responses\MoneybackReport.cs" />
+    <Compile Include="Responses\Operation.cs" />
+    <Compile Include="Responses\OutgoingInvoice.cs" />
+    <Compile Include="Responses\OutgoingInvoiceRegister.cs" />
+    <Compile Include="Responses\Passport.cs" />
+    <Compile Include="Responses\ProtectionReport.cs" />
+    <Compile Include="Responses\PurseInfo.cs" />
+    <Compile Include="Responses\PurseInfoRegister.cs" />
+    <Compile Include="Responses\RecentContract.cs" />
+    <Compile Include="Responses\RecentInvoice.cs" />
+    <Compile Include="Responses\RecentMessage.cs" />
+    <Compile Include="Responses\RecentPurse.cs" />
+    <Compile Include="Responses\RecentTransfer.cs" />
+    <Compile Include="Responses\SignatureEvidence.cs" />
+    <Compile Include="Responses\Transfer.cs" />
+    <Compile Include="Responses\TransferEnvelope.cs" />
+    <Compile Include="Responses\TransferRegister.cs" />
+    <Compile Include="Responses\Trust.cs" />
+    <Compile Include="Responses\TrustRegister.cs" />
+    <Compile Include="Responses\WmIdInfo.cs" />
+    <Compile Include="Responses\WmIdReport.cs" />
+    <Compile Include="Responses\WmResponse.cs" />
+    <Compile Include="SignatureInspector.cs" />
+    <Compile Include="TransferFilter.cs" />
+    <Compile Include="TransferRejector.cs" />
+    <Compile Include="Utility\CryptographyUtility.cs" />
+    <Compile Include="Utility\WmXmlPackage.cs" />
+    <Compile Include="WmIdFinder.cs" />
+    <Compile Include="WmRequest%271.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

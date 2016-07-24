@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMoney.XmlInterfaces", "WebMoney.XmlInterfaces\WebMoney.XmlInterfaces.csproj", "{F810F3AD-9AC5-4A29-A25E-1F49DC5D621D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMoney.XmlInterfaces.Sandbox", "WebMoney.XmlInterfaces.Sandbox\WebMoney.XmlInterfaces.Sandbox.csproj", "{C843A773-13DD-4EAB-9DD3-0CC8EB0E5B17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F810F3AD-9AC5-4A29-A25E-1F49DC5D621D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F810F3AD-9AC5-4A29-A25E-1F49DC5D621D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F810F3AD-9AC5-4A29-A25E-1F49DC5D621D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F810F3AD-9AC5-4A29-A25E-1F49DC5D621D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C843A773-13DD-4EAB-9DD3-0CC8EB0E5B17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C843A773-13DD-4EAB-9DD3-0CC8EB0E5B17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C843A773-13DD-4EAB-9DD3-0CC8EB0E5B17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C843A773-13DD-4EAB-9DD3-0CC8EB0E5B17}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

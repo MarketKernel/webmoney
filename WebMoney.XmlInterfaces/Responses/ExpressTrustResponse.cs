@@ -1,0 +1,31 @@
+﻿using System;
+using System.Xml.Serialization;
+using WebMoney.XmlInterfaces.BasicObjects;
+using WebMoney.XmlInterfaces.Utility;
+
+namespace WebMoney.XmlInterfaces.Responses
+{
+#if DEBUG
+#else
+    [System.Diagnostics.DebuggerNonUserCode]
+#endif
+    [Serializable]
+    [XmlRoot(ElementName = "merchant.response")]
+    public class ExpressTrustResponse : WmResponse
+    {
+        public uint Reference { get; protected set; }
+
+        public ConfirmationType ConfirmationType { get; protected set; }
+
+        public string Info { get; protected set; }
+
+        protected override void Fill(WmXmlPackage wmXmlPackage)
+        {
+            if (null == wmXmlPackage) throw new ArgumentNullException(nameof(wmXmlPackage));
+
+            Reference = wmXmlPackage.SelectUInt32("trust/@purseid");
+            ConfirmationType = (ConfirmationType)wmXmlPackage.SelectInt32("trust/realsmstype");
+            Info = wmXmlPackage.SelectString("userdesc");
+        }
+    }
+}
