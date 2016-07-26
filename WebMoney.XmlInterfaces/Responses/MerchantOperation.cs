@@ -58,32 +58,13 @@ namespace WebMoney.XmlInterfaces.Responses
                         errorExtendedInfo = new MerchantOperationObtainerException.ErrorExtendedInfo
                         {
                             ExtendedErrorNumber = int.Parse(extendedErrorNumberValue,
-                                CultureInfo.InvariantCulture.NumberFormat)
+                                CultureInfo.InvariantCulture.NumberFormat),
+                            StorePurse = wmXmlPackage.SelectPurse("errorlog/@lmi_payee_purse"),
+                            OrderId = wmXmlPackage.SelectInt32("errorlog/@lmi_payment_no"),
+                            PaymentInfoCreateTime = wmXmlPackage.SelectWmDateTime("errorlog/datecrt"),
+                            PaymentInfoUpdateTime = wmXmlPackage.SelectWmDateTime("errorlog/dateupd")
                         };
-
-                        var storePurseValue = wmXmlPackage.SelectString("errorlog/@lmi_payee_purse");
-
-                        if (!string.IsNullOrEmpty(storePurseValue))
-                            errorExtendedInfo.StorePurse = wmXmlPackage.SelectPurse(storePurseValue);
-
-                        var orderIdValue = wmXmlPackage.SelectString("errorlog/@lmi_payment_no");
-
-                        if (!string.IsNullOrEmpty(orderIdValue))
-                            errorExtendedInfo.OrderId = int.Parse(orderIdValue,
-                                CultureInfo.InvariantCulture.NumberFormat);
-
-                        var paymentInfoCreateTimeValue = wmXmlPackage.SelectString("errorlog/datecrt");
-
-                        if (!string.IsNullOrEmpty(paymentInfoCreateTimeValue))
-                            errorExtendedInfo.PaymentInfoCreateTime =
-                                WmDateTime.ParseServerString(paymentInfoCreateTimeValue);
-
-                        var paymentInfoUpdateTimeValue = wmXmlPackage.SelectString("errorlog/dateupd");
-
-                        if (!string.IsNullOrEmpty(paymentInfoUpdateTimeValue))
-                            errorExtendedInfo.PaymentInfoUpdateTime =
-                                WmDateTime.ParseServerString(paymentInfoUpdateTimeValue);
-
+                        
                         var enterTimeValue = wmXmlPackage.SelectString("errorlog/date_s");
 
                         if (!string.IsNullOrEmpty(enterTimeValue))
@@ -102,12 +83,8 @@ namespace WebMoney.XmlInterfaces.Responses
                             errorExtendedInfo.ConfirmationTime =
                                 WmDateTime.ParseServerString(confirmationTimeValue);
 
-                        string siteIdValue = wmXmlPackage.SelectString("errorlog/siteid");
-
-                        if (!string.IsNullOrEmpty(siteIdValue))
-                            errorExtendedInfo.SiteId = int.Parse(siteIdValue, CultureInfo.InvariantCulture.NumberFormat);
-
-                        errorExtendedInfo.PaymentMethod = wmXmlPackage.SelectString("errorlog/att");
+                        errorExtendedInfo.SiteId = wmXmlPackage.SelectInt32("errorlog/siteid"); // TODO: расшифровать
+                        errorExtendedInfo.PaymentMethod = wmXmlPackage.SelectString("errorlog/att"); // TODO: расшифровать
                     }
                 }
 

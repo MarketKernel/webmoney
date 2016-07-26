@@ -17,15 +17,15 @@ namespace WebMoney.XmlInterfaces.Exceptions
     {
         public sealed class ErrorExtendedInfo
         {
-            public Purse? StorePurse { get; set; }
-            public int? OrderId { get; set; }
-            public WmDateTime? PaymentInfoCreateTime { get; set; }
-            public WmDateTime? PaymentInfoUpdateTime { get; set; }
+            public Purse StorePurse { get; set; }
+            public int OrderId { get; set; }
+            public WmDateTime PaymentInfoCreateTime { get; set; }
+            public WmDateTime PaymentInfoUpdateTime { get; set; }
             public WmDateTime? EnterTime { get; set; }
             public WmDateTime? AuthorizationTime { get; set; }
             public WmDateTime? ConfirmationTime { get; set; }
-            public int? ExtendedErrorNumber { get; set; }
-            public int? SiteId { get; set; }
+            public int ExtendedErrorNumber { get; set; }
+            public int SiteId { get; set; }
             public string PaymentMethod { get; set; }
         }
 
@@ -77,10 +77,10 @@ namespace WebMoney.XmlInterfaces.Exceptions
 
         public string TranslateExtendedErrorNumber(Language language)
         {
-            if (null == ExtendedInfo || null == ExtendedInfo.ExtendedErrorNumber)
+            if (null == ExtendedInfo)
                 return null;
 
-            return LocalizationUtility.GetErrorDescription("X18E", ExtendedInfo.ExtendedErrorNumber.Value, language);
+            return LocalizationUtility.GetErrorDescription("X18E", ExtendedInfo.ExtendedErrorNumber, language);
         }
     }
 }

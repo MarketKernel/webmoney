@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Runtime.Remoting.Messaging;
 using System.Security.Cryptography.X509Certificates;
 using WebMoney.Cryptography;
 using WebMoney.XmlInterfaces.BasicObjects;
 using WebMoney.XmlInterfaces.Configuration;
 using WebMoney.XmlInterfaces.Core;
+using WebMoney.XmlInterfaces.Exceptions;
 using WebMoney.XmlInterfaces.Responses;
 using WebMoney.XmlInterfaces.Sandbox.Properties;
 
@@ -21,7 +23,7 @@ namespace WebMoney.XmlInterfaces.Sandbox
         //private readonly Purse _primaryPurse = Purse.Parse(""); // кошелек с деньгами
         //private readonly Purse _secondaryPurse = Purse.Parse("");
 
-        private readonly Purse _storePurse = Purse.Parse("");
+        private readonly Purse _storePurse = Purse.Parse("U259441224405");
 
         //private readonly Description _clientFirstName = (Description)"Иван";
         //private readonly Description _clientSecondName = (Description)"Иванов";
@@ -41,8 +43,8 @@ namespace WebMoney.XmlInterfaces.Sandbox
         {
             var program = new Program();
 
-            //var initializer = new Initializer(WmId.Parse(""), "");
-            //initializer.Apply();
+            var initializer = new Initializer(WmId.Parse("301095414760"), "fzRsA9VpOno1GANj0JrkQQjB3CuOuwwDH13dldPs");
+            initializer.Apply();
 
             // XML-конфигурация
             //var configurator = new Configurator();
@@ -193,14 +195,15 @@ namespace WebMoney.XmlInterfaces.Sandbox
             //    Console.WriteLine(exception);
             //}
 
-            // X18. Детали операции через merchant
+            // X18.Детали операции через merchant
             try
             {
                 program.MerchantOperationObtainerTest();
             }
-            catch (Exception exception)
+            catch (WmException exception)
             {
-                Console.WriteLine(exception);
+                Console.WriteLine("ex");
+                //Console.WriteLine(exception.TranslateExtendedErrorNumber(Language.Ru));
             }
 
             //// X19. Проверка данных WMID
@@ -233,7 +236,9 @@ namespace WebMoney.XmlInterfaces.Sandbox
             //    Console.WriteLine(exception);
             //}
 
-            // X22.Получение ссылки на оплату через Merchant
+            return;
+
+            //// X22.Получение ссылки на оплату через Merchant
             try
             {
                 program.TestMerchantPayment();
@@ -563,19 +568,19 @@ namespace WebMoney.XmlInterfaces.Sandbox
             //var transferFilter = new TransferFilter(_primaryPurse, DateTime.Now.AddMonths(-17), DateTime.Now.AddMonths(-16));
             //var transferRegister = transferFilter.Submit();
             
-            var merchantOperationFilter = new MerchantOperationObtainer(_storePurse, 12);
+            var merchantOperationFilter = new MerchantOperationObtainer(_storePurse, 17, 1);
 
             try
             {
                 var merchantOperation = merchantOperationFilter.Submit();
                 Console.WriteLine(merchantOperation.Amount);
             }
-            catch (Exception e)
+            catch (MerchantOperationObtainerException e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine(e.TranslateExtendedErrorNumber(Language.Ru));
             }
         }
-
+        
         //// X19. Проверка данных WMID
         //public void ClientInspectorTest()
         //{
@@ -690,7 +695,7 @@ namespace WebMoney.XmlInterfaces.Sandbox
         public void TestMerchantPayment()
         {
             var originalMerchantPayment = new OriginalMerchantPayment(
-                1005, _storePurse, (Amount)10.0, (Description)"Тестовый платеж (проверка API)", 1);
+                107, _storePurse, (Amount)10.0, (Description)"Тестовый платеж (проверка API)", 1);
 
             var merchantPaymentToken = originalMerchantPayment.Submit();
             Console.WriteLine(merchantPaymentToken.Token);

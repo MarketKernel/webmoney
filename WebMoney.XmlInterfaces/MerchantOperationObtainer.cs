@@ -21,21 +21,23 @@ namespace WebMoney.XmlInterfaces
         }
 
         public Purse TargetPurse { get; set; }
-        public uint OrderId { get; set; }
+        public uint PaymentNumber { get; set; }
+        public int NumberType { get; set; }
 
         protected internal MerchantOperationObtainer()
         {
         }
 
-        public MerchantOperationObtainer(Purse targetPurse, uint orderId)
+        public MerchantOperationObtainer(Purse targetPurse, uint paymentNumber, int numberType)
         {
             TargetPurse = targetPurse;
-            OrderId = orderId;
+            PaymentNumber = paymentNumber;
+            NumberType = numberType;
         }
 
         protected override string BuildMessage(ulong requestNumber)
         {
-            return string.Format(CultureInfo.InvariantCulture, "{0}{1}{2}", Initializer.Id, TargetPurse, OrderId);
+            return string.Format(CultureInfo.InvariantCulture, "{0}{1}{2}", Initializer.Id, TargetPurse, PaymentNumber);
         }
 
         protected override void BuildXmlHead(XmlRequestBuilder xmlRequestBuilder)
@@ -70,7 +72,8 @@ namespace WebMoney.XmlInterfaces
                 throw new ArgumentNullException(nameof(xmlRequestBuilder));
 
             xmlRequestBuilder.WriteElement("lmi_payee_purse", TargetPurse.ToString());
-            xmlRequestBuilder.WriteElement("lmi_payment_no", OrderId);
+            xmlRequestBuilder.WriteElement("lmi_payment_no_type", "1");
+            xmlRequestBuilder.WriteElement("lmi_payment_no", NumberType);
         }
 
         protected override void BuildXmlFoot(XmlRequestBuilder xmlRequestBuilder)

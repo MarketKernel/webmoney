@@ -22,6 +22,7 @@ namespace WebMoney.XmlInterfaces.BasicObjects
         private const string Template4 = "dd.MM.yyyy HH:mm:ss";
         private const string Template5 = "dd.MM.yyyy H:mm:ss";
         private const string Template6 = "yyyy-MM-dd HH:mm:ss";
+        private const string Template7 = "yyyy-MM-dd HH:mm:ss.fff";
 
         private const int PutinTimeZone = 3;
         //private const int MedvedevTimeZone = 4;
@@ -154,8 +155,17 @@ namespace WebMoney.XmlInterfaces.BasicObjects
                                         DateTimeStyles.None,
                                         out serverTime))
                                 {
-                                    wmDateTime = default(WmDateTime);
-                                    return false;
+                                    if (
+                                     !DateTime.TryParseExact(
+                                         value,
+                                         Template7,
+                                         CultureInfo.InvariantCulture.DateTimeFormat,
+                                         DateTimeStyles.None,
+                                         out serverTime))
+                                    {
+                                        wmDateTime = default(WmDateTime);
+                                        return false;
+                                    }
                                 }
                             }
                         }

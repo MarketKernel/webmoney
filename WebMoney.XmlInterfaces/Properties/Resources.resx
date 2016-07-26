@@ -376,7 +376,7 @@
     <value>A merchant closed a checkout page</value>
   </data>
   <data name="X18_N000002" xml:space="preserve">
-    <value>merchant.request/wmid is incorrect; merchant.request/lmi_payee_purse is incorrect; merchant.request/lmi_payement_no is incorrect; merchant.request/wmid is incorrect</value>
+    <value>merchant.request/wmid is incorrect</value>
   </data>
   <data name="X18_N000003" xml:space="preserve">
     <value>merchant.request/lmi_payee_purse is incorrect</value>
@@ -385,7 +385,7 @@
     <value>sign not right</value>
   </data>
   <data name="X18_N000007" xml:space="preserve">
-    <value>sign not right: PlanStr; MD5 or SHA256 not right:PlanStr(this planstr without secret_key)</value>
+    <value>sign not right: PlanStr</value>
   </data>
   <data name="X18_N000008" xml:space="preserve">
     <value>Operation not found, internal error:error code</value>
@@ -463,7 +463,13 @@
     <value>с момента изменения номера паспорта участником userinfo/wmid еще не прошло 7 суток</value>
   </data>
   <data name="X19_P000415" xml:space="preserve">
-    <value>userinfo/wmid membe... not yet been paid. You pay for it through WebMoney.Check, while you did not specify the code sent to you by SMS.</value>
+    <value>userinfo/wmid member should check his phone number, see https://passport.wmtransfer.com/asp/mobilever.asp</value>
+  </data>
+  <data name="X19_P000416" xml:space="preserve">
+    <value>it's impossible to recharge the account of the specified mobile phone</value>
+  </data>
+  <data name="X19_P000417" xml:space="preserve">
+    <value>it's impossible to recharge the account of the specified mobile phone</value>
   </data>
   <data name="X19_P000418" xml:space="preserve">
     <value>пополнение баланса указанного телефона невозможно, превышен лимит для данного телефона</value>
@@ -485,6 +491,18 @@
   </data>
   <data name="X19_P000428" xml:space="preserve">
     <value>телефон должен быть указан в международном формате (с кодом страны)</value>
+  </data>
+  <data name="X19_P000451" xml:space="preserve">
+    <value>this payment system is not supported in this interface</value>
+  </data>
+  <data name="X19_P000452" xml:space="preserve">
+    <value>member ID is specified incorrectly</value>
+  </data>
+  <data name="X19_P000499" xml:space="preserve">
+    <value>requests limit exceeded</value>
+  </data>
+  <data name="X19_P000500" xml:space="preserve">
+    <value>unknown error</value>
   </data>
   <data name="X1_N000001" xml:space="preserve">
     <value>Invalid value in w3s.request/invoice/orderid field</value>
@@ -567,8 +585,128 @@
   <data name="X20P_N000022" xml:space="preserve">
     <value>The code can not be more than 8 digits</value>
   </data>
+  <data name="X20P_P000500" xml:space="preserve">
+    <value>Message from WebMoney Transfer : specified SMS-code is wrong. Maybe it`s code from another payment, wait for the code and try to specify it again.</value>
+  </data>
+  <data name="X20P_P000501" xml:space="preserve">
+    <value>Message from WebMoney Transfer : for now your Merchant has stopped accepting payments by SMS, please try again later.</value>
+  </data>
+  <data name="X20P_P000502" xml:space="preserve">
+    <value>Only unique lmi_payment_no allowed</value>
+  </data>
+  <data name="X20P_P000503" xml:space="preserve">
+    <value>Message from WebMoney Transfer : Only the following purse types can be used for payment: WMZ, WME, WMR, WMU, WMG, WMB. You`ve tried the wrong purse type.</value>
+  </data>
+  <data name="X20P_P000504" xml:space="preserve">
+    <value>Message from WebMoney Transfer : for now your Merchant has stopped accepting payments by SMS, please try again later.</value>
+  </data>
+  <data name="X20P_P000505" xml:space="preserve">
+    <value>Message from WebMoney Transfer : for now your Merchant has stopped accepting payments by SMS, please try again later.</value>
+  </data>
+  <data name="X20P_P000506" xml:space="preserve">
+    <value>Message from WebMoney Transfer : for now your Merchant has stopped accepting payments by SMS, please try again later.</value>
+  </data>
+  <data name="X20P_P000507" xml:space="preserve">
+    <value>Message from WebMoney Transfer : for now your Merchant has stopped accepting payments by SMS, please try again later.</value>
+  </data>
+  <data name="X20P_P000508" xml:space="preserve">
+    <value>Message from WebMoney Transfer : for now your Merchant has stopped accepting payments by SMS, please try again later.</value>
+  </data>
+  <data name="X20P_P000509" xml:space="preserve">
+    <value>Message from WebMoney Transfer : for now your Merchant has stopped accepting payments by SMS, please try again later.</value>
+  </data>
+  <data name="X20P_P000510" xml:space="preserve">
+    <value>Message from WebMoney Transfer : for now your Merchant has stopped accepting payments by SMS, please try again later.</value>
+  </data>
+  <data name="X20P_P000511" xml:space="preserve">
+    <value>You can only pay by entering your phone number, WMID or E-mail, other payment methods are not available yet.</value>
+  </data>
+  <data name="X20P_P000512" xml:space="preserve">
+    <value>No WMID was found via the specified phone number.</value>
+  </data>
+  <data name="X20P_P000513" xml:space="preserve">
+    <value>The specified phone number is not verified, go to passport.webmoney.ru and verify your phone number by entering the verification code, received via SMS.</value>
+  </data>
+  <data name="X20P_P000514" xml:space="preserve">
+    <value>WMID found via the specified phone number has insufficient funds.</value>
+  </data>
+  <data name="X20P_P000515" xml:space="preserve">
+    <value>WMID found via the specified phone number has a purse with enough funds, but this purse is set up for merchant.webmoney and can not be used for this payment. Please either top up another purse or go to https://security.wmtransfer.com/asp/trustlistmerch.asp and specify the purse which shall be used for SMS payment.</value>
+  </data>
+  <data name="X20P_P000516" xml:space="preserve">
+    <value>The specified WMID can not be found.</value>
+  </data>
+  <data name="X20P_P000517" xml:space="preserve">
+    <value>The specified WMID has unverified phone, go to passport.wmtransfer.com and verify your phone number by entering the verification code, received via SMS.</value>
+  </data>
+  <data name="X20P_P000518" xml:space="preserve">
+    <value>The specified WMID was found but it has insufficient funds.</value>
+  </data>
+  <data name="X20P_P000519" xml:space="preserve">
+    <value>The specified WMID has a purse with enough funds, but this purse is set up for merchant.webmoney and can not be used for this payment. Please either top up another purse or go to https://security.wmtransfer.com/asp/trustlistmerch.asp and specify the purse which shall be used for SMS payment.</value>
+  </data>
+  <data name="X20P_P000520" xml:space="preserve">
+    <value>No WMID was found via the specified E-mail.</value>
+  </data>
+  <data name="X20P_P000521" xml:space="preserve">
+    <value>WMID found via the specified E-mail has unverified phone number, go to passport.wmtransfer.com and verify your phone number by entering the verification code, received via SMS.</value>
+  </data>
+  <data name="X20P_P000522" xml:space="preserve">
+    <value>WMID found via the specified E-mail has insufficient funds.</value>
+  </data>
+  <data name="X20P_P000523" xml:space="preserve">
+    <value>WMID found via the specified E-mail has a purse with enough funds, but this purse is set up for merchant.webmoney and can not be used for this payment. Please either top up another purse or go to https://security.wmtransfer.com/asp/trustlistmerch.asp and specify the purse which shall be used for SMS payment.</value>
+  </data>
+  <data name="X20P_P000524" xml:space="preserve">
+    <value>You are trying to make a payment which exceeds the specified limit, you can fix limits for each purse type at https://security.wmtransfer.com/asp/trustlistmerch.asp</value>
+  </data>
+  <data name="X20P_P000525" xml:space="preserve">
+    <value>The specified WMID is found but the SMS payment option is not enabled for this WMID, this option is enabled for another WMID of this phone number. Either use WMID with enabled SMS payment option, or enable this option at https://security.wmtransfer.com/asp/trustlistmerch.asp</value>
+  </data>
+  <data name="X20P_P000526" xml:space="preserve">
+    <value>WMID found via details you`ve provided has disabled SMS payment option; to enable it, go to https://security.wmtransfer.com/asp/trustlistmerch.asp</value>
+  </data>
+  <data name="X20P_P000527" xml:space="preserve">
+    <value>WMID found via details you`ve provided doesn`t have a required purse type.</value>
+  </data>
+  <data name="X20P_P000528" xml:space="preserve">
+    <value>The payment amount exceeds the daily limit for such payments; to fix limits, go to https://security.wmtransfer.com/asp/trustlistmerch.asp</value>
+  </data>
+  <data name="X20P_P000529" xml:space="preserve">
+    <value>The payment amount exceeds the weekly limit for such payments; to fix limits, go to https://security.wmtransfer.com/asp/trustlistmerch.asp</value>
+  </data>
+  <data name="X20P_P000530" xml:space="preserve">
+    <value>The payment amount exceeds the monthly limit for such payments; to fix limits, go to https://security.wmtransfer.com/asp/trustlistmerch.asp</value>
+  </data>
+  <data name="X20P_P000531" xml:space="preserve">
+    <value>The specified (or default) purse for SMS payments has insufficient funds.</value>
+  </data>
+  <data name="X20P_P000532" xml:space="preserve">
+    <value>WMID found via details you`ve provided doesn`t have a purse with enabled SMS payment option, go to https://security.wmtransfer.com/asp/trustlistmerch.asp</value>
+  </data>
+  <data name="X20P_P000533" xml:space="preserve">
+    <value>SMS payments are not allowed for this WMID, please contact WebMoney Transfer support team - support.wmtransfer.com</value>
+  </data>
+  <data name="X20P_P000534" xml:space="preserve">
+    <value>Go to https://security.wmtransfer.com/asp/trustlistmerch.asp for enable SMS payment for needed purse type.</value>
+  </data>
+  <data name="X20P_P000535" xml:space="preserve">
+    <value>Too many SMS (or USSD) without payment, please try again later.</value>
+  </data>
   <data name="X20P_P000540" xml:space="preserve">
     <value>Возникает только при вызове первого запроса интерфейса с указанным emulated_flag=1, означает что запрос в режиме эмуляции успешен.</value>
+  </data>
+  <data name="X20P_P000543" xml:space="preserve">
+    <value>You`ve already tried to make a payment with the same number, for the same amount, to the same merchant, please try again later.</value>
+  </data>
+  <data name="X20P_P000550" xml:space="preserve">
+    <value>Something goes wrong, you`re trying to confirm the payment, which is not registered in the system as a payment WebMoney.Check, please refer to this problem to your merchant</value>
+  </data>
+  <data name="X20P_P000551" xml:space="preserve">
+    <value>You have refused to pay this payment by WebMoney.Check, to pay all the same we should start again.</value>
+  </data>
+  <data name="X20P_P000553" xml:space="preserve">
+    <value>This payment has not yet been paid. You pay for it through WebMoney.Check, while you did not specify the code sent to you by SMS.</value>
   </data>
   <data name="X20P_P000555" xml:space="preserve">
     <value>Something goes wrong, you`re trying to confirm the payment, which is not registered in the system as a payment WebMoney, please refer to this problem to your merchant</value>
@@ -594,11 +732,170 @@
   <data name="X20P_P000573" xml:space="preserve">
     <value>The phone number you`ve provided has no registered WebMoney.Check, or it has insufficient funds.</value>
   </data>
+  <data name="X20_N000001" xml:space="preserve">
+    <value>merchant.request/wmid is incorrect</value>
+  </data>
+  <data name="X20_N000002" xml:space="preserve">
+    <value>merchant.request/lmi_payee_purse is incorrect</value>
+  </data>
+  <data name="X20_N000003" xml:space="preserve">
+    <value>merchant.request/lmi_payement_no is incorrect</value>
+  </data>
+  <data name="X20_N000004" xml:space="preserve">
+    <value>value of merchant.request/lmi_payment_amount is incorrect</value>
+  </data>
+  <data name="X20_N000005" xml:space="preserve">
+    <value>merchant.request/lmi_payment_desc is incorrect, less than 5 symbols or greater than 235 symbols</value>
+  </data>
+  <data name="X20_N000006" xml:space="preserve">
+    <value>merchant.request/lmi_clientnumber is incorrect, less than 5 symbols or greater than 50 symbols</value>
+  </data>
+  <data name="X20_N000007" xml:space="preserve">
+    <value>merchant.request/lmi_clientnumber_type is incorrect, must be specified 1 digit</value>
+  </data>
+  <data name="X20_N000008" xml:space="preserve">
+    <value>Attempt to deposit check to purse failed:PaymerResultNum</value>
+  </data>
+  <data name="X20_N000009" xml:space="preserve">
+    <value>sign not right</value>
+  </data>
+  <data name="X20_N000100" xml:space="preserve">
+    <value>general request parsing error</value>
+  </data>
   <data name="X20_P000500" xml:space="preserve">
     <value>Указанный в lmi_clientnumber_code код неверен</value>
   </data>
+  <data name="X20_P000501" xml:space="preserve">
+    <value>Merchant purse not found or purse not in active and work mode</value>
+  </data>
+  <data name="X20_P000502" xml:space="preserve">
+    <value>Only unique lmi_payment_no allowed</value>
+  </data>
+  <data name="X20_P000503" xml:space="preserve">
+    <value>Only WMZ, WME, WMR, WMU, WMG, WMB purses allowed</value>
+  </data>
+  <data name="X20_P000504" xml:space="preserve">
+    <value>Specified WMID in wmid tag not found</value>
+  </data>
+  <data name="X20_P000505" xml:space="preserve">
+    <value>Specified WMID is not owner for lmi_payee_purse and don`t have trust access for create invoice</value>
+  </data>
+  <data name="X20_P000506" xml:space="preserve">
+    <value>Secret key for lmi_payee_purse not specified</value>
+  </data>
+  <data name="X20_P000507" xml:space="preserve">
+    <value>Specified secret key for lmi_payee_purse - wrong</value>
+  </data>
+  <data name="X20_P000509" xml:space="preserve">
+    <value>Sorry, X20 doesn`t work in test mode with free purpose, please turn on your merchant purse in operating(work) mode (http://merchant.webmoney.ru) or use fixed test parameter of lmi_payment_desc tag for test payments (lmi_payment_desc=X20 test payment).</value>
+  </data>
+  <data name="X20_P000510" xml:space="preserve">
+    <value>Payment from WebMoney.Check is not allowed, because merchant purse is operating in test mode</value>
+  </data>
+  <data name="X20_P000511" xml:space="preserve">
+    <value>Specified in lmi_clientnumber_type wrong, only phone, wmid or e-mail allowed</value>
+  </data>
+  <data name="X20_P000512" xml:space="preserve">
+    <value>WMID not found by specified in lmi_clientnumber_type phone</value>
+  </data>
+  <data name="X20_P000513" xml:space="preserve">
+    <value>Specified in lmi_client_number phone not checked,</value>
+  </data>
+  <data name="X20_P000514" xml:space="preserve">
+    <value>WMID found by specified in lmi_clientnumber_type phone have not enough money</value>
+  </data>
+  <data name="X20_P000515" xml:space="preserve">
+    <value>Purse found by specified in lmi_clientnumber_type phone used for active merchant interface and payment not allowed</value>
+  </data>
+  <data name="X20_P000516" xml:space="preserve">
+    <value>Specified in lmi_clientnumber_type WMID not found</value>
+  </data>
+  <data name="X20_P000517" xml:space="preserve">
+    <value>Specified in lmi_client_number WMID have no checked phone,</value>
+  </data>
+  <data name="X20_P000518" xml:space="preserve">
+    <value>Specified in lmi_clientnumber_type WMID have not enough money</value>
+  </data>
+  <data name="X20_P000519" xml:space="preserve">
+    <value>Purse found by specified in lmi_clientnumber_type WMID used for active merchant interface and payment not allowed</value>
+  </data>
+  <data name="X20_P000520" xml:space="preserve">
+    <value>WMID not found by specified in lmi_clientnumber_type email</value>
+  </data>
+  <data name="X20_P000521" xml:space="preserve">
+    <value>WMID found by specified in lmi_client_number email, but it have no no checked phone</value>
+  </data>
+  <data name="X20_P000522" xml:space="preserve">
+    <value>WMID found by specified in lmi_clientnumber_type email have not enough money</value>
+  </data>
+  <data name="X20_P000523" xml:space="preserve">
+    <value>Purse found by specified in lmi_clientnumber_type email, but it used for active merchant interface and payment not allowed</value>
+  </data>
+  <data name="X20_P000524" xml:space="preserve">
+    <value>Payment amount exceed default daily limit</value>
+  </data>
+  <data name="X20_P000525" xml:space="preserve">
+    <value>WMID found , but it have no enabled payment option by sms, so this option enabled in another WMID found by phone, please use that WMID for payments</value>
+  </data>
+  <data name="X20_P000526" xml:space="preserve">
+    <value>Payments disabled by user for specified phone/wmid/email</value>
+  </data>
+  <data name="X20_P000527" xml:space="preserve">
+    <value>Require purse not found for specified(found) WMID</value>
+  </data>
+  <data name="X20_P000528" xml:space="preserve">
+    <value>Payment amount exceed daily limit, specified by user</value>
+  </data>
+  <data name="X20_P000529" xml:space="preserve">
+    <value>Payment amount exceed weekly limit, specified by user</value>
+  </data>
+  <data name="X20_P000530" xml:space="preserve">
+    <value>Payment amount exceed monthly limit, specified by user</value>
+  </data>
+  <data name="X20_P000531" xml:space="preserve">
+    <value>Purse (specified by user for sms payments) have not enough money</value>
+  </data>
+  <data name="X20_P000532" xml:space="preserve">
+    <value>Payments disabled by user for required purse type</value>
+  </data>
+  <data name="X20_P000533" xml:space="preserve">
+    <value>SMS payments for found WMID disabled by system</value>
+  </data>
+  <data name="X20_P000535" xml:space="preserve">
+    <value>Too mach SMS without payments found for specified WMID/email/phone</value>
+  </data>
+  <data name="X20_P000543" xml:space="preserve">
+    <value>Less than 15 minutes ago, it is WebMoney check already try to pay same amount with same number to same merchant, try again later</value>
+  </data>
+  <data name="X20_P000550" xml:space="preserve">
+    <value>Specified lmi_wminvoiceid not registred for sms payment by Webmoney Check</value>
+  </data>
+  <data name="X20_P000551" xml:space="preserve">
+    <value>User canceled payment lmi_wminvoiceid by WebMoney Check</value>
+  </data>
   <data name="X20_P000553" xml:space="preserve">
     <value>Пользователь начал процесс оплаты через WM Check, но не указал код из СМС. Провести платеж при помощи WM.Check без введения кода из СМС невозможно.</value>
+  </data>
+  <data name="X20_P000555" xml:space="preserve">
+    <value>Specified lmi_wminvoiceid not registred for sms payment by Webmoney Purse</value>
+  </data>
+  <data name="X20_P000556" xml:space="preserve">
+    <value>Specified lmi_clientnumber_code wrong</value>
+  </data>
+  <data name="X20_P000557" xml:space="preserve">
+    <value>User canceled payment lmi_wminvoiceid by WebMoney Purse</value>
+  </data>
+  <data name="X20_P000558" xml:space="preserve">
+    <value>SMS for lmi_wminvoiceid not send by XMLTransRequest</value>
+  </data>
+  <data name="X20_P000571" xml:space="preserve">
+    <value>Specified in lmi_client_number WebMoney check not exists</value>
+  </data>
+  <data name="X20_P000572" xml:space="preserve">
+    <value>Specified in lmi_client_number WebMoney check have wrong WM type (example - merchant have WMZ purse, but WebMoney check - WMR type)</value>
+  </data>
+  <data name="X20_P000573" xml:space="preserve">
+    <value>Specified in lmi_client_number WebMoney check have no enough money</value>
   </data>
   <data name="X21P_P000601" xml:space="preserve">
     <value>Please contact the merchant. Trust for the merchant's ID cannot be set since the WMID could not be found (incorrectly specified) or its status does not allow setting trust.</value>
@@ -712,22 +1009,22 @@
     <value>Failed to set trust. Contact WebMoney technical support and indicate the data you entered.</value>
   </data>
   <data name="X21_N000001" xml:space="preserve">
-    <value>merchant.request/wmid is incorrect; merchant.request/wmid is incorrect</value>
+    <value>merchant.request/wmid is incorrect</value>
   </data>
   <data name="X21_N000002" xml:space="preserve">
-    <value>merchant.request/lmi_payee_purse is incorrect; merchant.request/lmi_payee_purse is incorrect; merchant.request/lmi_purseid is incorrect, less than 1 symbol or greater than 25 symbols</value>
+    <value>merchant.request/lmi_payee_purse is incorrect</value>
   </data>
   <data name="X21_N000004" xml:space="preserve">
-    <value>value of merchant.request/lmi_day_limit is incorrect; value of merchant.request/lmi_week_limit is incorrect; value of merchant.request/lmi_month_limit is incorrect</value>
+    <value>value of merchant.request/lmi_day_limit is incorrect</value>
   </data>
   <data name="X21_N000006" xml:space="preserve">
     <value>merchant.request/lmi_clientnumber is incorrect, less than 5 symbols or greater than 50 symbols</value>
   </data>
   <data name="X21_N000007" xml:space="preserve">
-    <value>merchant.request/lmi_clientnumber_type is incorrect, must be specified 1 digit; merchant.request/lmi_clientnumber_type is incorrect, must be specified 0, 1,2, 4</value>
+    <value>merchant.request/lmi_clientnumber_type is incorrect, must be specified 1 digit</value>
   </data>
   <data name="X21_N000009" xml:space="preserve">
-    <value>sign not right; sign not right:planstr</value>
+    <value>sign not right</value>
   </data>
   <data name="X21_N000022" xml:space="preserve">
     <value>merchant.request/request_clientnumber_code is incorrect, less than 5 symbols or greater than 25 symbols</value>
@@ -847,7 +1144,7 @@
     <value>Databaser error confirm of the trust</value>
   </data>
   <data name="X22_N000002" xml:space="preserve">
-    <value>merchant.request/wmid is incorrect; merchant.request/lmi_payee_purse is incorrect; merchant.request/lmi_payement_no is incorrect; merchant.request/wmid is incorrect</value>
+    <value>merchant.request/wmid is incorrect</value>
   </data>
   <data name="X22_N000003" xml:space="preserve">
     <value>merchant.request/lmi_payee_purse is incorrect</value>
@@ -856,7 +1153,7 @@
     <value>sign not right</value>
   </data>
   <data name="X22_N000007" xml:space="preserve">
-    <value>sign not right: PlanStr; SHA256 or MD5 not right:PlanStr(this planstr without secret_key)</value>
+    <value>sign not right: PlanStr</value>
   </data>
   <data name="X22_N000008" xml:space="preserve">
     <value>internal error:error code</value>

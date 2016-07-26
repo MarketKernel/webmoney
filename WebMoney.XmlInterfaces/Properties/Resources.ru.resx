@@ -334,10 +334,49 @@
     <value>чек с указанными данными не найден, возможно он уже погашен</value>
   </data>
   <data name="X18E_P006401" xml:space="preserve">
-    <value>платеж по банковской карте пока не проведен процессингом, пожал...лек не настроен), произведите настройку кошелька на сайте https://security.webmoney.ru/asp/trustlistmerch.asp</value>
+    <value>платеж по банковской карте пока не проведен процессингом, пожалуйста подождите</value>
+  </data>
+  <data name="X18E_P006402" xml:space="preserve">
+    <value>платеж с данными реквизитами по банковской карте уже был успешно проведен или отменен, произвести его повторно с теми же реквизитами нельзя</value>
+  </data>
+  <data name="X18E_P007004" xml:space="preserve">
+    <value>В данный момент произвести обмен вместе с платежом невозможно.</value>
+  </data>
+  <data name="X18E_P007005" xml:space="preserve">
+    <value>В общей сумме на кошельках уже имеется необходимая сумма средств, переведите все средства, требуемого типа на один кошелек и заплатите с него. Обмен невозможен.</value>
+  </data>
+  <data name="X18E_P007007" xml:space="preserve">
+    <value>Ошибка создания у клиента кошелька требуемого для платежа типа.</value>
+  </data>
+  <data name="X18E_P007008" xml:space="preserve">
+    <value>У клиента недостаточно средств на кошельках одного типа, чтобы обменяв их произвести требуемый платеж.</value>
+  </data>
+  <data name="X18E_P008001" xml:space="preserve">
+    <value>Продавец имеет ограничения на прием платежей по некоторым странам. Так как страна вашей регистрации не установлена платеж не может быть выполнен.</value>
+  </data>
+  <data name="X18E_P008002" xml:space="preserve">
+    <value>Платеж не может быть выполнен. Продавец не принимает платежи из страны, которую вы указали при регистрации.</value>
+  </data>
+  <data name="X18E_P008003" xml:space="preserve">
+    <value>Введен неверный код SMS подтверждения</value>
+  </data>
+  <data name="X18E_P008004" xml:space="preserve">
+    <value>Не введен код SMS подтверждения</value>
+  </data>
+  <data name="X18E_P009012" xml:space="preserve">
+    <value>Вы перешли по данной ссылке повторно.Ваш платеж уже был успешно проведен в прошлый раз, средства переданы продавцу и он уведомлен о платеже.</value>
+  </data>
+  <data name="X18E_P100001" xml:space="preserve">
+    <value>Превышено время ожидания ответа от сервера продавца. Попробуйте позже и сообщите продавцу, если ошибка повторится.</value>
+  </data>
+  <data name="X18E_P100002" xml:space="preserve">
+    <value>Покупатель отказался от выполнения платежа</value>
+  </data>
+  <data name="X18E_P100004" xml:space="preserve">
+    <value>Покупатель закрыл страницу оплаты</value>
   </data>
   <data name="X18_N000002" xml:space="preserve">
-    <value>merchant.request/wmid is incorrect; merchant.request/lmi_payee_purse is incorrect; merchant.request/lmi_payement_no is incorrect; merchant.request/wmid is incorrect</value>
+    <value>merchant.request/wmid is incorrect</value>
   </data>
   <data name="X18_N000003" xml:space="preserve">
     <value>merchant.request/lmi_payee_purse is incorrect</value>
@@ -346,7 +385,7 @@
     <value>sign not right</value>
   </data>
   <data name="X18_N000007" xml:space="preserve">
-    <value>sign not right: PlanStr; MD5 or SHA256 not right:PlanStr(this planstr without secret_key)</value>
+    <value>sign not right: PlanStr</value>
   </data>
   <data name="X18_N000008" xml:space="preserve">
     <value>Operation not found, internal error:error code</value>
@@ -392,6 +431,78 @@
   </data>
   <data name="X18_P000014" xml:space="preserve">
     <value>Payment with lmi_payment_no number (by unique webmoney invoice number!) found for this merchant purse, but it already reject!</value>
+  </data>
+  <data name="X19_000000" xml:space="preserve">
+    <value>запрос выполнен успешно, переданные в запросе данные соответствуют данным, указанным в аттестате участника системы, другие значения означают, что при запросе произошла ошибка</value>
+  </data>
+  <data name="X19_P000002" xml:space="preserve">
+    <value>у signerwmid нет доступа к интерфейсу</value>
+  </data>
+  <data name="X19_P000403" xml:space="preserve">
+    <value>запрос информации по участнику системы userinfo/wmid не возможен</value>
+  </data>
+  <data name="X19_P000404" xml:space="preserve">
+    <value>указанные параметры не соответствуют участнику системы userinfo/wmid</value>
+  </data>
+  <data name="X19_P000405" xml:space="preserve">
+    <value>участнику системы userinfo/wmid необходимо получить формальный (или выше) аттестат</value>
+  </data>
+  <data name="X19_P000406" xml:space="preserve">
+    <value>запрос информации по бюджетным автоматам Capitaller не возможен</value>
+  </data>
+  <data name="X19_P000407" xml:space="preserve">
+    <value>участнику системы userinfo/wmid необходимо загрузить на странице https://passport.webmoney.ru/asp/Upload.asp или https://passport.webmoney.ua/asp/Upload.asp цветную отсканированную копию страницы паспорта с фотографией и дождаться окончания ее проверки</value>
+  </data>
+  <data name="X19_P000408" xml:space="preserve">
+    <value>на указанную банковскую платежную карту не разрешен вывод средств для участника системы userinfo/wmid, см. http://link.wmtransfer.com/1Q</value>
+  </data>
+  <data name="X19_P000409" xml:space="preserve">
+    <value>с момента регистрации в системе userinfo/wmid еще не прошло 7 суток</value>
+  </data>
+  <data name="X19_P000410" xml:space="preserve">
+    <value>с момента изменения номера паспорта участником userinfo/wmid еще не прошло 7 суток</value>
+  </data>
+  <data name="X19_P000415" xml:space="preserve">
+    <value>участнику системы userinfo/wmid необходимо проверить свой телефон, см. https://passport.webmoney.ru/asp/mobilever.asp или https://passport.webmoney.ua/asp/mobilever.asp</value>
+  </data>
+  <data name="X19_P000416" xml:space="preserve">
+    <value>пополнение баланса указанного телефона невозможно</value>
+  </data>
+  <data name="X19_P000417" xml:space="preserve">
+    <value>пополнение баланса указанного телефона невозможно</value>
+  </data>
+  <data name="X19_P000418" xml:space="preserve">
+    <value>пополнение баланса указанного телефона невозможно, превышен лимит для данного телефона</value>
+  </data>
+  <data name="X19_P000419" xml:space="preserve">
+    <value>пополнение баланса указанного телефона невозможно, превышен лимит для отправителя</value>
+  </data>
+  <data name="X19_P000420" xml:space="preserve">
+    <value>операция доступна только для граждан Российской Федерации</value>
+  </data>
+  <data name="X19_P000421" xml:space="preserve">
+    <value>вывод на банковские карты с WMZ кошельков резидентам Европейской Экономической Зоны не доступен</value>
+  </data>
+  <data name="X19_P000422" xml:space="preserve">
+    <value>вывод на банковские карты с WME кошельков доступен только резидентам Европейской Экономической Зоны</value>
+  </data>
+  <data name="X19_P000427" xml:space="preserve">
+    <value>неверно указан номер телефона (номер некорректной длины)</value>
+  </data>
+  <data name="X19_P000428" xml:space="preserve">
+    <value>телефон должен быть указан в международном формате (с кодом страны)</value>
+  </data>
+  <data name="X19_P000451" xml:space="preserve">
+    <value>данная платежная система не поддерживается интерфейсом</value>
+  </data>
+  <data name="X19_P000452" xml:space="preserve">
+    <value>неверно указан ID участника</value>
+  </data>
+  <data name="X19_P000499" xml:space="preserve">
+    <value>превышен лимит запросов</value>
+  </data>
+  <data name="X19_P000500" xml:space="preserve">
+    <value>не имеющая отдельного кода ошибка, подробности см. в значении retdesc</value>
   </data>
   <data name="X1_N000001" xml:space="preserve">
     <value>неверное значение поля w3s.request/invoice/orderid</value>
@@ -474,6 +585,90 @@
   <data name="X20P_N000022" xml:space="preserve">
     <value>Код не может быть больше 8 цифр</value>
   </data>
+  <data name="X20P_P000500" xml:space="preserve">
+    <value>Сообщение от WebMoney Transfer: вы неверно указали код, полученный по SMS для оплаты с вашего WebMoney-чека, возможно это код от другого платежа, дождитесь кода и попробуйте указать его снова.</value>
+  </data>
+  <data name="X20P_P000501" xml:space="preserve">
+    <value>Сообщение от WebMoney Transfer: в данный момент ваш продавец приостановил прием платежей, попробуйте, пожалуйста, позднее.</value>
+  </data>
+  <data name="X20P_P000502" xml:space="preserve">
+    <value>Только уникальное значение номера платежа в системе учета продавца является допустимым. Возможно вы уже делали или пытались делать платеж с таким номером и вам необходимо начать все снова.</value>
+  </data>
+  <data name="X20P_P000503" xml:space="preserve">
+    <value>Сообщение от WebMoney Transfer: В данный момент реализована возможность оплаты только для следующих типов кошельков WMZ, WME, WMR, WMU, WMG, WMB. Вы пытаетесь заплатить на кошелек с типов ВМ-валюты, который пока не поддерживается.</value>
+  </data>
+  <data name="X20P_P000504" xml:space="preserve">
+    <value>Сообщение от WebMoney Transfer: в данный момент ваш продавец приостановил прием платежей, попробуйте, пожалуйста, позднее.</value>
+  </data>
+  <data name="X20P_P000505" xml:space="preserve">
+    <value>Сообщение от WebMoney Transfer: в данный момент ваш продавец приостановил прием платежей, попробуйте, пожалуйста, позднее.</value>
+  </data>
+  <data name="X20P_P000506" xml:space="preserve">
+    <value>Сообщение от WebMoney Transfer: в данный момент ваш продавец приостановил прием платежей, попробуйте, пожалуйста, позднее.</value>
+  </data>
+  <data name="X20P_P000507" xml:space="preserve">
+    <value>Сообщение от WebMoney Transfer: в данный момент ваш продавец приостановил прием платежей, попробуйте, пожалуйста, позднее.</value>
+  </data>
+  <data name="X20P_P000508" xml:space="preserve">
+    <value>Сообщение от WebMoney Transfer: в данный момент ваш продавец приостановил прием платежей, попробуйте, пожалуйста, позднее.</value>
+  </data>
+  <data name="X20P_P000509" xml:space="preserve">
+    <value>Сообщение от WebMoney Transfer: в данный момент ваш продавец приостановил прием платежей (кошелек в тестовом режиме), попробуйте, пожалуйста, позднее.</value>
+  </data>
+  <data name="X20P_P000510" xml:space="preserve">
+    <value>Сообщение от WebMoney Transfer: в данный момент ваш продавец приостановил прием платежей (кошелек в тестовом режиме), попробуйте, пожалуйста, позднее.</value>
+  </data>
+  <data name="X20P_P000511" xml:space="preserve">
+    <value>В данный момоент можно заплатить только введя номер телефона или WM-идентификатор или E-mail, другие способы пока не поддерживаются.</value>
+  </data>
+  <data name="X20P_P000512" xml:space="preserve">
+    <value>По указанному вами телефону не найден ни один WM-идентификатор</value>
+  </data>
+  <data name="X20P_P000513" xml:space="preserve">
+    <value>По указанному вами телефону найден WM-идентификатор, но данный телефон не проверен, пожалуйста перейдите на passport.webmoney.ru и там в личных данных проверьте свой номер телефона, получив SMS и введя код проверки.</value>
+  </data>
+  <data name="X20P_P000514" xml:space="preserve">
+    <value>В WM-идентификаторе, который был найден по указанному вами телефону нет достаточного для оплаты количества средств</value>
+  </data>
+  <data name="X20P_P000515" xml:space="preserve">
+    <value>В WM-идентификаторе, который был найден по указанному вами телефону найден кошелек с достаточным для оплаты количеством средств, но этот кошелек настроен на прием оплаты в merchant.webmoney и заплатить с него нельзя. Пожалуйста, или пополните другой кошелек или зайдите на https://security.webmoney.ru/asp/trustlistmerch.asp и укажите точно какой именно кошелек необходимо использовать для оплаты в этом типе платежей по телефону.</value>
+  </data>
+  <data name="X20P_P000516" xml:space="preserve">
+    <value>Указанный WM-идентификатор не найден в системе.</value>
+  </data>
+  <data name="X20P_P000517" xml:space="preserve">
+    <value>Найден указанный вами WM-идентификатор, но телефон прописанный в нем не проверен, пожалуйста, перейдите на passport.webmoney.ru и там в личных данных проверьте свой номер телефона, получив SMS и введя код проверки.</value>
+  </data>
+  <data name="X20P_P000518" xml:space="preserve">
+    <value>Найден указанный вами WM-идентификатор, но на его кошельке средств для оплаты недостаточно.</value>
+  </data>
+  <data name="X20P_P000519" xml:space="preserve">
+    <value>В WM-идентификаторе, который был найден, есть кошелек с достаточным для оплаты количеством средств, но этот кошелек настроен на прием оплаты в merchant.webmoney и заплатить с него нельзя. Пожалуйста, или пополните другой кошелек или зайдите на https://security.webmoney.ru/asp/trustlistmerch.asp и укажите точно какой именно кошелек необходимо использовать для оплаты в этом типе платежей по телефону.</value>
+  </data>
+  <data name="X20P_P000520" xml:space="preserve">
+    <value>По указанному вами E-mail не найден ни один WM-идентификатор.</value>
+  </data>
+  <data name="X20P_P000521" xml:space="preserve">
+    <value>По указанному вами E-mail найден WM-идентификатор, но телефон в нем не проверен. Пожалуйста, перейдите на passport.webmoney.ru и там в личных данных проверьте свой номер телефона, получив SMS и введя код проверки.</value>
+  </data>
+  <data name="X20P_P000522" xml:space="preserve">
+    <value>На кошельках WM-идентификатора, который был найден по указанному вами E-mail, средств для оплаты недостаточно.</value>
+  </data>
+  <data name="X20P_P000523" xml:space="preserve">
+    <value>В WM-идентификаторе, который был найден по указанному вами E-mail, есть кошелек с достаточным для оплаты количеством средств, но этот кошелек настроен на прием оплаты в merchant.webmoney и заплатить с него нельзя. Пожалуйста, или пополните другой кошелек или зайдите на https://security.webmoney.ru/asp/trustlistmerch.asp и укажите точно какой именно кошелек необходимо использовать для оплаты в этом типе платежей по телефону.</value>
+  </data>
+  <data name="X20P_P000524" xml:space="preserve">
+    <value>Вы пытаетесь заплатить сумму, которая превышает лимит, установленный по умолчанию или назначенный вами. Отрегулировать лимиты для каждого типа кошельков можно на странице https://security.webmoney.ru/asp/trustlistmerch.asp</value>
+  </data>
+  <data name="X20P_P000525" xml:space="preserve">
+    <value>Указанный вами WM-идентификатор найден, но в нем не включена опция оплаты по SMS, она включена в другом WM-идентификаторе с тем же телефоном. Либо используйте его, либо включите опцию в этом ВМИД на странице https://security.webmoney.ru/asp/trustlistmerch.asp</value>
+  </data>
+  <data name="X20P_P000526" xml:space="preserve">
+    <value>По введенным вами данным найден WM-идентификатор, в котором опция оплаты по SMS была выключена владельцем WM-идентификатора. Включить ее опять можно на странице https://security.webmoney.ru/asp/trustlistmerch.asp</value>
+  </data>
+  <data name="X20P_P000527" xml:space="preserve">
+    <value>По введенным вами данным найден WM-идентификатор, но в нем нет подходящего для оплаты кошелька (или кошелек не настроен), произведите настройку кошелька на сайте https://security.webmoney.ru/asp/trustlistmerch.asp</value>
+  </data>
   <data name="X20P_P000528" xml:space="preserve">
     <value>Сумма платежа превышает назначенный вами (или по умолчанию) дневной лимит для платежей такого типа, регулировка лимитов находится на странице https://security.webmoney.ru/asp/trustlistmerch.asp</value>
   </data>
@@ -487,7 +682,7 @@
     <value>Назначенный вами (или по умолчанию) кошелек для платежей по SMS не имеет достаточной суммы.</value>
   </data>
   <data name="X20P_P000532" xml:space="preserve">
-    <value>По введенным вами данным найден WM-идентификатор, но кошелек требуемого типа не настроен на оплату через SMS, обратитесь к странице https://security.webmoney.ru/asp/trustlistmerch.asp; Для найденного WM-идентификатора платежи по SMS невозможны, обратитесь, пожалуйста в тех. поддержку системы WebMoney Transfer</value>
+    <value>По введенным вами данным найден WM-идентификатор, но кошелек требуемого типа не настроен на оплату через SMS, обратитесь к странице https://security.webmoney.ru/asp/trustlistmerch.asp</value>
   </data>
   <data name="X20P_P000533" xml:space="preserve">
     <value>Для найденного WM-идентификатора платежи по SMS невозможны, обратитесь, пожалуйста в тех. поддержку системы WebMoney Transfer</value>
@@ -536,6 +731,171 @@
   </data>
   <data name="X20P_P000573" xml:space="preserve">
     <value>Вы указали номер телефона по которому не зарегистрирован WebMoney.Check, либо на нем нет требуемой для оплаты суммы, если на данном телефоне есть регистрация в WebMoney, то на найденных WMID нет необходимой суммы требуемого типа WM-валюты.</value>
+  </data>
+  <data name="X20_N000001" xml:space="preserve">
+    <value>некорректный merchant.request/wmid</value>
+  </data>
+  <data name="X20_N000002" xml:space="preserve">
+    <value>некорректный merchant.request/lmi_payee_purse</value>
+  </data>
+  <data name="X20_N000003" xml:space="preserve">
+    <value>некорректный merchant.request/lmi_payement_no</value>
+  </data>
+  <data name="X20_N000004" xml:space="preserve">
+    <value>некорректное значение merchant.request/lmi_payment_amount</value>
+  </data>
+  <data name="X20_N000005" xml:space="preserve">
+    <value>некорректный merchant.request/lmi_payment_desc (менее 5 или более 235 символов)</value>
+  </data>
+  <data name="X20_N000006" xml:space="preserve">
+    <value>некорректный merchant.request/lmi_clientnumber (менее 5 или более 50 символов)</value>
+  </data>
+  <data name="X20_N000007" xml:space="preserve">
+    <value>некорректный merchant.request/lmi_clientnumber_type, должен состоять из 1 цифры</value>
+  </data>
+  <data name="X20_N000008" xml:space="preserve">
+    <value>Попытка перевода с WM.Check на кошелек не удалась:PaymerResultNum</value>
+  </data>
+  <data name="X20_N000009" xml:space="preserve">
+    <value>неверное значение sign</value>
+  </data>
+  <data name="X20_N000100" xml:space="preserve">
+    <value>общая ошибка при обработке запроса</value>
+  </data>
+  <data name="X20_P000500" xml:space="preserve">
+    <value>Указанный в lmi_clientnumber_code код неверен</value>
+  </data>
+  <data name="X20_P000501" xml:space="preserve">
+    <value>Кошелек продавца не найден или находится не в рабочем режиме</value>
+  </data>
+  <data name="X20_P000502" xml:space="preserve">
+    <value>Допускается только уникальное значение lmi_payment_no</value>
+  </data>
+  <data name="X20_P000503" xml:space="preserve">
+    <value>Разрешены только кошельки WMZ, WME, WMR, WMU, WMG и WMB</value>
+  </data>
+  <data name="X20_P000504" xml:space="preserve">
+    <value>Идентификатор, указанный в тэге 'wmid' не обнаружен</value>
+  </data>
+  <data name="X20_P000505" xml:space="preserve">
+    <value>Кошелек, указанный в lmi_payee_purse, не принадлежит указанному WMID и не имеет доверенности для выставления счетов</value>
+  </data>
+  <data name="X20_P000506" xml:space="preserve">
+    <value>Не указан секретный ключ для lmi_payee_purse</value>
+  </data>
+  <data name="X20_P000507" xml:space="preserve">
+    <value>Указанный секретный ключ для lmi_payee_purse неверен</value>
+  </data>
+  <data name="X20_P000509" xml:space="preserve">
+    <value>Извините, для X20 недоступно свободное переключение в тестовый режим. Пожалуйста, переведите ваш кошелек продавца в рабочий режим (http://merchant.webmoney.ru) или используйте фиксированный параметр тега lmi_payment_desc для совершения тестовых платежей (lmi_payment_desc=X20 тестовый платеж)</value>
+  </data>
+  <data name="X20_P000510" xml:space="preserve">
+    <value>Платеж с WebMoney.Check невозможен, так как прием средств на кошелек продавца осуществляется в тестовом режиме.</value>
+  </data>
+  <data name="X20_P000511" xml:space="preserve">
+    <value>Неверное значение lmi_clientnumber_type: допускается только номер телефона, WMID, или е-мейл</value>
+  </data>
+  <data name="X20_P000512" xml:space="preserve">
+    <value>По номеру телефона, указанному в lmi_clientnumber_type не найдено ни одного WMID</value>
+  </data>
+  <data name="X20_P000513" xml:space="preserve">
+    <value>Номер телефона, указанный в lmi_client_number не проверен</value>
+  </data>
+  <data name="X20_P000514" xml:space="preserve">
+    <value>На WMID, найденном по номеру телефона, указанному в lmi_clientnumber_type недостаточно средств</value>
+  </data>
+  <data name="X20_P000515" xml:space="preserve">
+    <value>Кошелек, найденный по указанному в lmi_clientnumber_type номеру телефона, используется для приема платежей при помощи Merchant и производить оплату с него не разрешается</value>
+  </data>
+  <data name="X20_P000516" xml:space="preserve">
+    <value>WMID, указанный в lmi_clientnumber_type, не найден</value>
+  </data>
+  <data name="X20_P000517" xml:space="preserve">
+    <value>В данных WMID, указанного в lmi_client_number нет проверенного номера телефона</value>
+  </data>
+  <data name="X20_P000518" xml:space="preserve">
+    <value>На WMID, указанном в lmi_clientnumber_type недостаточно средств</value>
+  </data>
+  <data name="X20_P000519" xml:space="preserve">
+    <value>Кошелек, найденный по указанному в lmi_clientnumber_type WMID, используется для приема средств при помощи Merchant и производить оплату с него не разрешается</value>
+  </data>
+  <data name="X20_P000520" xml:space="preserve">
+    <value>По е-мейлу, указанному в lmi_clientnumber_type не найдено ни одного WMID</value>
+  </data>
+  <data name="X20_P000521" xml:space="preserve">
+    <value>По указанному в lmi_client_number е-мейлу найден WMID, но в его аттестате нет проверенного номера телефона</value>
+  </data>
+  <data name="X20_P000522" xml:space="preserve">
+    <value>По е-мейлу, указанному в lmi_clientnumber_type найден WMID, но на нем недостаточно средств</value>
+  </data>
+  <data name="X20_P000523" xml:space="preserve">
+    <value>По е-мейлу, указанному в lmi_clientnumber_type найден WMID, но он используется для приема средств при помощи Merchant и производить оплату с него не разрешается</value>
+  </data>
+  <data name="X20_P000524" xml:space="preserve">
+    <value>Сумма платежа превышает дневной лимит, установленный по-умолчанию</value>
+  </data>
+  <data name="X20_P000525" xml:space="preserve">
+    <value>WMID найден, но для него не включена опция платежей по СМС. В то же время, эта опция включена для другого WMID, найденного по номеру телефона. Пожалуйста, используйте этот второй WMID для оплаты</value>
+  </data>
+  <data name="X20_P000526" xml:space="preserve">
+    <value>Возможность оплаты отключена пользователем для данного телефона/WMID/е-мейла</value>
+  </data>
+  <data name="X20_P000527" xml:space="preserve">
+    <value>Требуемый кошелек не найден в списке кошельков указанного (найденного) WMID</value>
+  </data>
+  <data name="X20_P000528" xml:space="preserve">
+    <value>Сумма платежа превышает дневной лимит, установленный владельцем</value>
+  </data>
+  <data name="X20_P000529" xml:space="preserve">
+    <value>Сумма платежа превышает недельный лимит, установленный владельцем</value>
+  </data>
+  <data name="X20_P000530" xml:space="preserve">
+    <value>Сумма платежа превышает месячный лимит, установленный владельцем</value>
+  </data>
+  <data name="X20_P000531" xml:space="preserve">
+    <value>На кошельке (указанном пользователем для СМС-платежей) недостаточно средств</value>
+  </data>
+  <data name="X20_P000532" xml:space="preserve">
+    <value>СМС-платежи для найденного WMID отключены системой</value>
+  </data>
+  <data name="X20_P000533" xml:space="preserve">
+    <value>СМС-платежи для найденного WMID отключены системой</value>
+  </data>
+  <data name="X20_P000535" xml:space="preserve">
+    <value>Обнаружено слишком много отправленных СМС без совершения платежей для данного WMID/е-мейла/телефона</value>
+  </data>
+  <data name="X20_P000543" xml:space="preserve">
+    <value>Попытка платежа с данного Чека на такую же сумму, с таким же номером и тому же продавцу была совершена менее 15 минут назад. Повторите попытку позже.</value>
+  </data>
+  <data name="X20_P000550" xml:space="preserve">
+    <value>Номер платежа, указанный в lmi_wminvoiceid не зарегистрирован в системе как платеж с WebMoney.Check</value>
+  </data>
+  <data name="X20_P000551" xml:space="preserve">
+    <value>Пользователь отказался от оплаты через WebMoney Check платежа lmi_wminvoiceid</value>
+  </data>
+  <data name="X20_P000553" xml:space="preserve">
+    <value>Пользователь начал процесс оплаты через WM Check, но не указал код из СМС. Провести платеж при помощи WM.Check без введения кода из СМС невозможно.</value>
+  </data>
+  <data name="X20_P000555" xml:space="preserve">
+    <value>Номер платежа, указанный в lmi_wminvoiceid не зарегистрирован в системе как СМС-платеж Webmoney</value>
+  </data>
+  <data name="X20_P000556" xml:space="preserve">
+    <value>Указанный в lmi_clientnumber_code код неверен</value>
+  </data>
+  <data name="X20_P000557" xml:space="preserve">
+    <value>Пользователь отказался от оплаты lmi_wminvoiceid</value>
+  </data>
+  <data name="X20_P000558" xml:space="preserve">
+    <value>СМС для lmi_wminvoiceid не было отправлено XMLTransRequest</value>
+  </data>
+  <data name="X20_P000571" xml:space="preserve">
+    <value>WM.Check, указанный в lmi_client_number WebMoney, не существует</value>
+  </data>
+  <data name="X20_P000572" xml:space="preserve">
+    <value>WM.Check, указанный в lmi_client_number WebMoney относится к другому типу титульных знаков (например, у продавца кошелек типа WMZ, а WebMoney check содержит кошелек типа WMR)</value>
+  </data>
+  <data name="X20_P000573" xml:space="preserve">
+    <value>На WM.Check, указанный в lmi_client_number недостаточно средств</value>
   </data>
   <data name="X21P_P000601" xml:space="preserve">
     <value>Обратитесь, пожалуйста, к продавцу, доверие к его WMID не может быть установлено, так как WMID не найден (указан с ошибкой) или имеет недопустимый для установки доверия статус.</value>
@@ -649,22 +1009,22 @@
     <value>Произошел отказ в установке доверия, обратитесь пожалуйста в тех. поддержку Системы с указанием вводимых вами данных.</value>
   </data>
   <data name="X21_N000001" xml:space="preserve">
-    <value>merchant.request/wmid is incorrect; merchant.request/wmid is incorrect</value>
+    <value>merchant.request/wmid is incorrect</value>
   </data>
   <data name="X21_N000002" xml:space="preserve">
-    <value>merchant.request/lmi_payee_purse is incorrect; merchant.request/lmi_payee_purse is incorrect; merchant.request/lmi_purseid is incorrect, less than 1 symbol or greater than 25 symbols</value>
+    <value>merchant.request/lmi_payee_purse is incorrect</value>
   </data>
   <data name="X21_N000004" xml:space="preserve">
-    <value>value of merchant.request/lmi_day_limit is incorrect; value of merchant.request/lmi_week_limit is incorrect; value of merchant.request/lmi_month_limit is incorrect</value>
+    <value>value of merchant.request/lmi_day_limit is incorrect</value>
   </data>
   <data name="X21_N000006" xml:space="preserve">
     <value>merchant.request/lmi_clientnumber is incorrect, less than 5 symbols or greater than 50 symbols</value>
   </data>
   <data name="X21_N000007" xml:space="preserve">
-    <value>merchant.request/lmi_clientnumber_type is incorrect, must be specified 1 digit; merchant.request/lmi_clientnumber_type is incorrect, must be specified 0, 1,2, 4</value>
+    <value>merchant.request/lmi_clientnumber_type is incorrect, must be specified 1 digit</value>
   </data>
   <data name="X21_N000009" xml:space="preserve">
-    <value>sign not right; sign not right:planstr</value>
+    <value>sign not right</value>
   </data>
   <data name="X21_N000022" xml:space="preserve">
     <value>merchant.request/request_clientnumber_code is incorrect, less than 5 symbols or greater than 25 symbols</value>
@@ -784,7 +1144,7 @@
     <value>Databaser error confirm of the trust</value>
   </data>
   <data name="X22_N000002" xml:space="preserve">
-    <value>merchant.request/wmid is incorrect; merchant.request/lmi_payee_purse is incorrect; merchant.request/lmi_payement_no is incorrect; merchant.request/wmid is incorrect</value>
+    <value>merchant.request/wmid is incorrect</value>
   </data>
   <data name="X22_N000003" xml:space="preserve">
     <value>merchant.request/lmi_payee_purse is incorrect</value>
@@ -793,7 +1153,7 @@
     <value>sign not right</value>
   </data>
   <data name="X22_N000007" xml:space="preserve">
-    <value>sign not right: PlanStr; SHA256 or MD5 not right:PlanStr(this planstr without secret_key)</value>
+    <value>sign not right: PlanStr</value>
   </data>
   <data name="X22_N000008" xml:space="preserve">
     <value>internal error:error code</value>
