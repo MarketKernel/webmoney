@@ -11,7 +11,7 @@ namespace WebMoney.XmlInterfaces
     [System.Diagnostics.DebuggerNonUserCode]
 #endif
     [Serializable]
-    public class MerchantOperationFilter : WmRequest<MerchantOperation>
+    public class MerchantOperationObtainer : WmRequest<MerchantOperation>
     {
         protected override string ClassicUrl => "https://merchant.webmoney.ru/conf/xml/XMLTransGet.asp";
 
@@ -23,11 +23,11 @@ namespace WebMoney.XmlInterfaces
         public Purse TargetPurse { get; set; }
         public uint OrderId { get; set; }
 
-        protected internal MerchantOperationFilter()
+        protected internal MerchantOperationObtainer()
         {
         }
 
-        public MerchantOperationFilter(Purse targetPurse, uint orderId)
+        public MerchantOperationObtainer(Purse targetPurse, uint orderId)
         {
             TargetPurse = targetPurse;
             OrderId = orderId;
@@ -54,7 +54,7 @@ namespace WebMoney.XmlInterfaces
             {
                 case AuthorizationMode.Merchant:
                     xmlRequestBuilder.WriteElement(
-                        "md5", Utility.CryptographyUtility.ComputeMD5Hash(BuildMessage(requestNumber) + Initializer.SecretKey));
+                        "md5", Utilities.CryptographyUtility.ComputeHash(BuildMessage(requestNumber) + Initializer.SecretKey));
                     break;
                 case AuthorizationMode.Classic:
                     xmlRequestBuilder.WriteElement("sign", Initializer.Sign(BuildMessage(requestNumber)));

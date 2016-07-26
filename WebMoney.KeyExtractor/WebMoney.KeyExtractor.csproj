@@ -34,13 +34,19 @@
   <PropertyGroup>
     <ApplicationIcon>App.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Properties\key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="WebMoney.Cryptography, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\WebMoney.Cryptography.3.3.0.0\lib\net20\WebMoney.Cryptography.dll</HintPath>
+    <Reference Include="WebMoney.Cryptography, Version=3.3.1.0, Culture=neutral, PublicKeyToken=7532635057d899e6, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebMoney.Cryptography.3.3.1\lib\net20\WebMoney.Cryptography.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -127,6 +133,7 @@
     <EmbeddedResource Include="Properties\Resources.ru.resx" />
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Properties\key.snk" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

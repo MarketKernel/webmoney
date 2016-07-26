@@ -13,13 +13,7 @@ namespace WebMoney.XmlInterfaces
     [Serializable]
     public class ExpressPaymentConfirmation : WmRequest<ExpressPaymentReport>
     {
-        protected override string ClassicUrl
-        {
-            get
-            {
-                return "https://merchant.webmoney.ru/conf/xml/XMLTransConfirm.asp";
-            }
-        }
+        protected override string ClassicUrl => "https://merchant.webmoney.ru/conf/xml/XMLTransConfirm.asp";
 
         protected override string LightUrl
         {
@@ -90,7 +84,7 @@ namespace WebMoney.XmlInterfaces
             {
                 case AuthorizationMode.Merchant:
                     xmlRequestBuilder.WriteElement(
-                        "md5", Utility.CryptographyUtility.ComputeMD5Hash(BuildMessage(requestNumber) + Initializer.SecretKey));
+                        "md5", Utilities.CryptographyUtility.ComputeHash(BuildMessage(requestNumber) + Initializer.SecretKey));
                     break;
                 case AuthorizationMode.Classic:
                     xmlRequestBuilder.WriteElement("sign", Initializer.Sign(BuildMessage(requestNumber)));

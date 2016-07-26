@@ -1,5 +1,5 @@
 ﻿using WebMoney.XmlInterfaces.BasicObjects;
-using WebMoney.XmlInterfaces.Utility;
+using WebMoney.XmlInterfaces.Utilities;
 
 namespace WebMoney.XmlInterfaces.Responses
 {

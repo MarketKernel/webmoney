@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 using WebMoney.XmlInterfaces.BasicObjects;
 using WebMoney.XmlInterfaces.Core;
 using WebMoney.XmlInterfaces.Exceptions;
-using WebMoney.XmlInterfaces.Utility;
+using WebMoney.XmlInterfaces.Utilities;
 
 namespace WebMoney.XmlInterfaces.Responses
 {

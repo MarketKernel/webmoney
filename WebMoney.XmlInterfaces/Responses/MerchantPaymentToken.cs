@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Xml.Serialization;
-using WebMoney.XmlInterfaces.Utility;
+using WebMoney.XmlInterfaces.Core;
+using WebMoney.XmlInterfaces.Exceptions;
+using WebMoney.XmlInterfaces.Utilities;
 
 namespace WebMoney.XmlInterfaces.Responses
 {
@@ -15,6 +17,17 @@ namespace WebMoney.XmlInterfaces.Responses
         public string Token { get; protected set; }
 
         public uint Lifetime { get; protected set; }
+
+        protected override void Inspect(XmlPackage xmlPackage)
+        {
+            if (null == xmlPackage)
+                throw new ArgumentNullException(nameof(xmlPackage));
+
+            int errorNumber = xmlPackage.SelectInt32("retval");
+
+            if (0 != errorNumber)
+                throw new OriginalMerchantPaymentException(errorNumber, xmlPackage.SelectString("retdesc"));
+        }
 
         protected override void Fill(WmXmlPackage wmXmlPackage)
         {

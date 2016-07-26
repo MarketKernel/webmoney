@@ -177,4 +177,847 @@
   <data name="Service2" xml:space="preserve">
     <value>сервиса WMT</value>
   </data>
+  <data name="X14_P000017" xml:space="preserve">
+    <value>недостаточно средств на кошельке для осуществления возврата</value>
+  </data>
+  <data name="X14_P000050" xml:space="preserve">
+    <value>транзакция inwmtranid не найдена, возможно она была совершена несколько месяцев назад или это транзакция между кредитными кошельками</value>
+  </data>
+  <data name="X14_P000051" xml:space="preserve">
+    <value>транзакция inwmtranid имеет тип с протекцией (возвращенная или незавершенная), вернуть ее данным интерфейсом нельзя</value>
+  </data>
+  <data name="X14_P000052" xml:space="preserve">
+    <value>сумма транзакции inwmtranid меньше суммы переданной в теге запроса trans/amount, вернуть сумму больше исходной нельзя</value>
+  </data>
+  <data name="X14_P000053" xml:space="preserve">
+    <value>прошло более 30 дней с момента совершения транзакции inwmtranid</value>
+  </data>
+  <data name="X14_P000054" xml:space="preserve">
+    <value>транзакция выполнена с кошельков сервиса PAYMER при помощи ВМ-карты , ВМ-ноты или чека Пеймер, при этом параметр moneybackphone в запросе не был указан и возврат не может быть осуществлен, необходимо получить у покупателя номер мобильного телефона и передать его в moneybackphone , чтобы покупателю был сделан возврат на этот телефон в Сервис WebMoney Check</value>
+  </data>
+  <data name="X14_P000055" xml:space="preserve">
+    <value>транзакция выполнена через e-invoicing (параметр lmi_sdp_type в resulturl )а moneybackphone в запросе не был указан (при этом тип lmi_sdp_type платежа тако что в системе нет номера телефона покупателя) и возврат не может быть осуществлен, необходимо получить у покупателя номер мобильного телефона и передать его в moneybackphone , чтобы был сделан возврат на этот телефон в Сервис WebMoney Check</value>
+  </data>
+  <data name="X14_P000056" xml:space="preserve">
+    <value>сумма транзакции inwmtranid меньше суммы переданной в теге запроса trans/amount и сумм , которые возвращались в рамках транзакции inwmtranid ранее</value>
+  </data>
+  <data name="X14_P000103" xml:space="preserve">
+    <value>транзакция с таким значением поля w3s.request/trans/tranid уже выполнялась на полную сумму возврата при первом же вызове</value>
+  </data>
+  <data name="X14_P000104" xml:space="preserve">
+    <value>транзакция с таким значением поля w3s.request/trans/tranid и с такой же частичной суммой возврата уже выполнялась, второй раз можно вызвать частичный возврат в рамках этой исходной транзакции и на эту же сумму не ранее чем через полчаса</value>
+  </data>
+  <data name="X16_P000015" xml:space="preserve">
+    <value>внутренняя ошибка создания кошелька</value>
+  </data>
+  <data name="X16_P000031" xml:space="preserve">
+    <value>кошелек указанного типа может быть только один</value>
+  </data>
+  <data name="X16_P000044" xml:space="preserve">
+    <value>в создании кошелька данного типа данному ВМ-идентификатору отказано</value>
+  </data>
+  <data name="X16_P000048" xml:space="preserve">
+    <value>cоздание кошелька данного типа не позволяется в Вашей стране</value>
+  </data>
+  <data name="X16_P001007" xml:space="preserve">
+    <value>слишком много кошельков внутри одного ВМИД, текущее ограничение - 1000 кошельков внутри одного ВМИД</value>
+  </data>
+  <data name="X18E_N000001" xml:space="preserve">
+    <value>кипер не в режиме online. Перезапустите Ваш кипер.</value>
+  </data>
+  <data name="X18E_N000002" xml:space="preserve">
+    <value>включите режим использования активации в диалоге Параметры программы\Безопасность WM Keeper Classic</value>
+  </data>
+  <data name="X18E_N000003" xml:space="preserve">
+    <value>прием платежей невозможен, продавец запретил у себя данный способ платежа</value>
+  </data>
+  <data name="X18E_N000004" xml:space="preserve">
+    <value>IP адреса вашего кипера и запроса на платеж различаются. Включите блокировку по IP адресу на сайте security.webmoney.ru.</value>
+  </data>
+  <data name="X18E_N000100" xml:space="preserve">
+    <value>продавец не дал разрешение на выполнение операции</value>
+  </data>
+  <data name="X18E_P000006" xml:space="preserve">
+    <value>корреспондент не найден</value>
+  </data>
+  <data name="X18E_P000011" xml:space="preserve">
+    <value>кошелек отправителя не найден</value>
+  </data>
+  <data name="X18E_P000013" xml:space="preserve">
+    <value>слишком маленькая сумма операции</value>
+  </data>
+  <data name="X18E_P000017" xml:space="preserve">
+    <value>недостаточно средств на кошельке или исчерпан лимит</value>
+  </data>
+  <data name="X18E_P000018" xml:space="preserve">
+    <value>для вашего Mini или Social Keeper достигнут лимит платежей</value>
+  </data>
+  <data name="X18E_P000026" xml:space="preserve">
+    <value>в операции должно участвовать два кошелька</value>
+  </data>
+  <data name="X18E_P000029" xml:space="preserve">
+    <value>типы кошельков различны</value>
+  </data>
+  <data name="X18E_P000030" xml:space="preserve">
+    <value>кошелек не поддерживает операцию</value>
+  </data>
+  <data name="X18E_P000032" xml:space="preserve">
+    <value>выполнение операции невозможно до получения аттестата</value>
+  </data>
+  <data name="X18E_P000033" xml:space="preserve">
+    <value>кредитный статус покупателя не соответствует требованиям продавца</value>
+  </data>
+  <data name="X18E_P000301" xml:space="preserve">
+    <value>у Вас стоит блокировка по IP. Вы пытаетесь заплатить используя IP-адрес, которого нет в Вашем списке разрешенных IP-адресов.</value>
+  </data>
+  <data name="X18E_P000400" xml:space="preserve">
+    <value>платеж с таким номером у данного продавца уже был, продавец не разрешает производить повторные платежи с одним и тем же номером, попробуйте произвести платеж снова с самого начала</value>
+  </data>
+  <data name="X18E_P000401" xml:space="preserve">
+    <value>с этим чеком Вы уже только что делали попытку оплаты данному продавцу на данную сумму, подождите пока не будет выяснено состояние предыдущего платежа</value>
+  </data>
+  <data name="X18E_P000402" xml:space="preserve">
+    <value>с этим чеком Вы уже только что успешно произвели оплату данному продавцу на данную сумму, подождите 15 минут для того, чтобы появилась возможность произвести следующую оплату</value>
+  </data>
+  <data name="X18E_P000403" xml:space="preserve">
+    <value>с этим чеком Вы уже только что успешно произвели оплату данному продавцу на данную сумму, подождите 15 минут для того, чтобы появилась возможность произвести следующую оплату</value>
+  </data>
+  <data name="X18E_P000411" xml:space="preserve">
+    <value>с этой WM-нотой Вы уже только что делали попытку оплаты данному продавцу на данную сумму, подождите пока не будет выяснено состояние предыдущего платежа</value>
+  </data>
+  <data name="X18E_P000412" xml:space="preserve">
+    <value>с этой WM-нотой Вы уже только что успешно произвели оплату данному продавцу на данную сумму, подождите 15 минут для того, чтобы появилась возможность произвести следующую оплату</value>
+  </data>
+  <data name="X18E_P000413" xml:space="preserve">
+    <value>с этой WM-нотой Вы уже только что успешно произвели оплату данному продавцу на данную сумму, подождите 15 минут для того, чтобы появилась возможность произвести следующую оплату</value>
+  </data>
+  <data name="X18E_P001001" xml:space="preserve">
+    <value>платеж с данным чеком (ВМ-картой) не найден, Вам необходим начать все сначала и не делать длительные паузы при вводе реквизитов чека</value>
+  </data>
+  <data name="X18E_P001003" xml:space="preserve">
+    <value>код чека Paymer (код авторизации ВМ-карты) указан неверно</value>
+  </data>
+  <data name="X18E_P001004" xml:space="preserve">
+    <value>платеж с данным чеком (ВМ-картой) не найден, Вам необходим начать все сначала и не делать длительные паузы при вводе реквизитов чека</value>
+  </data>
+  <data name="X18E_P001005" xml:space="preserve">
+    <value>одноразовый код подтверждения WebMoney чека указан неверно (возможно введен с ошибкой или указан код предыдущего платежа), необходимо все начать снова</value>
+  </data>
+  <data name="X18E_P001006" xml:space="preserve">
+    <value>превышен разовый лимит на совершение операции с WebMoney чека, подробнее на http://wiki.webmoney.ru/projects/webmoney/wiki/tarify_i_ogranicheniya_servisa_webmoney_check</value>
+  </data>
+  <data name="X18E_P001011" xml:space="preserve">
+    <value>платеж с данной WM-нотой не найден, Вам необходим начать все сначала и не делать длительные паузы при вводе реквизитов чека</value>
+  </data>
+  <data name="X18E_P001012" xml:space="preserve">
+    <value>платеж с данной WM-нотой отменен</value>
+  </data>
+  <data name="X18E_P001013" xml:space="preserve">
+    <value>код WM-ноты указан неверно</value>
+  </data>
+  <data name="X18E_P002005" xml:space="preserve">
+    <value>КОД платежа присланный на Ваш телефон, введен неверно</value>
+  </data>
+  <data name="X18E_P002008" xml:space="preserve">
+    <value>платеж с таким номером у данного продавца уже был, продавец не разрешает производить повторные платежи с одним и тем же номером, попробуйте произвести платеж снова с самого начала</value>
+  </data>
+  <data name="X18E_P002012" xml:space="preserve">
+    <value>платеж произвести не удалось, возможно у Вас на телефоне (или кошельке управляемом с телефона) не хватает средств, для проведения платежа</value>
+  </data>
+  <data name="X18E_P002015" xml:space="preserve">
+    <value>платеж произвести не удалось, возможно у Вас на телефоне (или кошельке управляемом с телефона) не хватает средств, для проведения платежа</value>
+  </data>
+  <data name="X18E_P002117" xml:space="preserve">
+    <value>платеж произвести не удалось, возможно у Вас на телефоне (или кошельке управляемом с телефона) не хватает средств, для проведения платежа, либо Вы превысили лимит на 1 операцию в эквиваленте 1000 WMR</value>
+  </data>
+  <data name="X18E_P003205" xml:space="preserve">
+    <value>чек с указанными данными не найден, возможно он уже погашен</value>
+  </data>
+  <data name="X18E_P006401" xml:space="preserve">
+    <value>платеж по банковской карте пока не проведен процессингом, пожал...лек не настроен), произведите настройку кошелька на сайте https://security.webmoney.ru/asp/trustlistmerch.asp</value>
+  </data>
+  <data name="X18_N000002" xml:space="preserve">
+    <value>merchant.request/wmid is incorrect; merchant.request/lmi_payee_purse is incorrect; merchant.request/lmi_payement_no is incorrect; merchant.request/wmid is incorrect</value>
+  </data>
+  <data name="X18_N000003" xml:space="preserve">
+    <value>merchant.request/lmi_payee_purse is incorrect</value>
+  </data>
+  <data name="X18_N000006" xml:space="preserve">
+    <value>sign not right</value>
+  </data>
+  <data name="X18_N000007" xml:space="preserve">
+    <value>sign not right: PlanStr; MD5 or SHA256 not right:PlanStr(this planstr without secret_key)</value>
+  </data>
+  <data name="X18_N000008" xml:space="preserve">
+    <value>Operation not found, internal error:error code</value>
+  </data>
+  <data name="X18_N000100" xml:space="preserve">
+    <value>общая ошибка при разборе запроса</value>
+  </data>
+  <data name="X18_P000001" xml:space="preserve">
+    <value>Merchant purse not found:1</value>
+  </data>
+  <data name="X18_P000002" xml:space="preserve">
+    <value>Please use sign or sha256 method for authentication, and specify secret key in merchant service settings:2</value>
+  </data>
+  <data name="X18_P000003" xml:space="preserve">
+    <value>Please use sign or sha256 method for authentication:3</value>
+  </data>
+  <data name="X18_P000004" xml:space="preserve">
+    <value>Merchant wmid not found or security trust for purse is not exists:4</value>
+  </data>
+  <data name="X18_P000006" xml:space="preserve">
+    <value>Merchant wmid not found or security trust for purse is not exists:6</value>
+  </data>
+  <data name="X18_P000007" xml:space="preserve">
+    <value>Payment with lmi_payment_no number not found for this merchant purse:7</value>
+  </data>
+  <data name="X18_P000008" xml:space="preserve">
+    <value>Payment with lmi_payment_no (by merchant orderid number!) not found for this merchant purse</value>
+  </data>
+  <data name="X18_P000009" xml:space="preserve">
+    <value>Payment with lmi_payment_no number (by merchant orderid number!) found for this merchant purse, but not paid yet!</value>
+  </data>
+  <data name="X18_P000010" xml:space="preserve">
+    <value>Payment with lmi_payment_no number (by unique webmoney invoice number!) not found for this merchant purse</value>
+  </data>
+  <data name="X18_P000011" xml:space="preserve">
+    <value>Payment with lmi_payment_no number (by unique webmoney invoice number!) found for this merchant purse, but not paid yet!</value>
+  </data>
+  <data name="X18_P000012" xml:space="preserve">
+    <value>Payment with lmi_payment_no number (by unique webmoney transact number!) not found for this merchant purse</value>
+  </data>
+  <data name="X18_P000013" xml:space="preserve">
+    <value>Payment with lmi_payment_no number (by merchant orderid number!) found for this merchant purse, but it already reject!</value>
+  </data>
+  <data name="X18_P000014" xml:space="preserve">
+    <value>Payment with lmi_payment_no number (by unique webmoney invoice number!) found for this merchant purse, but it already reject!</value>
+  </data>
+  <data name="X1_N000001" xml:space="preserve">
+    <value>неверное значение поля w3s.request/invoice/orderid</value>
+  </data>
+  <data name="X1_N000002" xml:space="preserve">
+    <value>неверное значение поля w3s.request/invoice/customerwmid</value>
+  </data>
+  <data name="X1_N000003" xml:space="preserve">
+    <value>неверное значение поля w3s.request/invoice/storepurse</value>
+  </data>
+  <data name="X1_N000005" xml:space="preserve">
+    <value>неверное значение поля w3s.request/invoice/amount</value>
+  </data>
+  <data name="X1_N000006" xml:space="preserve">
+    <value>слишком длинное поле w3s.request/invoice/desc</value>
+  </data>
+  <data name="X1_N000007" xml:space="preserve">
+    <value>слишком длинное поле w3s.request/invoice/address</value>
+  </data>
+  <data name="X1_N000008" xml:space="preserve">
+    <value>неверное значение поля w3s.request/sign</value>
+  </data>
+  <data name="X1_N000009" xml:space="preserve">
+    <value>неверное значение поля w3s.request/reqn</value>
+  </data>
+  <data name="X1_N000011" xml:space="preserve">
+    <value>идентификатор, переданный в поле w3s.request/wmid не зарегистрирован</value>
+  </data>
+  <data name="X1_N000012" xml:space="preserve">
+    <value>проверка подписи не прошла</value>
+  </data>
+  <data name="X1_N000100" xml:space="preserve">
+    <value>общая ошибка при разборе команды. неверный формат команды.</value>
+  </data>
+  <data name="X1_P000005" xml:space="preserve">
+    <value>отправитель счета не найден</value>
+  </data>
+  <data name="X1_P000006" xml:space="preserve">
+    <value>получатель счета не найден</value>
+  </data>
+  <data name="X1_P000007" xml:space="preserve">
+    <value>отправитель счета не найден</value>
+  </data>
+  <data name="X1_P000008" xml:space="preserve">
+    <value>кошелек w3s.request/invoice/storepurse принадлежит агрегатору платежей, но lmi_shop_id не указан или указан неверно</value>
+  </data>
+  <data name="X1_P000035" xml:space="preserve">
+    <value>плательщик не авторизован корреспондентом для выполнения данной операции. Это означает, что магазин пытается выписать счет плательщику, который, либо не добавил ВМИД магазина к себе в список корреспондентов и при этом запретил неавторизованным (не являющимся его корреспондентами) выписывать себе счета (для Кипер Классик - в главном меню вверху - Инструменты - Парметры программы -Ограничения ), либо плательщик добавил ВМИД магазина к себе в корреспонденты, но именно для ВМИДа этого магазина запретил выписку себе счетов. Без действий со стороны плательщика избежать этой ошибки магазин не может, необходимо показать плательщику ВМИД магазина с инструкцией о том, что ВМИД магазина должен быть добавлен плательщиком в список корреспондентов и для ВМИДа должна быть разрешена выписка счета</value>
+  </data>
+  <data name="X1_P000051" xml:space="preserve">
+    <value>кошелек продавца w3s.request/invoice/storepurse не имеет регистрации в каталоге Мегасток и при этом имеет лишь аттестат псевдонима, которого недостаточно для приема средств данным автоматизированным способом</value>
+  </data>
+  <data name="X1_P000052" xml:space="preserve">
+    <value>кошелек продавца w3s.request/invoice/storepurse не имеет регистрации в каталоге Мегасток и при этом имеет формальный аттестат у которого нет проверенного телефона и проверенной копии паспорта или ИНН и этого недостаточно для приема средств данным автоматизированным способом</value>
+  </data>
+  <data name="X1_P000054" xml:space="preserve">
+    <value>кошелек продавца w3s.request/invoice/storepurse не имеет регистрации в каталоге Мегасток и при этом превысил дневной лимит на прием средств автоматизированным способом</value>
+  </data>
+  <data name="X1_P000055" xml:space="preserve">
+    <value>кошелек продавца w3s.request/invoice/storepurse не имеет регистрации в каталоге Мегасток и при этом превысил недельный лимит на прием средств автоматизированным способом</value>
+  </data>
+  <data name="X1_P000056" xml:space="preserve">
+    <value>кошелек продавца w3s.request/invoice/storepurse не имеет регистрации в каталоге Мегасток и при этом превысил месячный лимит на прием средств автоматизированным способом</value>
+  </data>
+  <data name="X1_P000061" xml:space="preserve">
+    <value>Превышен лимит долговых обязательств заемщика</value>
+  </data>
+  <data name="X1_P000067" xml:space="preserve">
+    <value>Операция на сумму больше 15000 WMR на этот кошелек доступна только идентифицированным гражданам РФ</value>
+  </data>
+  <data name="X1_P000102" xml:space="preserve">
+    <value>не выполнено условие постоянного увеличения значения параметра w3s.request/reqn</value>
+  </data>
+  <data name="X1_P000110" xml:space="preserve">
+    <value>нет прав на использования интерфейса; аттестат не удовлетворяет требованиям</value>
+  </data>
+  <data name="X1_P000111" xml:space="preserve">
+    <value>попытка выставление счета для кошелька не принадлежащего WMID, которым подписывается запрос; при этом доверие не установлено.</value>
+  </data>
+  <data name="X20P_N000022" xml:space="preserve">
+    <value>Код не может быть больше 8 цифр</value>
+  </data>
+  <data name="X20P_P000528" xml:space="preserve">
+    <value>Сумма платежа превышает назначенный вами (или по умолчанию) дневной лимит для платежей такого типа, регулировка лимитов находится на странице https://security.webmoney.ru/asp/trustlistmerch.asp</value>
+  </data>
+  <data name="X20P_P000529" xml:space="preserve">
+    <value>Сумма платежа превышает назначенный вами (или по умолчанию) недельный лимит для платежей такого типа, регулировка лимитов находится на странице https://security.webmoney.ru/asp/trustlistmerch.asp</value>
+  </data>
+  <data name="X20P_P000530" xml:space="preserve">
+    <value>Сумма платежа превышает назначенный вами (или по умолчанию) месячный лимит для платежей такого типа, регулировка лимитов находится на странице https://security.webmoney.ru/asp/trustlistmerch.asp</value>
+  </data>
+  <data name="X20P_P000531" xml:space="preserve">
+    <value>Назначенный вами (или по умолчанию) кошелек для платежей по SMS не имеет достаточной суммы.</value>
+  </data>
+  <data name="X20P_P000532" xml:space="preserve">
+    <value>По введенным вами данным найден WM-идентификатор, но кошелек требуемого типа не настроен на оплату через SMS, обратитесь к странице https://security.webmoney.ru/asp/trustlistmerch.asp; Для найденного WM-идентификатора платежи по SMS невозможны, обратитесь, пожалуйста в тех. поддержку системы WebMoney Transfer</value>
+  </data>
+  <data name="X20P_P000533" xml:space="preserve">
+    <value>Для найденного WM-идентификатора платежи по SMS невозможны, обратитесь, пожалуйста в тех. поддержку системы WebMoney Transfer</value>
+  </data>
+  <data name="X20P_P000534" xml:space="preserve">
+    <value>Вы уже платили данным способом (SMS или USSD), но с кошелька другого типа, к сожалению пока мы не можем автоматически включить вам возможность оплаты для этого типа кошелька. Установите для нужного кошелька лимиты на оплату на странице https://security.webmoney.ru/asp/trustlistmerch.asp и попробуйте снова.</value>
+  </data>
+  <data name="X20P_P000535" xml:space="preserve">
+    <value>Слишком много SMS (или USSD) не закончившихся оплатой отправлено на Ваш телефон, пожалуйста, подождите и попробуйте позднее.</value>
+  </data>
+  <data name="X20P_P000540" xml:space="preserve">
+    <value>Возникает только при вызове первого запроса интерфейса с указанным emulated_flag=1, означает что запрос в режиме эмуляции успешен.</value>
+  </data>
+  <data name="X20P_P000543" xml:space="preserve">
+    <value>Несколько минут назад вы уже пытались платить этому продавцу на эту же сумму и с этим же номером платежа, попробуйте пожалуйста позднее.</value>
+  </data>
+  <data name="X20P_P000550" xml:space="preserve">
+    <value>Что-то идет не так, вы пытаетесь подтвердить платеж, который не зарегистрирован в системе как платеж с WebMoney.Check, обратитесь, пожалуйста, с этой проблемой к своему продавцу.</value>
+  </data>
+  <data name="X20P_P000551" xml:space="preserve">
+    <value>Вы отказались от оплаты данного платежа с помощью WebMoney.Check, чтобы все же заплатить надо начинать снова.</value>
+  </data>
+  <data name="X20P_P000553" xml:space="preserve">
+    <value>Данный платеж пока еще не оплачен. Вы оплачиваете его через WebMoney чек, при этом вы не указали код, высланный вам по SMS.</value>
+  </data>
+  <data name="X20P_P000555" xml:space="preserve">
+    <value>Что-то идет не так, вы пытаетесь подтвердить платеж, который не зарегистрирован в системе как платеж с WebMoney, обратитесь, пожалуйста, с этой проблемой к своему продавцу.</value>
+  </data>
+  <data name="X20P_P000556" xml:space="preserve">
+    <value>Либо данный платеж пока еще не оплачен (если вы оплачиваете счет по USSD или через какую-либо программу или сайт по управлению WM-кошельками), либо вы указали неверный код, высланный вам по SMS.</value>
+  </data>
+  <data name="X20P_P000557" xml:space="preserve">
+    <value>Вы отказались от оплаты данного платежа с помощью WebMoney, чтобы все же заплатить надо начинать снова.</value>
+  </data>
+  <data name="X20P_P000558" xml:space="preserve">
+    <value>SMS не была отправлена по данному платежу.</value>
+  </data>
+  <data name="X20P_P000561" xml:space="preserve">
+    <value>Сообщение от WebMoney Transfer: Подтверждение платежа по USSD пока еще неполучено, возможно вы уже отказались от платежа, в противном случае дождитесь получения подтверждения.</value>
+  </data>
+  <data name="X20P_P000571" xml:space="preserve">
+    <value>Вы указали номер телефона по которому не зарегистрирован WebMoney.Check и поиск подходящего WM-идентификатора в системе по указанному телефону также ничего не дал (возможно WMID с таким телефоном есть, но на нем нет средств или нужного типа кошелька).</value>
+  </data>
+  <data name="X20P_P000572" xml:space="preserve">
+    <value>Вы указали номер телефона, по которому зарегистрирован WebMoney.Check, но его тип не совпадает с типом кошелька продавца, например, вы пытаетесь чеком с WMR-балансом заплатить продавцу на WMU-кошелек.</value>
+  </data>
+  <data name="X20P_P000573" xml:space="preserve">
+    <value>Вы указали номер телефона по которому не зарегистрирован WebMoney.Check, либо на нем нет требуемой для оплаты суммы, если на данном телефоне есть регистрация в WebMoney, то на найденных WMID нет необходимой суммы требуемого типа WM-валюты.</value>
+  </data>
+  <data name="X21P_P000601" xml:space="preserve">
+    <value>Обратитесь, пожалуйста, к продавцу, доверие к его WMID не может быть установлено, так как WMID не найден (указан с ошибкой) или имеет недопустимый для установки доверия статус.</value>
+  </data>
+  <data name="X21P_P000602" xml:space="preserve">
+    <value>Обратитесь, пожалуйста, к продавцу, доверие к его WMID не может быть установлено, так как WMID не найден (указан с ошибкой) или имеет недопустимый для установки доверия статус (нет доступа к XML-интерфейсам).</value>
+  </data>
+  <data name="X21P_P000603" xml:space="preserve">
+    <value>Обратитесь, пожалуйста, к продавцу, только кошельки WMZ, WME, WMR, WMU, WMG, WMB, WMV типа допустимы при установке доверия, а ваш продавец хочет получить доверие на кошелек какого-то другого типа.</value>
+  </data>
+  <data name="X21P_P000604" xml:space="preserve">
+    <value>Обратитесь, пожалуйста, к продавцу, его кошелек на который будут переводиться средства не найден (указан с ошибкой) или имеет статус не разрешающий это делать.</value>
+  </data>
+  <data name="X21P_P000605" xml:space="preserve">
+    <value>Обратитесь, пожалуйста, к продавцу, он запрашивает доверие в объеме выше, чем может быть установлено в рамках данного интерфейса.</value>
+  </data>
+  <data name="X21P_P000606" xml:space="preserve">
+    <value>Обратитесь, пожалуйста, к продавцу, он запрашивает доверие на WMID которому не принадлежит кошелек, куда планируется производить оплату, при этом они не связаны между собой никакими отношениями.</value>
+  </data>
+  <data name="X21P_P000607" xml:space="preserve">
+    <value>Обратитесь, пожалуйста, к продавцу, он запрашивает доверие несуществующего типа.</value>
+  </data>
+  <data name="X21P_P000608" xml:space="preserve">
+    <value>Вы указали телефон (WMID, WM-кошелек или E-mail) для которого данному продавцу уже установлено требуемое доверие, посмотрите Ваши текущие настройки доверия на security.webmoney.ru</value>
+  </data>
+  <data name="X21P_P000609" xml:space="preserve">
+    <value>Вы указали телефон (WMID, WM-кошелек или E-mail) для которого данному продавцу уже установлено требуемое доверие, но продавец хочет платить на другой кошелек, посмотрите ваши текущие настройки доверия на security.webmoney.ru, если необходимо удалите это доверие и попробуйте снова.</value>
+  </data>
+  <data name="X21P_P000610" xml:space="preserve">
+    <value>Ваш кошелек, найденный по указанному телефону (WMID, WM-кошелек или E-mail) уже имеет доверие, но для другого WMID, если необходимо, то посмотрите ваши текущие настройки доверия на security.webmoney.ru, удалите это доверие и попробуйте снова.</value>
+  </data>
+  <data name="X21P_P000611" xml:space="preserve">
+    <value>Обратитесь, пожалуйста, к продавцу, его WMID не имеет требуемого для работы с данным интерфейсом аттестата (персональный или выше)</value>
+  </data>
+  <data name="X21P_P000612" xml:space="preserve">
+    <value>По указанному вами телефону мы не смогли найти WMID в Cистеме, обратитесь к сайту passport.webmoney.ru чтобы указать и проверить там свой мобильный телефон.</value>
+  </data>
+  <data name="X21P_P000613" xml:space="preserve">
+    <value>По указанному вами телефону мы нашли WMID в Cистеме, но данный телефон не имеет статус проверенного в данном WMID, обратитесь к сайту passport.webmoney.ru чтобы проверить там свой мобильный телефон.</value>
+  </data>
+  <data name="X21P_P000614" xml:space="preserve">
+    <value>По указанному вами телефону мы нашли WMID в Cистеме, но в нем нет требуемого продавцу типа кошелька, Вам необходимо создать кошелек нужного типа и пополнить его.</value>
+  </data>
+  <data name="X21P_P000615" xml:space="preserve">
+    <value>По указанному вами телефону мы нашли WMID в Cистеме, но он настроен на работу с сервисом merchant.webmoney.ru, вам необходимо, либо завести другой WM-кошелек в данном WMID и пополнить его, либо если вы сочтете это возможным, дать доверие найденному кошельку, но сделать это самостоятельно на сайте security.webmoney.ru</value>
+  </data>
+  <data name="X21P_P000616" xml:space="preserve">
+    <value>Указанный вами WMID в Cистеме не найден (указан с ошибкой), либо имеет статус, который не позволяет работать с данным интерфейсом, обратитесь пожалуйста в тех. поддержку Cистемы на support.wmtransfer.com.</value>
+  </data>
+  <data name="X21P_P000617" xml:space="preserve">
+    <value>Указанный вами WMID в Cистеме найден, но указанный в нем мобильный телефон не проверен, обратитесь с вашим WMID к сайту passport.webmoney.ru, чтобы проверить мобильный телефон в аттестате.</value>
+  </data>
+  <data name="X21P_P000618" xml:space="preserve">
+    <value>Кошелек требуемого типа не найден в указанном вами WMID, вам необходимо завести и пополнить его и попробовать снова.</value>
+  </data>
+  <data name="X21P_P000619" xml:space="preserve">
+    <value>По указанному вами WMID мы нашли WM-кошелек в Cистеме, но он настроен на работу с сервисом merchant.webmoney.ru, Вам необходимо, либо завести другой WM-кошелек в данном WMID и пополнить его, либо если вы сочтете это возможным, дать доверие найденному кошельку, но сделать это самостоятельно на сайте security.webmoney.ru</value>
+  </data>
+  <data name="X21P_P000620" xml:space="preserve">
+    <value>По указанному вами E-mail мы не смогли найти WMID в Системе, обратитесь к сайту passport.webmoney.ru чтобы указать и проверить там свой E-mail.</value>
+  </data>
+  <data name="X21P_P000621" xml:space="preserve">
+    <value>По указанному вами E-mail мы нашли WMID в Системе, но мобильный телефон в нем не имеет статус проверенного в аттестате WMID, обратитесь к сайту passport.webmoney.ru чтобы проверить там свой мобильный телефон.</value>
+  </data>
+  <data name="X21P_P000622" xml:space="preserve">
+    <value>По указанному вами E-mail мы нашли WMID в Системе, но в нем нет требуемого продавцу типа кошелька, вам необходимо создать кошелек нужного типа и пополнить его.</value>
+  </data>
+  <data name="X21P_P000623" xml:space="preserve">
+    <value>По указанному вами E-mail мы нашли WMID в Системе, но он настроен на работу с сервисом merchant.webmoney.ru, вам необходимо, либо завести другой WM-кошелек в WMID с указанным E-mail и пополнить его, либо если вы сочтете это возможным, дать доверие найденному кошельку, но сделать это самостоятельно на сайте security.webmoney.ru</value>
+  </data>
+  <data name="X21P_P000624" xml:space="preserve">
+    <value>Указанный вами кошелек не найден в Системе, возможно он указан с ошибкой.</value>
+  </data>
+  <data name="X21P_P000625" xml:space="preserve">
+    <value>В WMID, которому принадлежит указанный вами WM-кошелек, не проверен мобильный телефон. Обратитесь с вашим WMID к сайту passport.webmoney.ru, чтобы проверить там свой мобильный телефон.</value>
+  </data>
+  <data name="X21P_P000626" xml:space="preserve">
+    <value>Указанный вами WM-кошелек настроен на работу с сервисом merchant.webmoney.ru, вам необходимо, либо завести другой WM-кошелек в данном WMID и пополнить его, либо если вы сочтете это возможным, дать доверие найденному кошельку, но сделать это самостоятельно на сайте security.webmoney.ru</value>
+  </data>
+  <data name="X21P_P000628" xml:space="preserve">
+    <value>Созданный для отправки на ваш телефон текст СМС имеет слишком большую длину, обратитесь к продавцу, чтобы он настроил вызов интерфейса с минимально требуемым количеством символов в СМС.</value>
+  </data>
+  <data name="X21P_P000629" xml:space="preserve">
+    <value>К сожалению мы не смогли отправить СМС (или USSD) так как СМС-сервис Системы в данный момент не отвечает, попробуйте пожалуйста повторить операцию несколько позднее.</value>
+  </data>
+  <data name="X21P_P000635" xml:space="preserve">
+    <value>Вы уже пробовали отправлять запрос на установку доверия только что, попробуйте, пожалуйста, в следующий раз не ранее чем через 1 минуту.</value>
+  </data>
+  <data name="X21P_P000636" xml:space="preserve">
+    <value>Вы уже пробовали отправлять запрос на установку доверия, причем уже несколько раз, попробуйте пожалуйста в следующий раз не ранее чем через 3 часа.</value>
+  </data>
+  <data name="X21P_P000640" xml:space="preserve">
+    <value>Мы к сожалению не смогли найти указанное для подтверждения доверие, пожалуйста попробуйте еще раз все с самого начала и если повторится тоже самое, обратитесь с данной проблемой к своему продавцу.</value>
+  </data>
+  <data name="X21P_P000641" xml:space="preserve">
+    <value>К сожалению уже прошло более 24 часов с момента как Вы сделали запрос на установку доверия, необходимо сделать запрос снова, так как этот запрос подтвердить уже нельзя.</value>
+  </data>
+  <data name="X21P_P000642" xml:space="preserve">
+    <value>В течении 2х часов вы попробовали указать неверный СМС-код уже несколько раз, попробуйте пожалуйста снова позднее.</value>
+  </data>
+  <data name="X21P_P000643" xml:space="preserve">
+    <value>Указанный СМС-код неверен, либо USSD запрос пока вами не подтвержден.</value>
+  </data>
+  <data name="X21P_P000650" xml:space="preserve">
+    <value>Вы отменили запрос на установку доверия по USSD.</value>
+  </data>
+  <data name="X21P_P000651" xml:space="preserve">
+    <value>Запрос на установку доверия по USSD пока Вами не подтвержден.</value>
+  </data>
+  <data name="X21P_P000652" xml:space="preserve">
+    <value>Произошел отказ в установке доверия, обратитесь пожалуйста в тех. поддержку Системы с указанием вводимых вами данных.</value>
+  </data>
+  <data name="X21_N000001" xml:space="preserve">
+    <value>merchant.request/wmid is incorrect; merchant.request/wmid is incorrect</value>
+  </data>
+  <data name="X21_N000002" xml:space="preserve">
+    <value>merchant.request/lmi_payee_purse is incorrect; merchant.request/lmi_payee_purse is incorrect; merchant.request/lmi_purseid is incorrect, less than 1 symbol or greater than 25 symbols</value>
+  </data>
+  <data name="X21_N000004" xml:space="preserve">
+    <value>value of merchant.request/lmi_day_limit is incorrect; value of merchant.request/lmi_week_limit is incorrect; value of merchant.request/lmi_month_limit is incorrect</value>
+  </data>
+  <data name="X21_N000006" xml:space="preserve">
+    <value>merchant.request/lmi_clientnumber is incorrect, less than 5 symbols or greater than 50 symbols</value>
+  </data>
+  <data name="X21_N000007" xml:space="preserve">
+    <value>merchant.request/lmi_clientnumber_type is incorrect, must be specified 1 digit; merchant.request/lmi_clientnumber_type is incorrect, must be specified 0, 1,2, 4</value>
+  </data>
+  <data name="X21_N000009" xml:space="preserve">
+    <value>sign not right; sign not right:planstr</value>
+  </data>
+  <data name="X21_N000022" xml:space="preserve">
+    <value>merchant.request/request_clientnumber_code is incorrect, less than 5 symbols or greater than 25 symbols</value>
+  </data>
+  <data name="X21_N000100" xml:space="preserve">
+    <value>общая ошибка при разборе запроса</value>
+  </data>
+  <data name="X21_P000601" xml:space="preserve">
+    <value>The specified WMID in wmid tag is not found</value>
+  </data>
+  <data name="X21_P000602" xml:space="preserve">
+    <value>Specified WMID in wmid tag no access to XML interfaces (X2 etc)</value>
+  </data>
+  <data name="X21_P000603" xml:space="preserve">
+    <value>Only WMZ, WME, WMR, WMU, WMG, WMB, WMV purses are allowed</value>
+  </data>
+  <data name="X21_P000604" xml:space="preserve">
+    <value>Merchant purse is not found</value>
+  </data>
+  <data name="X21_P000605" xml:space="preserve">
+    <value>Specified limits (lmi_day_limit, lmi_week_limit, lmi_month_limit) is wrong</value>
+  </data>
+  <data name="X21_P000606" xml:space="preserve">
+    <value>The specified WMID is not the owner for lmi_payee_purse and doesn`t have any trust rights</value>
+  </data>
+  <data name="X21_P000607" xml:space="preserve">
+    <value>Specified in lmi_clientnumber_type is wrong, trust via phone, wmid, purse or e-mail are available</value>
+  </data>
+  <data name="X21_P000608" xml:space="preserve">
+    <value>The specified WMID in wmid tag already have the trust. The trust is established to the user`s purse, found on the specified phone (wmid, email or purse)</value>
+  </data>
+  <data name="X21_P000609" xml:space="preserve">
+    <value>See error number 608. Also merchant purse already specified in the existed trust and it differs from the purse in lmi_payee_purse.</value>
+  </data>
+  <data name="X21_P000610" xml:space="preserve">
+    <value>User purse found by specifed in lmi_clientnumber tag value already have trust to another control WMID for this merchant purse (lmi_payee_purse)</value>
+  </data>
+  <data name="X21_P000611" xml:space="preserve">
+    <value>The specified identifier does not have the minimum passport level - personal or above</value>
+  </data>
+  <data name="X21_P000612" xml:space="preserve">
+    <value>User WMID can not be found via specified in lmi_clientnumber phone number</value>
+  </data>
+  <data name="X21_P000613" xml:space="preserve">
+    <value>Specified in lmi_clientnumber phone number is not verified</value>
+  </data>
+  <data name="X21_P000614" xml:space="preserve">
+    <value>User purse can not be found via specified in lmi_clientnumber phone number</value>
+  </data>
+  <data name="X21_P000615" xml:space="preserve">
+    <value>Purse found via specified in lmi_clientnumber phone number is enabled for merchant interface and this trust is not allowed</value>
+  </data>
+  <data name="X21_P000616" xml:space="preserve">
+    <value>Specified in lmi_clientnumber WMID is not found</value>
+  </data>
+  <data name="X21_P000617" xml:space="preserve">
+    <value>Specified in lmi_clientnumber WMID has unverified phone number</value>
+  </data>
+  <data name="X21_P000618" xml:space="preserve">
+    <value>User purse can not be found via specified in lmi_clientnumber WMID</value>
+  </data>
+  <data name="X21_P000619" xml:space="preserve">
+    <value>Purse found via specified in lmi_clientnumber WMID is used with merchant interface and this trust is not allowed</value>
+  </data>
+  <data name="X21_P000620" xml:space="preserve">
+    <value>WMID is not found via specified in lmi_clientnumber email:</value>
+  </data>
+  <data name="X21_P000621" xml:space="preserve">
+    <value>WMID found via specified in lmi_clientnumber email has unverified phone number</value>
+  </data>
+  <data name="X21_P000622" xml:space="preserve">
+    <value>User purse can not be found via specified in lmi_clientnumber email</value>
+  </data>
+  <data name="X21_P000623" xml:space="preserve">
+    <value>Purse found via specified in lmi_clientnumber email is used with merchant interface and this trust is not allowed</value>
+  </data>
+  <data name="X21_P000624" xml:space="preserve">
+    <value>Specified in lmi_clientnumber purse is not found</value>
+  </data>
+  <data name="X21_P000625" xml:space="preserve">
+    <value>Specified in lmi_clientnumber purse has unverified phone number</value>
+  </data>
+  <data name="X21_P000626" xml:space="preserve">
+    <value>The specified in lmi_clientnumber purse is enabled for merchant interface and this trust is not allowed</value>
+  </data>
+  <data name="X21_P000628" xml:space="preserve">
+    <value>Generated SMS text exceed 160 symbols, SMS not sent.</value>
+  </data>
+  <data name="X21_P000629" xml:space="preserve">
+    <value>SMS (USSD) not sent. SMS center not ready, try again later and if persist contact to support</value>
+  </data>
+  <data name="X21_P000635" xml:space="preserve">
+    <value>Too many SMS without trust for the specified WMID/email/phone/purse try again after 1 minute</value>
+  </data>
+  <data name="X21_P000636" xml:space="preserve">
+    <value>Too many SMS without trust for the specified WMID/email/phone/purse try again after 3 hour</value>
+  </data>
+  <data name="X21_P000640" xml:space="preserve">
+    <value>Trust is initiated earlier, was not found</value>
+  </data>
+  <data name="X21_P000641" xml:space="preserve">
+    <value>It took more than 24 hours after trust is initiated, try XMLTrustRequest again</value>
+  </data>
+  <data name="X21_P000642" xml:space="preserve">
+    <value>Less than 2 hour ago, you`ve tried to use wrong SMS code more than 5 times to make a trust, please try again later</value>
+  </data>
+  <data name="X21_P000643" xml:space="preserve">
+    <value>Specified in lmi_clientnumber_code code is wrong or payment not yet proceed</value>
+  </data>
+  <data name="X21_P000650" xml:space="preserve">
+    <value>User cancel trust initiated via USSD</value>
+  </data>
+  <data name="X21_P000651" xml:space="preserve">
+    <value>The trust initiated via USSD not confirm yet by user</value>
+  </data>
+  <data name="X21_P000652" xml:space="preserve">
+    <value>Databaser error confirm of the trust</value>
+  </data>
+  <data name="X22_N000002" xml:space="preserve">
+    <value>merchant.request/wmid is incorrect; merchant.request/lmi_payee_purse is incorrect; merchant.request/lmi_payement_no is incorrect; merchant.request/wmid is incorrect</value>
+  </data>
+  <data name="X22_N000003" xml:space="preserve">
+    <value>merchant.request/lmi_payee_purse is incorrect</value>
+  </data>
+  <data name="X22_N000006" xml:space="preserve">
+    <value>sign not right</value>
+  </data>
+  <data name="X22_N000007" xml:space="preserve">
+    <value>sign not right: PlanStr; SHA256 or MD5 not right:PlanStr(this planstr without secret_key)</value>
+  </data>
+  <data name="X22_N000008" xml:space="preserve">
+    <value>internal error:error code</value>
+  </data>
+  <data name="X22_N000100" xml:space="preserve">
+    <value>общая ошибка при разборе запроса</value>
+  </data>
+  <data name="X22_N000101" xml:space="preserve">
+    <value>при проверке платежа по тикету получили ошибку; детали в поле retdesc</value>
+  </data>
+  <data name="X22_P000001" xml:space="preserve">
+    <value>Merchant purse not found:1</value>
+  </data>
+  <data name="X22_P000002" xml:space="preserve">
+    <value>Please use sign or sha256 method for authentication, and specify secret key in merchant service settings:2</value>
+  </data>
+  <data name="X22_P000003" xml:space="preserve">
+    <value>Please use sign or sha256 method for authentication:3</value>
+  </data>
+  <data name="X22_P000004" xml:space="preserve">
+    <value>Merchant wmid not found or security trust for purse is not exists:4</value>
+  </data>
+  <data name="X22_P000006" xml:space="preserve">
+    <value>Merchant wmid not found or security trust for purse is not exists:6</value>
+  </data>
+  <data name="X22_P000007" xml:space="preserve">
+    <value>Payment with lmi_payment_no number not found for this merchant purse:7</value>
+  </data>
+  <data name="X2_N000001" xml:space="preserve">
+    <value>неверное значение поля w3s.request/reqn</value>
+  </data>
+  <data name="X2_N000002" xml:space="preserve">
+    <value>неверное значение поля w3s.request/sign</value>
+  </data>
+  <data name="X2_N000003" xml:space="preserve">
+    <value>неверное значение поля w3s.request/trans/tranid</value>
+  </data>
+  <data name="X2_N000004" xml:space="preserve">
+    <value>неверное значение поля w3s.request/trans/pursesrc</value>
+  </data>
+  <data name="X2_N000005" xml:space="preserve">
+    <value>неверное значение поля w3s.request/trans/pursedest</value>
+  </data>
+  <data name="X2_N000006" xml:space="preserve">
+    <value>неверное значение поля w3s.request/trans/amount</value>
+  </data>
+  <data name="X2_N000007" xml:space="preserve">
+    <value>неверное значение поля w3s.request/trans/desc</value>
+  </data>
+  <data name="X2_N000008" xml:space="preserve">
+    <value>слишком длинное поле w3s.request/trans/pcode</value>
+  </data>
+  <data name="X2_N000009" xml:space="preserve">
+    <value>поле w3s.request/trans/pcode не должно быть пустым если w3s.request/trans/period &gt; 0</value>
+  </data>
+  <data name="X2_N000010" xml:space="preserve">
+    <value>поле w3s.request/trans/pcode должно быть пустым если w3s.request/trans/period = 0</value>
+  </data>
+  <data name="X2_N000011" xml:space="preserve">
+    <value>неверное значение поля w3s.request/trans/wminvid</value>
+  </data>
+  <data name="X2_N000012" xml:space="preserve">
+    <value>идентификатор переданный в поле w3s.request/wmid не зарегистрирован</value>
+  </data>
+  <data name="X2_N000014" xml:space="preserve">
+    <value>проверка подписи не прошла</value>
+  </data>
+  <data name="X2_N000015" xml:space="preserve">
+    <value>неверное значение поля w3s.request/wmid</value>
+  </data>
+  <data name="X2_N000017" xml:space="preserve">
+    <value>не передан признак деноминации</value>
+  </data>
+  <data name="X2_N000100" xml:space="preserve">
+    <value>общая ошибка при разборе команды. неверный формат команды.</value>
+  </data>
+  <data name="X2_N000110" xml:space="preserve">
+    <value>запросы отсылаются не с того IP адреса, который указан при регистрации данного интерфейса в Технической поддержке.</value>
+  </data>
+  <data name="X2_P000004" xml:space="preserve">
+    <value>внутренняя ошибка при создании транзакции</value>
+  </data>
+  <data name="X2_P000005" xml:space="preserve">
+    <value>идентификатор отправителя не найден</value>
+  </data>
+  <data name="X2_P000006" xml:space="preserve">
+    <value>корреспондент не найден</value>
+  </data>
+  <data name="X2_P000007" xml:space="preserve">
+    <value>кошелек получателя не найден</value>
+  </data>
+  <data name="X2_P000011" xml:space="preserve">
+    <value>кошелек отправителя не найден</value>
+  </data>
+  <data name="X2_P000013" xml:space="preserve">
+    <value>сумма транзакции должна быть больше нуля</value>
+  </data>
+  <data name="X2_P000015" xml:space="preserve">
+    <value>внутренняя ошибка при создании транзакции</value>
+  </data>
+  <data name="X2_P000017" xml:space="preserve">
+    <value>недостаточно денег в кошельке для выполнения операции</value>
+  </data>
+  <data name="X2_P000018" xml:space="preserve">
+    <value>указанная транзакция (wmtransid) не найдена, возникает, например, когда указанная к возврату и завершению операция с протекцией уже завершена или возвращена</value>
+  </data>
+  <data name="X2_P000019" xml:space="preserve">
+    <value>внутренняя ошибка при создании транзакции</value>
+  </data>
+  <data name="X2_P000020" xml:space="preserve">
+    <value>указанный для завершения транзакции с протекцией код протекции неверен</value>
+  </data>
+  <data name="X2_P000021" xml:space="preserve">
+    <value>счет, по которому совершается оплата не найден</value>
+  </data>
+  <data name="X2_P000022" xml:space="preserve">
+    <value>по указанному счету оплата с протекцией не возможна</value>
+  </data>
+  <data name="X2_P000023" xml:space="preserve">
+    <value>внутренняя ошибка при создании транзакции</value>
+  </data>
+  <data name="X2_P000025" xml:space="preserve">
+    <value>время действия оплачиваемого счета закончилось</value>
+  </data>
+  <data name="X2_P000026" xml:space="preserve">
+    <value>в операции должны участвовать разные кошельки</value>
+  </data>
+  <data name="X2_P000029" xml:space="preserve">
+    <value>типы кошельков отличаются</value>
+  </data>
+  <data name="X2_P000030" xml:space="preserve">
+    <value>кошелек не поддерживает прямой перевод (например для кредитных кошельков C или D)</value>
+  </data>
+  <data name="X2_P000032" xml:space="preserve">
+    <value>плательщику необходимо заполнить персональную информацию на сайте Центра Аттестации</value>
+  </data>
+  <data name="X2_P000034" xml:space="preserve">
+    <value>плательщику необходимо заполнить персональную информацию на сайте Центра Аттестации</value>
+  </data>
+  <data name="X2_P000035" xml:space="preserve">
+    <value>плательщик не авторизован корреспондентом для выполнения данной операции</value>
+  </data>
+  <data name="X2_P000058" xml:space="preserve">
+    <value>превышен лимит средств на кошельках получателя</value>
+  </data>
+  <data name="X2_P000072" xml:space="preserve">
+    <value>Обслуживание на вывод средств в WME временно приостановлено, ознакомьтесь с требованиями Гаранта по идентификации</value>
+  </data>
+  <data name="X2_P000073" xml:space="preserve">
+    <value>Обслуживание получателя средств в WME временно приостановлено, ознакомьтесь с требованиями Гаранта по идентификации</value>
+  </data>
+  <data name="X2_P000074" xml:space="preserve">
+    <value>Обслуживание получателя средств в WME временно приостановлено, ознакомьтесь с требованиями Гаранта по идентификации</value>
+  </data>
+  <data name="X2_P000102" xml:space="preserve">
+    <value>не выполнено условие постоянного увеличения значения параметра w3s.request/reqn</value>
+  </data>
+  <data name="X2_P000103" xml:space="preserve">
+    <value>транзакция с таким значением поля w3s.request/trans/tranid уже выполнялась</value>
+  </data>
+  <data name="X2_P000110" xml:space="preserve">
+    <value>нет доступа к интерфейсу</value>
+  </data>
+  <data name="X2_P000111" xml:space="preserve">
+    <value>попытка перевода с кошелька не принадлежащего WMID, которым подписывается запрос; при этом доверие не установлено.</value>
+  </data>
+  <data name="X3_N000001" xml:space="preserve">
+    <value>неверное значение поля w3s.request/wmid</value>
+  </data>
+  <data name="X3_N000002" xml:space="preserve">
+    <value>неверное значение поля w3s.request/getoperations/purse</value>
+  </data>
+  <data name="X3_N000003" xml:space="preserve">
+    <value>неверное значение поля w3s.request/sign</value>
+  </data>
+  <data name="X3_N000004" xml:space="preserve">
+    <value>неверное значение поля w3s.request/reqn</value>
+  </data>
+  <data name="X3_N000005" xml:space="preserve">
+    <value>проверка подписи не прошла</value>
+  </data>
+  <data name="X3_N000007" xml:space="preserve">
+    <value>неверное значение поля w3s.request/getoperations/datestart</value>
+  </data>
+  <data name="X3_N000008" xml:space="preserve">
+    <value>неверное значение поля w3s.request/getoperations/datefinish</value>
+  </data>
+  <data name="X3_N000009" xml:space="preserve">
+    <value>WMID указанный в поле w3s.request/wmid не найден</value>
+  </data>
+  <data name="X3_N000100" xml:space="preserve">
+    <value>общая ошибка при разборе команды. неверный формат команды.</value>
+  </data>
+  <data name="X3_N000110" xml:space="preserve">
+    <value>запросы отсылаются не с того IP адреса, который указан при регистрации данного интерфейса в Технической поддержке.</value>
+  </data>
+  <data name="X3_P000102" xml:space="preserve">
+    <value>не выполнено условие постоянного увеличения значения параметра w3s.request/reqn</value>
+  </data>
+  <data name="X3_P000111" xml:space="preserve">
+    <value>попытка запроса истории по кошельку не принадлежащему WMID, которым подписывается запрос; при этом доверие не установлено.</value>
+  </data>
+  <data name="X3_P001004" xml:space="preserve">
+    <value>слишком большой диапазон выборки</value>
+  </data>
+  <data name="X4_P000111" xml:space="preserve">
+    <value>попытка запроса информации по кошельку не принадлежащему WMID, которым подписывается запрос; при этом доверие не установлено.</value>
+  </data>
+  <data name="X6_N000002" xml:space="preserve">
+    <value>Неверное значение поля message\receiverwmid</value>
+  </data>
+  <data name="X6_N000012" xml:space="preserve">
+    <value>Подпись не верна</value>
+  </data>
+  <data name="X6_P000006" xml:space="preserve">
+    <value>корреспондент не найден</value>
+  </data>
+  <data name="X6_P000035" xml:space="preserve">
+    <value>получатель не принимает сообщения от неавторизованных корреспондентов</value>
+  </data>
+  <data name="X6_P000102" xml:space="preserve">
+    <value>Не выполнено условие постоянного увеличения значения параметра w3s.request/reqn</value>
+  </data>
+  <data name="X6_P000110" xml:space="preserve">
+    <value>нет доступа к интерфейсу</value>
+  </data>
 </root>

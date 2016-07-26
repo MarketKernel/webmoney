@@ -149,7 +149,7 @@ namespace WebMoney.XmlInterfaces
             {
                 case AuthorizationMode.Merchant:
                     xmlRequestBuilder.WriteElement(
-                        "md5", Utility.CryptographyUtility.ComputeMD5Hash(BuildMessage(requestNumber) + Initializer.SecretKey));
+                        "md5", Utilities.CryptographyUtility.ComputeHash(BuildMessage(requestNumber) + Initializer.SecretKey));
                     break;
                 case AuthorizationMode.Classic:
                     xmlRequestBuilder.WriteElement("sign", Initializer.Sign(BuildMessage(requestNumber)));

@@ -29,6 +29,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Properties\key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.5\lib\net20-full\log4net.dll</HintPath>
@@ -38,8 +44,8 @@
     <Reference Include="System.configuration" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
-    <Reference Include="WebMoney.Cryptography, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\WebMoney.Cryptography.3.3.0.0\lib\net20\WebMoney.Cryptography.dll</HintPath>
+    <Reference Include="WebMoney.Cryptography, Version=3.3.1.0, Culture=neutral, PublicKeyToken=7532635057d899e6, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebMoney.Cryptography.3.3.1\lib\net20\WebMoney.Cryptography.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -55,7 +61,9 @@
     <Compile Include="BasicObjects\ContractType.cs" />
     <Compile Include="BasicObjects\Description.cs" />
     <Compile Include="BasicObjects\ExchangeType.cs" />
+    <Compile Include="BasicObjects\HashKind.cs" />
     <Compile Include="BasicObjects\InvoiceState.cs" />
+    <Compile Include="BasicObjects\Language.cs" />
     <Compile Include="BasicObjects\Message.cs" />
     <Compile Include="BasicObjects\PartnerAvailability.cs" />
     <Compile Include="BasicObjects\PassportAppointment.cs" />
@@ -96,10 +104,16 @@
     <Compile Include="Core\XmlRequest`1.cs" />
     <Compile Include="Core\XmlResponse.cs" />
     <Compile Include="Exceptions\ClientInspectorException.cs" />
+    <Compile Include="Exceptions\ExpressPaymentException.cs" />
+    <Compile Include="Exceptions\ExpressTrustException.cs" />
+    <Compile Include="Exceptions\MerchantOperationObtainerException.cs" />
     <Compile Include="Exceptions\OriginalInvoiceException.cs" />
+    <Compile Include="Exceptions\OriginalMerchantPaymentException.cs" />
     <Compile Include="Exceptions\OriginalMessageException.cs" />
     <Compile Include="Exceptions\OriginalPurseException.cs" />
     <Compile Include="Exceptions\OriginalTransferException.cs" />
+    <Compile Include="Exceptions\OutgoingInvoiceFilterException.cs" />
+    <Compile Include="Exceptions\TransferFilterException.cs" />
     <Compile Include="Exceptions\TransferRejectorException.cs" />
     <Compile Include="Exceptions\WmException.cs" />
     <Compile Include="ExpressPaymentConfirmation.cs" />
@@ -110,7 +124,7 @@
     <Compile Include="IncomingTrustFilter.cs" />
     <Compile Include="Initializer.cs" />
     <Compile Include="InvoiceRefusal.cs" />
-    <Compile Include="MerchantOperationFilter.cs" />
+    <Compile Include="MerchantOperationObtainer.cs" />
     <Compile Include="OriginalContract.cs" />
     <Compile Include="OriginalInvoice.cs" />
     <Compile Include="OriginalMerchantPayment.cs" />
@@ -169,8 +183,9 @@
     <Compile Include="SignatureInspector.cs" />
     <Compile Include="TransferFilter.cs" />
     <Compile Include="TransferRejector.cs" />
-    <Compile Include="Utility\CryptographyUtility.cs" />
-    <Compile Include="Utility\WmXmlPackage.cs" />
+    <Compile Include="Utilities\CryptographyUtility.cs" />
+    <Compile Include="Utilities\LocalizationUtility.cs" />
+    <Compile Include="Utilities\WmXmlPackage.cs" />
     <Compile Include="WmIdFinder.cs" />
     <Compile Include="WmRequest%271.cs" />
   </ItemGroup>
@@ -183,6 +198,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\key.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

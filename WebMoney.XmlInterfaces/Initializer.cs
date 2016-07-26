@@ -48,12 +48,13 @@ namespace WebMoney.XmlInterfaces
             Certificate = certificate;
         }
 
-        public Initializer(string secretKey)
+        public Initializer(WmId wmId, string secretKey)
         {
             if (null == secretKey)
                 throw new ArgumentNullException(nameof(secretKey));
 
             Mode = AuthorizationMode.Merchant;
+            Id = wmId;
             SecretKey = secretKey;
         }
 

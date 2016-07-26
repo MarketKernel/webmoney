@@ -12,36 +12,31 @@ namespace WebMoney.XmlInterfaces.Exceptions
     [System.Diagnostics.DebuggerNonUserCode]
 #endif
     [Serializable, ComVisible(true)]
-    public class ClientInspectorException : WmException
+    public class ExpressTrustException : WmException
     {
-        public string Reference { get; private set; }
-
-        public ClientInspectorException(string message)
+        public ExpressTrustException(string message)
             : base(message)
         {
         }
 
-        public ClientInspectorException(string message, Exception innerException)
+        public ExpressTrustException(string message, Exception innerException)
             : base(message, innerException)
         {
         }
 
-        public ClientInspectorException(string reference, int errorNumber, string message)
+        public ExpressTrustException(int errorNumber, string message)
             : base(errorNumber, message)
         {
-            Reference = reference;
         }
 
-        public ClientInspectorException(string reference, int errorNumber, string message, Exception innerException)
+        public ExpressTrustException(int errorNumber, string message, Exception innerException)
             : base(errorNumber, message, innerException)
         {
-            Reference = reference;
         }
 
-        protected ClientInspectorException(SerializationInfo info, StreamingContext context)
+        protected ExpressTrustException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {
-            Reference = info.GetString("Reference");
         }
 
         [SecurityPermission(SecurityAction.LinkDemand, Flags = SecurityPermissionFlag.SerializationFormatter)]
@@ -51,12 +46,21 @@ namespace WebMoney.XmlInterfaces.Exceptions
                 throw new ArgumentNullException(nameof(info));
 
             base.GetObjectData(info, context);
-            info.AddValue("Reference", Reference, typeof(String));
         }
 
         public override string TranslateDescription(Language language)
         {
-            return LocalizationUtility.GetErrorDescription("X19", ErrorNumber, language);
+            return LocalizationUtility.GetErrorDescription("X21", ErrorNumber, language);
+        }
+
+        public string GetClientMessage()
+        {
+            return GetClientMessage(LocalizationUtility.GetDefaultLanguage());
+        }
+
+        public string GetClientMessage(Language language)
+        {
+            return LocalizationUtility.GetErrorDescription("X21P", ErrorNumber, language);
         }
     }
 }

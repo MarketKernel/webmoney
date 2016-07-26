@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Xml.Serialization;
-using WebMoney.XmlInterfaces.Utility;
+using WebMoney.XmlInterfaces.Core;
+using WebMoney.XmlInterfaces.Exceptions;
+using WebMoney.XmlInterfaces.Utilities;
 
 namespace WebMoney.XmlInterfaces.Responses
 {
@@ -14,6 +16,17 @@ namespace WebMoney.XmlInterfaces.Responses
     public class TransferRegister : WmResponse
     {
         public List<Transfer> TransferList { get; protected set; }
+
+        protected override void Inspect(XmlPackage xmlPackage)
+        {
+            if (null == xmlPackage)
+                throw new ArgumentNullException(nameof(xmlPackage));
+
+            int errorNumber = xmlPackage.SelectInt32("retval");
+
+            if (0 != errorNumber)
+                throw new TransferFilterException(errorNumber, xmlPackage.SelectString("retdesc"));
+        }
 
         protected override void Fill(WmXmlPackage wmXmlPackage)
         {

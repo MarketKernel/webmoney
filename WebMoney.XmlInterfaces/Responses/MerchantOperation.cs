@@ -3,7 +3,9 @@ using System.Globalization;
 using System.Net;
 using System.Xml.Serialization;
 using WebMoney.XmlInterfaces.BasicObjects;
-using WebMoney.XmlInterfaces.Utility;
+using WebMoney.XmlInterfaces.Core;
+using WebMoney.XmlInterfaces.Exceptions;
+using WebMoney.XmlInterfaces.Utilities;
 
 namespace WebMoney.XmlInterfaces.Responses
 {
@@ -20,6 +22,7 @@ namespace WebMoney.XmlInterfaces.Responses
         public Amount Amount { get; protected set; }
         public WmDateTime CreateTime { get; protected set; }
         public Description Description { get; protected set; }
+        public WmId SourceWmId { get; protected set; }
         public Purse SourcePurse { get; protected set; }
         public bool CapitallerFlag { get; protected set; }
         public byte EnumFlag { get; protected set; }
@@ -31,6 +34,89 @@ namespace WebMoney.XmlInterfaces.Responses
         public string CashierNumber { get; protected set; }
         public WmDateTime? CashierDate { get; protected set; }
         public Amount? CashierAmount { get; protected set; }
+        public int? SdpType { get; protected set; }
+
+        protected override void Inspect(XmlPackage xmlPackage)
+        {
+            if (null == xmlPackage)
+                throw new ArgumentNullException(nameof(xmlPackage));
+
+            var wmXmlPackage = (WmXmlPackage)xmlPackage;
+
+            int errorNumber = wmXmlPackage.SelectInt32("retval");
+
+            if (0 != errorNumber)
+            {
+                MerchantOperationObtainerException.ErrorExtendedInfo errorExtendedInfo = null;
+
+                if (wmXmlPackage.Exists("errorlog/err_code"))
+                {
+                    string extendedErrorNumberValue = wmXmlPackage.SelectString("errorlog/err_code");
+
+                    if (!string.IsNullOrEmpty(extendedErrorNumberValue))
+                    {
+                        errorExtendedInfo = new MerchantOperationObtainerException.ErrorExtendedInfo
+                        {
+                            ExtendedErrorNumber = int.Parse(extendedErrorNumberValue,
+                                CultureInfo.InvariantCulture.NumberFormat)
+                        };
+
+                        var storePurseValue = wmXmlPackage.SelectString("errorlog/@lmi_payee_purse");
+
+                        if (!string.IsNullOrEmpty(storePurseValue))
+                            errorExtendedInfo.StorePurse = wmXmlPackage.SelectPurse(storePurseValue);
+
+                        var orderIdValue = wmXmlPackage.SelectString("errorlog/@lmi_payment_no");
+
+                        if (!string.IsNullOrEmpty(orderIdValue))
+                            errorExtendedInfo.OrderId = int.Parse(orderIdValue,
+                                CultureInfo.InvariantCulture.NumberFormat);
+
+                        var paymentInfoCreateTimeValue = wmXmlPackage.SelectString("errorlog/datecrt");
+
+                        if (!string.IsNullOrEmpty(paymentInfoCreateTimeValue))
+                            errorExtendedInfo.PaymentInfoCreateTime =
+                                WmDateTime.ParseServerString(paymentInfoCreateTimeValue);
+
+                        var paymentInfoUpdateTimeValue = wmXmlPackage.SelectString("errorlog/dateupd");
+
+                        if (!string.IsNullOrEmpty(paymentInfoUpdateTimeValue))
+                            errorExtendedInfo.PaymentInfoUpdateTime =
+                                WmDateTime.ParseServerString(paymentInfoUpdateTimeValue);
+
+                        var enterTimeValue = wmXmlPackage.SelectString("errorlog/date_s");
+
+                        if (!string.IsNullOrEmpty(enterTimeValue))
+                            errorExtendedInfo.EnterTime =
+                                WmDateTime.ParseServerString(enterTimeValue);
+
+                        var authorizationTimeValue = wmXmlPackage.SelectString("errorlog/date_pc");
+
+                        if (!string.IsNullOrEmpty(authorizationTimeValue))
+                            errorExtendedInfo.AuthorizationTime =
+                                WmDateTime.ParseServerString(authorizationTimeValue);
+
+                        var confirmationTimeValue = wmXmlPackage.SelectString("errorlog/date_pd");
+
+                        if (!string.IsNullOrEmpty(confirmationTimeValue))
+                            errorExtendedInfo.ConfirmationTime =
+                                WmDateTime.ParseServerString(confirmationTimeValue);
+
+                        string siteIdValue = wmXmlPackage.SelectString("errorlog/siteid");
+
+                        if (!string.IsNullOrEmpty(siteIdValue))
+                            errorExtendedInfo.SiteId = int.Parse(siteIdValue, CultureInfo.InvariantCulture.NumberFormat);
+
+                        errorExtendedInfo.PaymentMethod = wmXmlPackage.SelectString("errorlog/att");
+                    }
+                }
+
+                throw new MerchantOperationObtainerException(errorNumber, xmlPackage.SelectString("retdesc"))
+                {
+                    ExtendedInfo = errorExtendedInfo
+                };
+            }
+        }
 
         protected override void Fill(WmXmlPackage wmXmlPackage)
         {
@@ -42,6 +128,7 @@ namespace WebMoney.XmlInterfaces.Responses
             CreateTime = wmXmlPackage.SelectWmDateTime("operation/operdate");
             Description = (Description)wmXmlPackage.SelectString("operation/purpose");
             SourcePurse = wmXmlPackage.SelectPurse("operation/pursefrom");
+            SourceWmId = wmXmlPackage.SelectWmId("operation/wmidfrom");
 
             var capitallerFlagXPath = "operation/capitallerflag";
 
@@ -73,6 +160,11 @@ namespace WebMoney.XmlInterfaces.Responses
 
             //if (!string.IsNullOrEmpty(wmXmlResponsePackage.SelectString("operation/cashier_amount")))
             //    CashierAmount = wmXmlResponsePackage.SelectAmount("operation/cashier_amount");
+
+            string sdpType = wmXmlPackage.SelectString("operation/sdp_type");
+
+            if (!string.IsNullOrEmpty(sdpType))
+                SdpType = int.Parse(sdpType, NumberStyles.Integer, CultureInfo.InvariantCulture.NumberFormat);
         }
     }
 }

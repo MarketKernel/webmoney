@@ -40,8 +40,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="WebMoney.Cryptography, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\WebMoney.Cryptography.3.3.0.0\lib\net20\WebMoney.Cryptography.dll</HintPath>
+    <Reference Include="WebMoney.Cryptography, Version=3.3.1.0, Culture=neutral, PublicKeyToken=7532635057d899e6, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebMoney.Cryptography.3.3.1\lib\net20\WebMoney.Cryptography.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>

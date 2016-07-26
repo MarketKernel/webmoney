@@ -239,5 +239,2723 @@ namespace WebMoney.XmlInterfaces.Properties {
                 return ResourceManager.GetString("Service2", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid value in w3s.request/invoice/orderid field.
+        /// </summary>
+        internal static string X1_N000001 {
+            get {
+                return ResourceManager.GetString("X1_N000001", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid value in w3s.request/invoice/customerwmid field.
+        /// </summary>
+        internal static string X1_N000002 {
+            get {
+                return ResourceManager.GetString("X1_N000002", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid value in w3s.request/invoice/storepurse field.
+        /// </summary>
+        internal static string X1_N000003 {
+            get {
+                return ResourceManager.GetString("X1_N000003", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid value in w3s.request/invoice/amount field.
+        /// </summary>
+        internal static string X1_N000005 {
+            get {
+                return ResourceManager.GetString("X1_N000005", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field in w3s.request/invoice/desc is too long.
+        /// </summary>
+        internal static string X1_N000006 {
+            get {
+                return ResourceManager.GetString("X1_N000006", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field in w3s.request/invoice/address is too long.
+        /// </summary>
+        internal static string X1_N000007 {
+            get {
+                return ResourceManager.GetString("X1_N000007", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid value in w3s.request/sign field.
+        /// </summary>
+        internal static string X1_N000008 {
+            get {
+                return ResourceManager.GetString("X1_N000008", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid value in w3s.request/reqn field.
+        /// </summary>
+        internal static string X1_N000009 {
+            get {
+                return ResourceManager.GetString("X1_N000009", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Identifier sent in w3s.request/wmid is not registered.
+        /// </summary>
+        internal static string X1_N000011 {
+            get {
+                return ResourceManager.GetString("X1_N000011", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Signature verification failed.
+        /// </summary>
+        internal static string X1_N000012 {
+            get {
+                return ResourceManager.GetString("X1_N000012", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to General parsing error. Incorrect request format..
+        /// </summary>
+        internal static string X1_N000100 {
+            get {
+                return ResourceManager.GetString("X1_N000100", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invoice sender was not found.
+        /// </summary>
+        internal static string X1_P000005 {
+            get {
+                return ResourceManager.GetString("X1_P000005", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invoice recipient was not found.
+        /// </summary>
+        internal static string X1_P000006 {
+            get {
+                return ResourceManager.GetString("X1_P000006", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invoice sender was not found.
+        /// </summary>
+        internal static string X1_P000007 {
+            get {
+                return ResourceManager.GetString("X1_P000007", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to purse w3s.request/invoice/storepurse belongs to a payments aggregator, but lmi_shop_id is missing or specified incorrectly.
+        /// </summary>
+        internal static string X1_P000008 {
+            get {
+                return ResourceManager.GetString("X1_P000008", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payer is not authorized by correspondent to execute this operation.
+        /// </summary>
+        internal static string X1_P000035 {
+            get {
+                return ResourceManager.GetString("X1_P000035", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to purse w3s.request/invoice/storepurse belongs to a payments aggregator, but lmi_shop_id is missing or specified incorrectly.
+        /// </summary>
+        internal static string X1_P000051 {
+            get {
+                return ResourceManager.GetString("X1_P000051", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to merchant&apos;s purse w3s.request/invoice/storepurse isn&apos;t registered in the Megastock catalog and at the same time its owner holds Formal passport without verified phone number and verified ID card, that is not enough to accept funds using the given automated method.
+        /// </summary>
+        internal static string X1_P000052 {
+            get {
+                return ResourceManager.GetString("X1_P000052", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to merchant&apos;s purse w3s.request/invoice/storepurse isn&apos;t registered inthe Megastock catalog and at the same time exceeded the daily limit for accepting funds set for this automated method.
+        /// </summary>
+        internal static string X1_P000054 {
+            get {
+                return ResourceManager.GetString("X1_P000054", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to merchant&apos;s purse w3s.request/invoice/storepurse isn&apos;t registered in the Megastock catalog and at the same time exceeded the weekly limit for accepting funds set for this automated method.
+        /// </summary>
+        internal static string X1_P000055 {
+            get {
+                return ResourceManager.GetString("X1_P000055", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to merchant&apos;s purse w3s.request/invoice/storepurse isn&apos;t registered in the Megastock catalog and at the same time exceeded the monthly limit for accepting funds set for this automated method.
+        /// </summary>
+        internal static string X1_P000056 {
+            get {
+                return ResourceManager.GetString("X1_P000056", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Borrower&apos;s trust limit has been exceeded..
+        /// </summary>
+        internal static string X1_P000061 {
+            get {
+                return ResourceManager.GetString("X1_P000061", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The operation in the amount of more than 15000 WMR to this purse is only available to the identified citizens of the Russian Federation..
+        /// </summary>
+        internal static string X1_P000067 {
+            get {
+                return ResourceManager.GetString("X1_P000067", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Requirement for the steady increase of the w3s.request/reqn property was not followed.
+        /// </summary>
+        internal static string X1_P000102 {
+            get {
+                return ResourceManager.GetString("X1_P000102", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No permission for using the interface; certificate does not meet the requirements.
+        /// </summary>
+        internal static string X1_P000110 {
+            get {
+                return ResourceManager.GetString("X1_P000110", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attempt to send invoice for a purse which does not belong to the WMID used to sign the request; security trust is also not set..
+        /// </summary>
+        internal static string X1_P000111 {
+            get {
+                return ResourceManager.GetString("X1_P000111", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insufficient funds on the purse for refunding..
+        /// </summary>
+        internal static string X14_P000017 {
+            get {
+                return ResourceManager.GetString("X14_P000017", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to the transaction &apos;inwmtranid&apos; is not found, may be this transaction was performed more than one month ago or it is a transation between credit purses.
+        /// </summary>
+        internal static string X14_P000050 {
+            get {
+                return ResourceManager.GetString("X14_P000050", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to the transaction &apos;inwmtranid&apos; is the protected one (complete or incomplete), it cannot be refunded by this interface.
+        /// </summary>
+        internal static string X14_P000051 {
+            get {
+                return ResourceManager.GetString("X14_P000051", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to the amount of inwmtranid transaction is less then the sum sent in the trans/amount request tag; a sum exceeding the initial one cannot be refunded..
+        /// </summary>
+        internal static string X14_P000052 {
+            get {
+                return ResourceManager.GetString("X14_P000052", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to more than 30 days elapsed since the &apos;inwmtranid&apos; transaction date.
+        /// </summary>
+        internal static string X14_P000053 {
+            get {
+                return ResourceManager.GetString("X14_P000053", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If a payment had been made from a purse of PAYMER service, with a WM-card, WM-note or a paymer check, and moreover, moneybackphone parameter had not been specified in the request (that makes refunding impossible), the client&apos;s mobile phone number should be got and sent to moneybackphone, for a refund to the WM.Check account with the corresponding number could be made..
+        /// </summary>
+        internal static string X14_P000054 {
+            get {
+                return ResourceManager.GetString("X14_P000054", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to transaction performed via e-invoicing (lmi_sdp_type parameter in Result_URL) and no moneybackphone specified in the request (moreover, lmi_sdp_type indicates that the customer&apos;s phone number has never been received) and no refund can be performed. It is necessary to get the user&apos;s mobile phone number and put it to moneybackphone for a refund could be made to the WebMoney Check with the corresponding number..
+        /// </summary>
+        internal static string X14_P000055 {
+            get {
+                return ResourceManager.GetString("X14_P000055", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to the amount of inwmtranid transaction is less then the sum sent in the trans/amount request tag and less then the sums refunded for inwmtraind transactions earlier..
+        /// </summary>
+        internal static string X14_P000056 {
+            get {
+                return ResourceManager.GetString("X14_P000056", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to a transaction with such w3s.request/trans/tranid value has already been performed and its sum totaled exactly the sum which should have been refunded..
+        /// </summary>
+        internal static string X14_P000103 {
+            get {
+                return ResourceManager.GetString("X14_P000103", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to a transaction with such w3s.request/trans/tranid value and the same sum of partial refund has already been performed; it can be repeated not earlier than in half an hour..
+        /// </summary>
+        internal static string X14_P000104 {
+            get {
+                return ResourceManager.GetString("X14_P000104", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Internal error of purse creation.
+        /// </summary>
+        internal static string X16_P000015 {
+            get {
+                return ResourceManager.GetString("X16_P000015", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There can be only one purse of the specified type.
+        /// </summary>
+        internal static string X16_P000031 {
+            get {
+                return ResourceManager.GetString("X16_P000031", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This WM-identifier was refused to create a purse of this type.
+        /// </summary>
+        internal static string X16_P000044 {
+            get {
+                return ResourceManager.GetString("X16_P000044", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to It is not allowed to create a purse of this type for residents of your country.
+        /// </summary>
+        internal static string X16_P000048 {
+            get {
+                return ResourceManager.GetString("X16_P000048", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Too many purses created for the WMID. Current limitation is 1000 purses for a WMID..
+        /// </summary>
+        internal static string X16_P001007 {
+            get {
+                return ResourceManager.GetString("X16_P001007", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to merchant.request/wmid is incorrect; merchant.request/lmi_payee_purse is incorrect; merchant.request/lmi_payement_no is incorrect; merchant.request/wmid is incorrect.
+        /// </summary>
+        internal static string X18_N000002 {
+            get {
+                return ResourceManager.GetString("X18_N000002", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to merchant.request/lmi_payee_purse is incorrect.
+        /// </summary>
+        internal static string X18_N000003 {
+            get {
+                return ResourceManager.GetString("X18_N000003", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to sign not right.
+        /// </summary>
+        internal static string X18_N000006 {
+            get {
+                return ResourceManager.GetString("X18_N000006", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to sign not right: PlanStr; MD5 or SHA256 not right:PlanStr(this planstr without secret_key).
+        /// </summary>
+        internal static string X18_N000007 {
+            get {
+                return ResourceManager.GetString("X18_N000007", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Operation not found, internal error:error code.
+        /// </summary>
+        internal static string X18_N000008 {
+            get {
+                return ResourceManager.GetString("X18_N000008", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to General parsing error. Incorrect request format..
+        /// </summary>
+        internal static string X18_N000100 {
+            get {
+                return ResourceManager.GetString("X18_N000100", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Merchant purse not found:1.
+        /// </summary>
+        internal static string X18_P000001 {
+            get {
+                return ResourceManager.GetString("X18_P000001", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please use sign or sha256 method for authentication, and specify secret key in merchant service settings:2.
+        /// </summary>
+        internal static string X18_P000002 {
+            get {
+                return ResourceManager.GetString("X18_P000002", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please use sign or sha256 method for authentication:3.
+        /// </summary>
+        internal static string X18_P000003 {
+            get {
+                return ResourceManager.GetString("X18_P000003", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Merchant wmid not found or security trust for purse is not exists:4.
+        /// </summary>
+        internal static string X18_P000004 {
+            get {
+                return ResourceManager.GetString("X18_P000004", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Merchant wmid not found or security trust for purse is not exists:6.
+        /// </summary>
+        internal static string X18_P000006 {
+            get {
+                return ResourceManager.GetString("X18_P000006", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment with lmi_payment_no number not found for this merchant purse:7.
+        /// </summary>
+        internal static string X18_P000007 {
+            get {
+                return ResourceManager.GetString("X18_P000007", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment with lmi_payment_no (by merchant orderid number!) not found for this merchant purse.
+        /// </summary>
+        internal static string X18_P000008 {
+            get {
+                return ResourceManager.GetString("X18_P000008", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment with lmi_payment_no number (by merchant orderid number!) found for this merchant purse, but not paid yet!.
+        /// </summary>
+        internal static string X18_P000009 {
+            get {
+                return ResourceManager.GetString("X18_P000009", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment with lmi_payment_no number (by unique webmoney invoice number!) not found for this merchant purse.
+        /// </summary>
+        internal static string X18_P000010 {
+            get {
+                return ResourceManager.GetString("X18_P000010", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment with lmi_payment_no number (by unique webmoney invoice number!) found for this merchant purse, but not paid yet!.
+        /// </summary>
+        internal static string X18_P000011 {
+            get {
+                return ResourceManager.GetString("X18_P000011", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment with lmi_payment_no number (by unique webmoney transact number!) not found for this merchant purse.
+        /// </summary>
+        internal static string X18_P000012 {
+            get {
+                return ResourceManager.GetString("X18_P000012", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment with lmi_payment_no number (by merchant orderid number!) found for this merchant purse, but it already reject!.
+        /// </summary>
+        internal static string X18_P000013 {
+            get {
+                return ResourceManager.GetString("X18_P000013", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment with lmi_payment_no number (by unique webmoney invoice number!) found for this merchant purse, but it already reject!.
+        /// </summary>
+        internal static string X18_P000014 {
+            get {
+                return ResourceManager.GetString("X18_P000014", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WM Keeper is offline. Restart your WM Keeper..
+        /// </summary>
+        internal static string X18E_N000001 {
+            get {
+                return ResourceManager.GetString("X18E_N000001", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the option “activation of WebMoney Keeper” in settings / security of your WM Keeper Classic.
+        /// </summary>
+        internal static string X18E_N000002 {
+            get {
+                return ResourceManager.GetString("X18E_N000002", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Acceptance of payments is not possible. A merchant restricted this payment option on his side.
+        /// </summary>
+        internal static string X18E_N000003 {
+            get {
+                return ResourceManager.GetString("X18E_N000003", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to IP-address of your WM Keeper and of your check request are different. Select IP blocking at the following link: security.webmoney.ru..
+        /// </summary>
+        internal static string X18E_N000004 {
+            get {
+                return ResourceManager.GetString("X18E_N000004", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A merchant didn’t give permission to complete the operation.
+        /// </summary>
+        internal static string X18E_N000100 {
+            get {
+                return ResourceManager.GetString("X18E_N000100", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A correspondent is not found.
+        /// </summary>
+        internal static string X18E_P000006 {
+            get {
+                return ResourceManager.GetString("X18E_P000006", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A sender’s purse is not found.
+        /// </summary>
+        internal static string X18E_P000011 {
+            get {
+                return ResourceManager.GetString("X18E_P000011", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Too small amount to be operated.
+        /// </summary>
+        internal static string X18E_P000013 {
+            get {
+                return ResourceManager.GetString("X18E_P000013", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Funds are not enough in your purse or limits are depleted.
+        /// </summary>
+        internal static string X18E_P000017 {
+            get {
+                return ResourceManager.GetString("X18E_P000017", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Limits are depleted for your Mini or Social Keeper..
+        /// </summary>
+        internal static string X18E_P000018 {
+            get {
+                return ResourceManager.GetString("X18E_P000018", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There have to be two purses in the operation.
+        /// </summary>
+        internal static string X18E_P000026 {
+            get {
+                return ResourceManager.GetString("X18E_P000026", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Types of purses are different.
+        /// </summary>
+        internal static string X18E_P000029 {
+            get {
+                return ResourceManager.GetString("X18E_P000029", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A purse doesn’t support the operation.
+        /// </summary>
+        internal static string X18E_P000030 {
+            get {
+                return ResourceManager.GetString("X18E_P000030", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A completion of operation is not possible until a passport is received.
+        /// </summary>
+        internal static string X18E_P000032 {
+            get {
+                return ResourceManager.GetString("X18E_P000032", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payer&apos;s credit status doesn’t comply with a merchant’s demands.
+        /// </summary>
+        internal static string X18E_P000033 {
+            get {
+                return ResourceManager.GetString("X18E_P000033", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You’ve got an IP blocking. You are trying to pay with IP which is not in your white list of IP-addresses ..
+        /// </summary>
+        internal static string X18E_P000301 {
+            get {
+                return ResourceManager.GetString("X18E_P000301", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment with the same number has been already made. A merchant doesn’t allow making repeated payments with one and the same number. Please try to make payment again.
+        /// </summary>
+        internal static string X18E_P000400 {
+            get {
+                return ResourceManager.GetString("X18E_P000400", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have recently made a try of payment with a check in this amount to a merchant. Please wait till the status of your previous payment is clarified.
+        /// </summary>
+        internal static string X18E_P000401 {
+            get {
+                return ResourceManager.GetString("X18E_P000401", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have successfully made a payment with this check to a merchant. Please wait for 15 minutes for another payment to be made.
+        /// </summary>
+        internal static string X18E_P000402 {
+            get {
+                return ResourceManager.GetString("X18E_P000402", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have successfully made a payment with this check to a merchant. Please wait for 15 minutes for another payment to be made.
+        /// </summary>
+        internal static string X18E_P000403 {
+            get {
+                return ResourceManager.GetString("X18E_P000403", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have recently made a try of payment with this WM-note in this amount to a merchant. Please wait till the status of your previous payment is clarified.
+        /// </summary>
+        internal static string X18E_P000411 {
+            get {
+                return ResourceManager.GetString("X18E_P000411", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have successfully made a payment with this WM-note to a merchant. Please wait for 15 minutes for another payment to be made.
+        /// </summary>
+        internal static string X18E_P000412 {
+            get {
+                return ResourceManager.GetString("X18E_P000412", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have successfully made a payment with this WM-note to a merchant. Please wait for 15 minutes for another payment to be made.
+        /// </summary>
+        internal static string X18E_P000413 {
+            get {
+                return ResourceManager.GetString("X18E_P000413", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment with this check (WM-card) is not found. You should make payment again and please do not not make long pauses while entering check’s details.
+        /// </summary>
+        internal static string X18E_P001001 {
+            get {
+                return ResourceManager.GetString("X18E_P001001", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid paymer check’s code (authorization code of WM-card).
+        /// </summary>
+        internal static string X18E_P001003 {
+            get {
+                return ResourceManager.GetString("X18E_P001003", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment with this check (WM-card) is not found. You should start making payment again and please do not make long pauses while entering check’s details.
+        /// </summary>
+        internal static string X18E_P001004 {
+            get {
+                return ResourceManager.GetString("X18E_P001004", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One-time verification code of WebMoney check is incorrect (it was probably entered with a mistake or a code of previous payment was indicated). You should make payment again.
+        /// </summary>
+        internal static string X18E_P001005 {
+            get {
+                return ResourceManager.GetString("X18E_P001005", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One-time limit is exceeded in the operation using WebMoney check. Please find more information here: http://wiki.webmoney.ru/projects/webmoney/wiki/tarify_i_ogranicheniya_servisa_webmoney_check.
+        /// </summary>
+        internal static string X18E_P001006 {
+            get {
+                return ResourceManager.GetString("X18E_P001006", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment with this WM-note is not found. You should make payment again and please do not make long pauses while entering check’s details.
+        /// </summary>
+        internal static string X18E_P001011 {
+            get {
+                return ResourceManager.GetString("X18E_P001011", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment with this WM-note is cancelled.
+        /// </summary>
+        internal static string X18E_P001012 {
+            get {
+                return ResourceManager.GetString("X18E_P001012", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid code of WM-note.
+        /// </summary>
+        internal static string X18E_P001013 {
+            get {
+                return ResourceManager.GetString("X18E_P001013", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Code of payment, which was sent to your phone, was entered incorrectly.
+        /// </summary>
+        internal static string X18E_P002005 {
+            get {
+                return ResourceManager.GetString("X18E_P002005", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment with the same number has been already made. A merchant doesn’t allow making repeated payments with one and the same number. Please try to make payment again.
+        /// </summary>
+        internal static string X18E_P002008 {
+            get {
+                return ResourceManager.GetString("X18E_P002008", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Making payment was failed. Probably you have not enough funds on your telephone’s balance (or on a purse managed from the telephone) to make a transaction.
+        /// </summary>
+        internal static string X18E_P002012 {
+            get {
+                return ResourceManager.GetString("X18E_P002012", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Making payment was failed. Probably you have not enough funds on your telephone’s balance (or on a purse managed from the telephone) to make a transaction.
+        /// </summary>
+        internal static string X18E_P002015 {
+            get {
+                return ResourceManager.GetString("X18E_P002015", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Making payment was failed. Probably you have not enough funds on your telephone’s balance (or on a purse managed from the telephone) to make a transaction or you exceeded the limit for one operation in the equivalent of 1000 WMR.
+        /// </summary>
+        internal static string X18E_P002117 {
+            get {
+                return ResourceManager.GetString("X18E_P002117", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check with indicated data is not found. Probably it has already been redeemed.
+        /// </summary>
+        internal static string X18E_P003205 {
+            get {
+                return ResourceManager.GetString("X18E_P003205", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment via a bank card has not been made by processing yet. Please wait for a while.
+        /// </summary>
+        internal static string X18E_P006401 {
+            get {
+                return ResourceManager.GetString("X18E_P006401", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment with this data via a bank card has been successfully made or cancelled. To make it again with the same data is not possible.
+        /// </summary>
+        internal static string X18E_P006402 {
+            get {
+                return ResourceManager.GetString("X18E_P006402", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to It’s not possible to make an exchange together with a payment at this moment.
+        /// </summary>
+        internal static string X18E_P007004 {
+            get {
+                return ResourceManager.GetString("X18E_P007004", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There is already a necessary amount of funds on purses. Please transfer all necessary type of funds to one purse and then pay from it. The exchange is not possible..
+        /// </summary>
+        internal static string X18E_P007005 {
+            get {
+                return ResourceManager.GetString("X18E_P007005", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error of the creation of a necessary type of purse for a payment by client.
+        /// </summary>
+        internal static string X18E_P007007 {
+            get {
+                return ResourceManager.GetString("X18E_P007007", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A client doesn’t have enough funds on similar purses in order to exchange them and make a payment.
+        /// </summary>
+        internal static string X18E_P007008 {
+            get {
+                return ResourceManager.GetString("X18E_P007008", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A merchant has restrictions to receive payments from some countries. As your country of registration is not specified the payment cannot be made..
+        /// </summary>
+        internal static string X18E_P008001 {
+            get {
+                return ResourceManager.GetString("X18E_P008001", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment cannot be made. A merchant doesn’t accept funds from the country you have indicated during the registration..
+        /// </summary>
+        internal static string X18E_P008002 {
+            get {
+                return ResourceManager.GetString("X18E_P008002", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid SMS verification code.
+        /// </summary>
+        internal static string X18E_P008003 {
+            get {
+                return ResourceManager.GetString("X18E_P008003", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SMS verification code is not entered.
+        /// </summary>
+        internal static string X18E_P008004 {
+            get {
+                return ResourceManager.GetString("X18E_P008004", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have followed this link repeatedly. Your payment has already been completed, funds were transferred to a merchant and he was informed about it..
+        /// </summary>
+        internal static string X18E_P009012 {
+            get {
+                return ResourceManager.GetString("X18E_P009012", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The latency from a merchant’s server was exceeded. Please try again later and inform the merchant if the error occurs again..
+        /// </summary>
+        internal static string X18E_P100001 {
+            get {
+                return ResourceManager.GetString("X18E_P100001", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A customer refused to make payment.
+        /// </summary>
+        internal static string X18E_P100002 {
+            get {
+                return ResourceManager.GetString("X18E_P100002", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A merchant closed a checkout page.
+        /// </summary>
+        internal static string X18E_P100004 {
+            get {
+                return ResourceManager.GetString("X18E_P100004", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to request successful, the information given in the request matches the information for the user&apos;s WM passport, other values mean that an error occurred for the request.
+        /// </summary>
+        internal static string X19_000000 {
+            get {
+                return ResourceManager.GetString("X19_000000", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to signerwmid has no access to the interface.
+        /// </summary>
+        internal static string X19_P000002 {
+            get {
+                return ResourceManager.GetString("X19_P000002", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to request for userinfo/wmid member information is impossible.
+        /// </summary>
+        internal static string X19_P000403 {
+            get {
+                return ResourceManager.GetString("X19_P000403", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to specified parameters don&apos;t correspond with userinfo/wmid member.
+        /// </summary>
+        internal static string X19_P000404 {
+            get {
+                return ResourceManager.GetString("X19_P000404", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to userinfo/wmid member should obtain Formal (or higher) passport.
+        /// </summary>
+        internal static string X19_P000405 {
+            get {
+                return ResourceManager.GetString("X19_P000405", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to request for Capitaller budget automation tools information is impossible.
+        /// </summary>
+        internal static string X19_P000406 {
+            get {
+                return ResourceManager.GetString("X19_P000406", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to userinfo/wmid member of the System should upload a colour copy of all significant pages of his identity card to https://passport.wmtransfer.com/asp/Upload.asp and wait till it is verified.
+        /// </summary>
+        internal static string X19_P000407 {
+            get {
+                return ResourceManager.GetString("X19_P000407", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to funds withdrawal to the specified payment card is not allowed for userinfo/wmid member, see http://wiki.wmtransfer.com/projects/webmoney/wiki/Bank_card_verification.
+        /// </summary>
+        internal static string X19_P000408 {
+            get {
+                return ResourceManager.GetString("X19_P000408", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7 days since userinfo/wmid registered to the System have not yet passed.
+        /// </summary>
+        internal static string X19_P000409 {
+            get {
+                return ResourceManager.GetString("X19_P000409", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to с момента изменения номера паспорта участником userinfo/wmid еще не прошло 7 суток.
+        /// </summary>
+        internal static string X19_P000410 {
+            get {
+                return ResourceManager.GetString("X19_P000410", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to userinfo/wmid membe... not yet been paid. You pay for it through WebMoney.Check, while you did not specify the code sent to you by SMS..
+        /// </summary>
+        internal static string X19_P000415 {
+            get {
+                return ResourceManager.GetString("X19_P000415", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to пополнение баланса указанного телефона невозможно, превышен лимит для данного телефона.
+        /// </summary>
+        internal static string X19_P000418 {
+            get {
+                return ResourceManager.GetString("X19_P000418", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to пополнение баланса указанного телефона невозможно, превышен лимит для отправителя.
+        /// </summary>
+        internal static string X19_P000419 {
+            get {
+                return ResourceManager.GetString("X19_P000419", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to операция доступна только для граждан Российской Федерации.
+        /// </summary>
+        internal static string X19_P000420 {
+            get {
+                return ResourceManager.GetString("X19_P000420", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to вывод на банковские карты с WMZ кошельков резидентам Европейской Экономической Зоны не доступен.
+        /// </summary>
+        internal static string X19_P000421 {
+            get {
+                return ResourceManager.GetString("X19_P000421", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to вывод на банковские карты с WME кошельков доступен только резидентам Европейской Экономической Зоны.
+        /// </summary>
+        internal static string X19_P000422 {
+            get {
+                return ResourceManager.GetString("X19_P000422", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to неверно указан номер телефона (номер некорректной длины).
+        /// </summary>
+        internal static string X19_P000427 {
+            get {
+                return ResourceManager.GetString("X19_P000427", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to телефон должен быть указан в международном формате (с кодом страны).
+        /// </summary>
+        internal static string X19_P000428 {
+            get {
+                return ResourceManager.GetString("X19_P000428", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid value for w3s.request/reqn.
+        /// </summary>
+        internal static string X2_N000001 {
+            get {
+                return ResourceManager.GetString("X2_N000001", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid value for w3s.request/sign.
+        /// </summary>
+        internal static string X2_N000002 {
+            get {
+                return ResourceManager.GetString("X2_N000002", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid value for w3s.request/trans/tranid.
+        /// </summary>
+        internal static string X2_N000003 {
+            get {
+                return ResourceManager.GetString("X2_N000003", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid value for w3s.request/trans/pursesrc.
+        /// </summary>
+        internal static string X2_N000004 {
+            get {
+                return ResourceManager.GetString("X2_N000004", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid value for w3s.request/trans/pursedest.
+        /// </summary>
+        internal static string X2_N000005 {
+            get {
+                return ResourceManager.GetString("X2_N000005", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid value for w3s.request/trans/amount.
+        /// </summary>
+        internal static string X2_N000006 {
+            get {
+                return ResourceManager.GetString("X2_N000006", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid value for w3s.request/trans/desc.
+        /// </summary>
+        internal static string X2_N000007 {
+            get {
+                return ResourceManager.GetString("X2_N000007", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field for w3s.request/trans/pcode is too long.
+        /// </summary>
+        internal static string X2_N000008 {
+            get {
+                return ResourceManager.GetString("X2_N000008", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field w3s.request/trans/pcode should not be empty if w3s.request/trans/period &gt; 0.
+        /// </summary>
+        internal static string X2_N000009 {
+            get {
+                return ResourceManager.GetString("X2_N000009", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field w3s.request/trans/pcode should be empty if w3s.request/trans/period = 0.
+        /// </summary>
+        internal static string X2_N000010 {
+            get {
+                return ResourceManager.GetString("X2_N000010", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid value for w3s.request/trans/wminvid.
+        /// </summary>
+        internal static string X2_N000011 {
+            get {
+                return ResourceManager.GetString("X2_N000011", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Identifier sent for w3s.request/wmid is not registered.
+        /// </summary>
+        internal static string X2_N000012 {
+            get {
+                return ResourceManager.GetString("X2_N000012", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Signature verification failed.
+        /// </summary>
+        internal static string X2_N000014 {
+            get {
+                return ResourceManager.GetString("X2_N000014", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid value for w3s.request/wmid.
+        /// </summary>
+        internal static string X2_N000015 {
+            get {
+                return ResourceManager.GetString("X2_N000015", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to the denomination flag hasn&apos;t been transmitted.
+        /// </summary>
+        internal static string X2_N000017 {
+            get {
+                return ResourceManager.GetString("X2_N000017", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to General parsing error. Incorrect request format..
+        /// </summary>
+        internal static string X2_N000100 {
+            get {
+                return ResourceManager.GetString("X2_N000100", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Requests are sent from a different IP address than the one specified during the registration of the interface with technical support.
+        /// </summary>
+        internal static string X2_N000110 {
+            get {
+                return ResourceManager.GetString("X2_N000110", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Internal error when creating transaction.
+        /// </summary>
+        internal static string X2_P000004 {
+            get {
+                return ResourceManager.GetString("X2_P000004", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sender’s WMID not found.
+        /// </summary>
+        internal static string X2_P000005 {
+            get {
+                return ResourceManager.GetString("X2_P000005", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Correspondent not found.
+        /// </summary>
+        internal static string X2_P000006 {
+            get {
+                return ResourceManager.GetString("X2_P000006", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recipient’s WM purse not found.
+        /// </summary>
+        internal static string X2_P000007 {
+            get {
+                return ResourceManager.GetString("X2_P000007", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sender’s WM purse not found.
+        /// </summary>
+        internal static string X2_P000011 {
+            get {
+                return ResourceManager.GetString("X2_P000011", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transaction amount should be &gt;0.
+        /// </summary>
+        internal static string X2_P000013 {
+            get {
+                return ResourceManager.GetString("X2_P000013", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Internal error when creating transaction.
+        /// </summary>
+        internal static string X2_P000015 {
+            get {
+                return ResourceManager.GetString("X2_P000015", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insufficient amount of funds in the purse.
+        /// </summary>
+        internal static string X2_P000017 {
+            get {
+                return ResourceManager.GetString("X2_P000017", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to указанная транзакция (wmtransid) не найдена, возникает, например, когда указанная к возврату и завершению операция с протекцией уже завершена или возвращена.
+        /// </summary>
+        internal static string X2_P000018 {
+            get {
+                return ResourceManager.GetString("X2_P000018", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Internal error when creating transaction.
+        /// </summary>
+        internal static string X2_P000019 {
+            get {
+                return ResourceManager.GetString("X2_P000019", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to указанный для завершения транзакции с протекцией код протекции неверен.
+        /// </summary>
+        internal static string X2_P000020 {
+            get {
+                return ResourceManager.GetString("X2_P000020", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The invoice for this transaction was not found.
+        /// </summary>
+        internal static string X2_P000021 {
+            get {
+                return ResourceManager.GetString("X2_P000021", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Code-protected transfer for this invoice is not available.
+        /// </summary>
+        internal static string X2_P000022 {
+            get {
+                return ResourceManager.GetString("X2_P000022", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Internal error when creating transaction.
+        /// </summary>
+        internal static string X2_P000023 {
+            get {
+                return ResourceManager.GetString("X2_P000023", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The invoice validity period has expired.
+        /// </summary>
+        internal static string X2_P000025 {
+            get {
+                return ResourceManager.GetString("X2_P000025", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Different purses should be used for this operation.
+        /// </summary>
+        internal static string X2_P000026 {
+            get {
+                return ResourceManager.GetString("X2_P000026", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The types of purses are different.
+        /// </summary>
+        internal static string X2_P000029 {
+            get {
+                return ResourceManager.GetString("X2_P000029", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Purse doesn’t support direct transfers.
+        /// </summary>
+        internal static string X2_P000030 {
+            get {
+                return ResourceManager.GetString("X2_P000030", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to плательщику необходимо заполнить персональную информацию на сайте Центра Аттестации.
+        /// </summary>
+        internal static string X2_P000032 {
+            get {
+                return ResourceManager.GetString("X2_P000032", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payer must inform their personal information on the web-site WebMoney Passport.
+        /// </summary>
+        internal static string X2_P000034 {
+            get {
+                return ResourceManager.GetString("X2_P000034", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payer is not authorized by the correspondent to execute this operation.
+        /// </summary>
+        internal static string X2_P000035 {
+            get {
+                return ResourceManager.GetString("X2_P000035", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Funds limit for the recipient’s purses has been exceeded.
+        /// </summary>
+        internal static string X2_P000058 {
+            get {
+                return ResourceManager.GetString("X2_P000058", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Servicing of WME withdrawals temporarily suspended. Please read the WME guarantor identification rules.
+        /// </summary>
+        internal static string X2_P000072 {
+            get {
+                return ResourceManager.GetString("X2_P000072", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Service to the WME funds recipient has been temporarily suspended. Please read the WME guarantor identification rules.
+        /// </summary>
+        internal static string X2_P000073 {
+            get {
+                return ResourceManager.GetString("X2_P000073", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Service to the WME funds recipient has been temporarily suspended. Please read the WME guarantor identification rules.
+        /// </summary>
+        internal static string X2_P000074 {
+            get {
+                return ResourceManager.GetString("X2_P000074", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The requirement for constant increase in the w3s.request/reqn parameter has not been met.
+        /// </summary>
+        internal static string X2_P000102 {
+            get {
+                return ResourceManager.GetString("X2_P000102", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A transaction with the submitted value for w3s.request/trans/tranid has already been executed.
+        /// </summary>
+        internal static string X2_P000103 {
+            get {
+                return ResourceManager.GetString("X2_P000103", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No access to interface.
+        /// </summary>
+        internal static string X2_P000110 {
+            get {
+                return ResourceManager.GetString("X2_P000110", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attempt to transfer funds from a WM purse which does not belong to the WMID used to sign the request; Security trust has not been established..
+        /// </summary>
+        internal static string X2_P000111 {
+            get {
+                return ResourceManager.GetString("X2_P000111", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Указанный в lmi_clientnumber_code код неверен.
+        /// </summary>
+        internal static string X20_P000500 {
+            get {
+                return ResourceManager.GetString("X20_P000500", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пользователь начал процесс оплаты через WM Check, но не указал код из СМС. Провести платеж при помощи WM.Check без введения кода из СМС невозможно..
+        /// </summary>
+        internal static string X20_P000553 {
+            get {
+                return ResourceManager.GetString("X20_P000553", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The code can not be more than 8 digits.
+        /// </summary>
+        internal static string X20P_N000022 {
+            get {
+                return ResourceManager.GetString("X20P_N000022", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Возникает только при вызове первого запроса интерфейса с указанным emulated_flag=1, означает что запрос в режиме эмуляции успешен..
+        /// </summary>
+        internal static string X20P_P000540 {
+            get {
+                return ResourceManager.GetString("X20P_P000540", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Something goes wrong, you`re trying to confirm the payment, which is not registered in the system as a payment WebMoney, please refer to this problem to your merchant.
+        /// </summary>
+        internal static string X20P_P000555 {
+            get {
+                return ResourceManager.GetString("X20P_P000555", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Or the payment has not yet been paid for (if you pay for USSD or through any WebMoney Keeper), or you entered an incorrect code sent to you via SMS..
+        /// </summary>
+        internal static string X20P_P000556 {
+            get {
+                return ResourceManager.GetString("X20P_P000556", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have refused to pay this payment by WebMoney, to pay all the same we should start again..
+        /// </summary>
+        internal static string X20P_P000557 {
+            get {
+                return ResourceManager.GetString("X20P_P000557", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SMS was not sent on the payment, please try again from merchant`s site..
+        /// </summary>
+        internal static string X20P_P000558 {
+            get {
+                return ResourceManager.GetString("X20P_P000558", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message from WebMoney Transfer : USSD payment is not yet confirmed, you have probably already cancel the payment, otherwise wait for confirmation..
+        /// </summary>
+        internal static string X20P_P000561 {
+            get {
+                return ResourceManager.GetString("X20P_P000561", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The phone number you`ve provided has no registered WebMoney.Check, your WMID can not be found (WMID with this phone number may exist, but it may have no funds or a required purse type)..
+        /// </summary>
+        internal static string X20P_P000571 {
+            get {
+                return ResourceManager.GetString("X20P_P000571", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The phone number you`ve provided has registered WebMoney.Check, but it doesn`t coincide with the Merchant`s purse type, e.g. you are trying to pay with WMR check to the merchant with WMU purse..
+        /// </summary>
+        internal static string X20P_P000572 {
+            get {
+                return ResourceManager.GetString("X20P_P000572", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The phone number you`ve provided has no registered WebMoney.Check, or it has insufficient funds..
+        /// </summary>
+        internal static string X20P_P000573 {
+            get {
+                return ResourceManager.GetString("X20P_P000573", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to merchant.request/wmid is incorrect; merchant.request/wmid is incorrect.
+        /// </summary>
+        internal static string X21_N000001 {
+            get {
+                return ResourceManager.GetString("X21_N000001", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to merchant.request/lmi_payee_purse is incorrect; merchant.request/lmi_payee_purse is incorrect; merchant.request/lmi_purseid is incorrect, less than 1 symbol or greater than 25 symbols.
+        /// </summary>
+        internal static string X21_N000002 {
+            get {
+                return ResourceManager.GetString("X21_N000002", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to value of merchant.request/lmi_day_limit is incorrect; value of merchant.request/lmi_week_limit is incorrect; value of merchant.request/lmi_month_limit is incorrect.
+        /// </summary>
+        internal static string X21_N000004 {
+            get {
+                return ResourceManager.GetString("X21_N000004", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to merchant.request/lmi_clientnumber is incorrect, less than 5 symbols or greater than 50 symbols.
+        /// </summary>
+        internal static string X21_N000006 {
+            get {
+                return ResourceManager.GetString("X21_N000006", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to merchant.request/lmi_clientnumber_type is incorrect, must be specified 1 digit; merchant.request/lmi_clientnumber_type is incorrect, must be specified 0, 1,2, 4.
+        /// </summary>
+        internal static string X21_N000007 {
+            get {
+                return ResourceManager.GetString("X21_N000007", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to sign not right; sign not right:planstr.
+        /// </summary>
+        internal static string X21_N000009 {
+            get {
+                return ResourceManager.GetString("X21_N000009", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to merchant.request/request_clientnumber_code is incorrect, less than 5 symbols or greater than 25 symbols.
+        /// </summary>
+        internal static string X21_N000022 {
+            get {
+                return ResourceManager.GetString("X21_N000022", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to general query parsing error.
+        /// </summary>
+        internal static string X21_N000100 {
+            get {
+                return ResourceManager.GetString("X21_N000100", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The specified WMID in wmid tag is not found.
+        /// </summary>
+        internal static string X21_P000601 {
+            get {
+                return ResourceManager.GetString("X21_P000601", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Specified WMID in wmid tag no access to XML interfaces (X2 etc).
+        /// </summary>
+        internal static string X21_P000602 {
+            get {
+                return ResourceManager.GetString("X21_P000602", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Only WMZ, WME, WMR, WMU, WMG, WMB, WMV purses are allowed.
+        /// </summary>
+        internal static string X21_P000603 {
+            get {
+                return ResourceManager.GetString("X21_P000603", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Merchant purse is not found.
+        /// </summary>
+        internal static string X21_P000604 {
+            get {
+                return ResourceManager.GetString("X21_P000604", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Specified limits (lmi_day_limit, lmi_week_limit, lmi_month_limit) is wrong.
+        /// </summary>
+        internal static string X21_P000605 {
+            get {
+                return ResourceManager.GetString("X21_P000605", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The specified WMID is not the owner for lmi_payee_purse and doesn`t have any trust rights.
+        /// </summary>
+        internal static string X21_P000606 {
+            get {
+                return ResourceManager.GetString("X21_P000606", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Specified in lmi_clientnumber_type is wrong, trust via phone, wmid, purse or e-mail are available.
+        /// </summary>
+        internal static string X21_P000607 {
+            get {
+                return ResourceManager.GetString("X21_P000607", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The specified WMID in wmid tag already have the trust. The trust is established to the user`s purse, found on the specified phone (wmid, email or purse).
+        /// </summary>
+        internal static string X21_P000608 {
+            get {
+                return ResourceManager.GetString("X21_P000608", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to See error number 608. Also merchant purse already specified in the existed trust and it differs from the purse in lmi_payee_purse..
+        /// </summary>
+        internal static string X21_P000609 {
+            get {
+                return ResourceManager.GetString("X21_P000609", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User purse found by specifed in lmi_clientnumber tag value already have trust to another control WMID for this merchant purse (lmi_payee_purse).
+        /// </summary>
+        internal static string X21_P000610 {
+            get {
+                return ResourceManager.GetString("X21_P000610", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The specified identifier does not have the minimum passport level - personal or above.
+        /// </summary>
+        internal static string X21_P000611 {
+            get {
+                return ResourceManager.GetString("X21_P000611", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User WMID can not be found via specified in lmi_clientnumber phone number.
+        /// </summary>
+        internal static string X21_P000612 {
+            get {
+                return ResourceManager.GetString("X21_P000612", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Specified in lmi_clientnumber phone number is not verified.
+        /// </summary>
+        internal static string X21_P000613 {
+            get {
+                return ResourceManager.GetString("X21_P000613", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User purse can not be found via specified in lmi_clientnumber phone number.
+        /// </summary>
+        internal static string X21_P000614 {
+            get {
+                return ResourceManager.GetString("X21_P000614", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Purse found via specified in lmi_clientnumber phone number is enabled for merchant interface and this trust is not allowed.
+        /// </summary>
+        internal static string X21_P000615 {
+            get {
+                return ResourceManager.GetString("X21_P000615", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Specified in lmi_clientnumber WMID is not found.
+        /// </summary>
+        internal static string X21_P000616 {
+            get {
+                return ResourceManager.GetString("X21_P000616", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Specified in lmi_clientnumber WMID has unverified phone number.
+        /// </summary>
+        internal static string X21_P000617 {
+            get {
+                return ResourceManager.GetString("X21_P000617", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User purse can not be found via specified in lmi_clientnumber WMID.
+        /// </summary>
+        internal static string X21_P000618 {
+            get {
+                return ResourceManager.GetString("X21_P000618", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Purse found via specified in lmi_clientnumber WMID is used with merchant interface and this trust is not allowed.
+        /// </summary>
+        internal static string X21_P000619 {
+            get {
+                return ResourceManager.GetString("X21_P000619", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WMID is not found via specified in lmi_clientnumber email:.
+        /// </summary>
+        internal static string X21_P000620 {
+            get {
+                return ResourceManager.GetString("X21_P000620", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WMID found via specified in lmi_clientnumber email has unverified phone number.
+        /// </summary>
+        internal static string X21_P000621 {
+            get {
+                return ResourceManager.GetString("X21_P000621", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User purse can not be found via specified in lmi_clientnumber email.
+        /// </summary>
+        internal static string X21_P000622 {
+            get {
+                return ResourceManager.GetString("X21_P000622", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Purse found via specified in lmi_clientnumber email is used with merchant interface and this trust is not allowed.
+        /// </summary>
+        internal static string X21_P000623 {
+            get {
+                return ResourceManager.GetString("X21_P000623", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Specified in lmi_clientnumber purse is not found.
+        /// </summary>
+        internal static string X21_P000624 {
+            get {
+                return ResourceManager.GetString("X21_P000624", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Specified in lmi_clientnumber purse has unverified phone number.
+        /// </summary>
+        internal static string X21_P000625 {
+            get {
+                return ResourceManager.GetString("X21_P000625", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The specified in lmi_clientnumber purse is enabled for merchant interface and this trust is not allowed.
+        /// </summary>
+        internal static string X21_P000626 {
+            get {
+                return ResourceManager.GetString("X21_P000626", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generated SMS text exceed 160 symbols, SMS not sent..
+        /// </summary>
+        internal static string X21_P000628 {
+            get {
+                return ResourceManager.GetString("X21_P000628", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SMS (USSD) not sent. SMS center not ready, try again later and if persist contact to support.
+        /// </summary>
+        internal static string X21_P000629 {
+            get {
+                return ResourceManager.GetString("X21_P000629", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Too many SMS without trust for the specified WMID/email/phone/purse try again after 1 minute.
+        /// </summary>
+        internal static string X21_P000635 {
+            get {
+                return ResourceManager.GetString("X21_P000635", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Too many SMS without trust for the specified WMID/email/phone/purse try again after 3 hour.
+        /// </summary>
+        internal static string X21_P000636 {
+            get {
+                return ResourceManager.GetString("X21_P000636", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trust is initiated earlier, was not found.
+        /// </summary>
+        internal static string X21_P000640 {
+            get {
+                return ResourceManager.GetString("X21_P000640", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to It took more than 24 hours after trust is initiated, try XMLTrustRequest again.
+        /// </summary>
+        internal static string X21_P000641 {
+            get {
+                return ResourceManager.GetString("X21_P000641", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Less than 2 hour ago, you`ve tried to use wrong SMS code more than 5 times to make a trust, please try again later.
+        /// </summary>
+        internal static string X21_P000642 {
+            get {
+                return ResourceManager.GetString("X21_P000642", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Specified in lmi_clientnumber_code code is wrong or payment not yet proceed.
+        /// </summary>
+        internal static string X21_P000643 {
+            get {
+                return ResourceManager.GetString("X21_P000643", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User cancel trust initiated via USSD.
+        /// </summary>
+        internal static string X21_P000650 {
+            get {
+                return ResourceManager.GetString("X21_P000650", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The trust initiated via USSD not confirm yet by user.
+        /// </summary>
+        internal static string X21_P000651 {
+            get {
+                return ResourceManager.GetString("X21_P000651", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Databaser error confirm of the trust.
+        /// </summary>
+        internal static string X21_P000652 {
+            get {
+                return ResourceManager.GetString("X21_P000652", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please contact the merchant. Trust for the merchant&apos;s ID cannot be set since the WMID could not be found (incorrectly specified) or its status does not allow setting trust..
+        /// </summary>
+        internal static string X21P_P000601 {
+            get {
+                return ResourceManager.GetString("X21P_P000601", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please contact the merchant. Trust for the merchant&apos;s ID cannot be set since the WMID could not be found (incorrectly specified) or its status does not allow setting trust (no access to XML interfaces)..
+        /// </summary>
+        internal static string X21P_P000602 {
+            get {
+                return ResourceManager.GetString("X21P_P000602", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please contact the merchant. Only purses of types WMZ, WME, WMR, WMU, WMG, WMB and WMV can be used to set trust. The merchant wants to receive trust for a purse of another type..
+        /// </summary>
+        internal static string X21P_P000603 {
+            get {
+                return ResourceManager.GetString("X21P_P000603", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please contact the merchant. The merchant purse to which funds will be transferred was not found (incorrectly entered) or has an incompatible status..
+        /// </summary>
+        internal static string X21P_P000604 {
+            get {
+                return ResourceManager.GetString("X21P_P000604", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please contact the merchant. The merchant is asking for a greater trust limit than can be set through this interface..
+        /// </summary>
+        internal static string X21P_P000605 {
+            get {
+                return ResourceManager.GetString("X21P_P000605", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please contact the merchant. The merchant is asking for trust for an WMID to which the purse for receiving funds does not belong, and there is no relationship between the WMID and the purse..
+        /// </summary>
+        internal static string X21P_P000606 {
+            get {
+                return ResourceManager.GetString("X21P_P000606", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please contact the merchant. The type of trust required by the merchant does not exist..
+        /// </summary>
+        internal static string X21P_P000607 {
+            get {
+                return ResourceManager.GetString("X21P_P000607", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have specified a phone number (WMID, WM purse or email address) for which the merchant already has the required trust. Please review your current trust settings at security.wmtransfer.com.
+        /// </summary>
+        internal static string X21P_P000608 {
+            get {
+                return ResourceManager.GetString("X21P_P000608", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have specified a phone number (WMID, WM purse or email address) for which the merchant already has the required trust, but the merchant wants payment to another purse. Please review your current trust settings at security.wmtransfer.com If necessary, delete this trust and try again..
+        /// </summary>
+        internal static string X21P_P000609 {
+            get {
+                return ResourceManager.GetString("X21P_P000609", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The purse found for the indicated phone number (WMID, WM purse or email address) already has trust, but for another WMID. If necessary, review your trust settings at security.wmtransfer.com, delete that trust and try again..
+        /// </summary>
+        internal static string X21P_P000610 {
+            get {
+                return ResourceManager.GetString("X21P_P000610", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please contact the merchant. The merchant&apos;s WMID does not have the passport necessary for using this interface (personal or higher).
+        /// </summary>
+        internal static string X21P_P000611 {
+            get {
+                return ResourceManager.GetString("X21P_P000611", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We could not find a WMID in the system that matches the phone number you entered. Visit passport.wmtransfer.com to enter and verify your cell phone number..
+        /// </summary>
+        internal static string X21P_P000612 {
+            get {
+                return ResourceManager.GetString("X21P_P000612", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We found a WMID in the system for the phone number you entered, but the phone number is not verified for that WMID. Visit passport.wmtransfer.com to verify your cell phone number..
+        /// </summary>
+        internal static string X21P_P000613 {
+            get {
+                return ResourceManager.GetString("X21P_P000613", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We found a WMID in the system for the phone number you entered, but it does not have the type of purse required by the merchant. Create a purse of the necessary type and top it up..
+        /// </summary>
+        internal static string X21P_P000614 {
+            get {
+                return ResourceManager.GetString("X21P_P000614", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We found a WMID in the system for the phone number you entered, but it is configured to work with &quot;merchant.wmtransfer.com&quot;. You need to either create another WM purse under this WMID and top it up, or if you think it feasible, grant trust to the found purse, but do this independently at security.wmtransfer.com.
+        /// </summary>
+        internal static string X21P_P000615 {
+            get {
+                return ResourceManager.GetString("X21P_P000615", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The WMID you specified was not found in the system (incorrectly specified) or has a status incompatible with this interface. Contact technical support at support.wmtransfer.com..
+        /// </summary>
+        internal static string X21P_P000616 {
+            get {
+                return ResourceManager.GetString("X21P_P000616", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The WMID you specified was found in the system, but the mobile phone indicated for it has not been verified. Log in with your WMID on passport.wmtransfer.com to check the cell phone number in your passport..
+        /// </summary>
+        internal static string X21P_P000617 {
+            get {
+                return ResourceManager.GetString("X21P_P000617", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A purse of the necessary type was not found for the WMID you entered. Create one, top it up, and try again..
+        /// </summary>
+        internal static string X21P_P000618 {
+            get {
+                return ResourceManager.GetString("X21P_P000618", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We found a WM purse in the system for the WMID you specified, but it is configured to work with &quot;merchant.wmtransfer.com&quot;. You need to either create another WM purse under this WMID and top it up, or if you think it feasible, grant trust to the found purse, but do this independently at security.wmtransfer.com.
+        /// </summary>
+        internal static string X21P_P000619 {
+            get {
+                return ResourceManager.GetString("X21P_P000619", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We could not find a WMID in the system that matches the e-mail address you entered. Visit passport.wmtransfer.com to enter and verify your e-mail address..
+        /// </summary>
+        internal static string X21P_P000620 {
+            get {
+                return ResourceManager.GetString("X21P_P000620", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We found a WMID in the system for the e-mail address you entered, but the cell phone number for it does not have verified status in the WMID passport. Visit passport.wmtransfer.com to verify your cell phone number..
+        /// </summary>
+        internal static string X21P_P000621 {
+            get {
+                return ResourceManager.GetString("X21P_P000621", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We found a WMID in the system for the e-mail address you entered, but it does not have the type of purse required by the merchant. Create a purse of the necessary type and top it up..
+        /// </summary>
+        internal static string X21P_P000622 {
+            get {
+                return ResourceManager.GetString("X21P_P000622", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We found a WMID in the system for the e-mail address you entered, but it is configured to work with &quot;merchant.wmtransfer.com&quot;. You need to either create another WM purse under the WMID with this e-mail address and top it up, or if you think it feasible, grant trust to the found purse, but do this independently at security.wmtransfer.com..
+        /// </summary>
+        internal static string X21P_P000623 {
+            get {
+                return ResourceManager.GetString("X21P_P000623", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The purse you specified was not found in the system. Check your information and try again..
+        /// </summary>
+        internal static string X21P_P000624 {
+            get {
+                return ResourceManager.GetString("X21P_P000624", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The WMID to which the specified WM purse belongs does not have a verified cell phone number. Log in with your WMID on passport.wmtransfer.com to verify your cell phone number..
+        /// </summary>
+        internal static string X21P_P000625 {
+            get {
+                return ResourceManager.GetString("X21P_P000625", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The WM purse you specified is configured to work with &quot;merchant.wmtransfer.com&quot;. You need to either create another WM purse under this WMID and top it up, or if you think it feasible, grant trust to the found purse, but do this independently at security.wmtransfer.com.
+        /// </summary>
+        internal static string X21P_P000626 {
+            get {
+                return ResourceManager.GetString("X21P_P000626", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The SMS text to be sent to your phone is too long. Contact the merchant to call the interface with the smallest amount of SMS characters possible..
+        /// </summary>
+        internal static string X21P_P000628 {
+            get {
+                return ResourceManager.GetString("X21P_P000628", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unfortunately we could not send an SMS (USSD) since the WebMoney SMS service is currently not responding. Please try again a bit later..
+        /// </summary>
+        internal static string X21P_P000629 {
+            get {
+                return ResourceManager.GetString("X21P_P000629", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You were already trying to send a request for trust just a little bit ago. Please try again in at least one minute..
+        /// </summary>
+        internal static string X21P_P000635 {
+            get {
+                return ResourceManager.GetString("X21P_P000635", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You were already trying to send a request for trust just a little bit ago, and you tried a large number of times. Please try again after three hours..
+        /// </summary>
+        internal static string X21P_P000636 {
+            get {
+                return ResourceManager.GetString("X21P_P000636", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unfortunately, we could not find the trust indicated for confirmation. Please try starting again from the beginning, and if this error happens again, contact the merchant about the problem..
+        /// </summary>
+        internal static string X21P_P000640 {
+            get {
+                return ResourceManager.GetString("X21P_P000640", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unfortunately, it has already been over 24 hours since you requested that trust be set. This request cannot be confirmed anymore, so please make your request again..
+        /// </summary>
+        internal static string X21P_P000641 {
+            get {
+                return ResourceManager.GetString("X21P_P000641", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have tried several times in two hours to indicate an incorrect SMS code. Please try again later..
+        /// </summary>
+        internal static string X21P_P000642 {
+            get {
+                return ResourceManager.GetString("X21P_P000642", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Specified SMS code is invalid or you have not confirmed the USSD query yet..
+        /// </summary>
+        internal static string X21P_P000643 {
+            get {
+                return ResourceManager.GetString("X21P_P000643", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You canceled the request for setting trust over USSD..
+        /// </summary>
+        internal static string X21P_P000650 {
+            get {
+                return ResourceManager.GetString("X21P_P000650", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have not confirmed the request for setting trust over USSD..
+        /// </summary>
+        internal static string X21P_P000651 {
+            get {
+                return ResourceManager.GetString("X21P_P000651", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to set trust. Contact WebMoney technical support and indicate the data you entered..
+        /// </summary>
+        internal static string X21P_P000652 {
+            get {
+                return ResourceManager.GetString("X21P_P000652", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to merchant.request/wmid is incorrect; merchant.request/lmi_payee_purse is incorrect; merchant.request/lmi_payement_no is incorrect; merchant.request/wmid is incorrect.
+        /// </summary>
+        internal static string X22_N000002 {
+            get {
+                return ResourceManager.GetString("X22_N000002", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to merchant.request/lmi_payee_purse is incorrect.
+        /// </summary>
+        internal static string X22_N000003 {
+            get {
+                return ResourceManager.GetString("X22_N000003", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to sign not right.
+        /// </summary>
+        internal static string X22_N000006 {
+            get {
+                return ResourceManager.GetString("X22_N000006", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to sign not right: PlanStr; SHA256 or MD5 not right:PlanStr(this planstr without secret_key).
+        /// </summary>
+        internal static string X22_N000007 {
+            get {
+                return ResourceManager.GetString("X22_N000007", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to internal error:error code.
+        /// </summary>
+        internal static string X22_N000008 {
+            get {
+                return ResourceManager.GetString("X22_N000008", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to general request parsing error.
+        /// </summary>
+        internal static string X22_N000100 {
+            get {
+                return ResourceManager.GetString("X22_N000100", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to при проверке платежа по тикету получили ошибку; детали в поле retdesc.
+        /// </summary>
+        internal static string X22_N000101 {
+            get {
+                return ResourceManager.GetString("X22_N000101", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Merchant purse not found:1.
+        /// </summary>
+        internal static string X22_P000001 {
+            get {
+                return ResourceManager.GetString("X22_P000001", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please use sign or sha256 method for authentication, and specify secret key in merchant service settings:2.
+        /// </summary>
+        internal static string X22_P000002 {
+            get {
+                return ResourceManager.GetString("X22_P000002", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please use sign or sha256 method for authentication:3.
+        /// </summary>
+        internal static string X22_P000003 {
+            get {
+                return ResourceManager.GetString("X22_P000003", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Merchant wmid not found or security trust for purse is not exists:4.
+        /// </summary>
+        internal static string X22_P000004 {
+            get {
+                return ResourceManager.GetString("X22_P000004", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Merchant wmid not found or security trust for purse is not exists:6.
+        /// </summary>
+        internal static string X22_P000006 {
+            get {
+                return ResourceManager.GetString("X22_P000006", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment with lmi_payment_no number not found for this merchant purse:7.
+        /// </summary>
+        internal static string X22_P000007 {
+            get {
+                return ResourceManager.GetString("X22_P000007", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to неверное значение поля w3s.request/wmid.
+        /// </summary>
+        internal static string X3_N000001 {
+            get {
+                return ResourceManager.GetString("X3_N000001", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to неверное значение поля w3s.request/getoperations/purse.
+        /// </summary>
+        internal static string X3_N000002 {
+            get {
+                return ResourceManager.GetString("X3_N000002", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to неверное значение поля w3s.request/sign.
+        /// </summary>
+        internal static string X3_N000003 {
+            get {
+                return ResourceManager.GetString("X3_N000003", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to неверное значение поля w3s.request/reqn.
+        /// </summary>
+        internal static string X3_N000004 {
+            get {
+                return ResourceManager.GetString("X3_N000004", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to проверка подписи не прошла.
+        /// </summary>
+        internal static string X3_N000005 {
+            get {
+                return ResourceManager.GetString("X3_N000005", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to неверное значение поля w3s.request/getoperations/datestart.
+        /// </summary>
+        internal static string X3_N000007 {
+            get {
+                return ResourceManager.GetString("X3_N000007", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to неверное значение поля w3s.request/getoperations/datefinish.
+        /// </summary>
+        internal static string X3_N000008 {
+            get {
+                return ResourceManager.GetString("X3_N000008", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WMID указанный в поле w3s.request/wmid не найден.
+        /// </summary>
+        internal static string X3_N000009 {
+            get {
+                return ResourceManager.GetString("X3_N000009", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to общая ошибка при разборе команды. неверный формат команды..
+        /// </summary>
+        internal static string X3_N000100 {
+            get {
+                return ResourceManager.GetString("X3_N000100", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to запросы отсылаются не с того IP адреса, который указан при регистрации данного интерфейса в Технической поддержке..
+        /// </summary>
+        internal static string X3_N000110 {
+            get {
+                return ResourceManager.GetString("X3_N000110", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to не выполнено условие постоянного увеличения значения параметра w3s.request/reqn.
+        /// </summary>
+        internal static string X3_P000102 {
+            get {
+                return ResourceManager.GetString("X3_P000102", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to попытка запроса истории по кошельку не принадлежащему WMID, которым подписывается запрос; при этом доверие не установлено..
+        /// </summary>
+        internal static string X3_P000111 {
+            get {
+                return ResourceManager.GetString("X3_P000111", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to слишком большой диапазон выборки.
+        /// </summary>
+        internal static string X3_P001004 {
+            get {
+                return ResourceManager.GetString("X3_P001004", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to попытка запроса информации по кошельку не принадлежащему WMID, которым подписывается запрос; при этом доверие не установлено..
+        /// </summary>
+        internal static string X4_P000111 {
+            get {
+                return ResourceManager.GetString("X4_P000111", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Неверное значение поля message\receiverwmid.
+        /// </summary>
+        internal static string X6_N000002 {
+            get {
+                return ResourceManager.GetString("X6_N000002", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Подпись не верна.
+        /// </summary>
+        internal static string X6_N000012 {
+            get {
+                return ResourceManager.GetString("X6_N000012", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to корреспондент не найден.
+        /// </summary>
+        internal static string X6_P000006 {
+            get {
+                return ResourceManager.GetString("X6_P000006", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to получатель не принимает сообщения от неавторизованных корреспондентов.
+        /// </summary>
+        internal static string X6_P000035 {
+            get {
+                return ResourceManager.GetString("X6_P000035", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Не выполнено условие постоянного увеличения значения параметра w3s.request/reqn.
+        /// </summary>
+        internal static string X6_P000102 {
+            get {
+                return ResourceManager.GetString("X6_P000102", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to нет доступа к интерфейсу.
+        /// </summary>
+        internal static string X6_P000110 {
+            get {
+                return ResourceManager.GetString("X6_P000110", resourceCulture);
+            }
+        }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
+using WebMoney.XmlInterfaces.BasicObjects;
+using WebMoney.XmlInterfaces.Utilities;
 
 namespace WebMoney.XmlInterfaces.Exceptions
 {
@@ -36,27 +38,9 @@ namespace WebMoney.XmlInterfaces.Exceptions
         {
         }
 
-        public override string TranslateDescription()
+        public override string TranslateDescription(Language language)
         {
-            string info;
-
-            switch (ErrorNumber)
-            {
-                case -2:
-                    info = "Неверное значение поля message\receiverwmid.";
-                    break;
-                case -12:
-                    info = "Подпись не верна.";
-                    break;
-                case 102:
-                    info = "Не выполнено условие постоянного увеличения значения параметра w3s.request/reqn.";
-                    break;
-                default:
-                    info = string.Empty;
-                    break;
-            }
-
-            return info;
+            return LocalizationUtility.GetErrorDescription("X6", ErrorNumber, language);
         }
     }
 }

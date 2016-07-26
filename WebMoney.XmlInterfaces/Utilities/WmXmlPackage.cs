@@ -4,8 +4,12 @@ using System.Xml;
 using WebMoney.XmlInterfaces.BasicObjects;
 using WebMoney.XmlInterfaces.Core;
 
-namespace WebMoney.XmlInterfaces.Utility
+namespace WebMoney.XmlInterfaces.Utilities
 {
+#if DEBUG
+#else
+    [System.Diagnostics.DebuggerNonUserCode]
+#endif
     public class WmXmlPackage : XmlPackage
     {
         public WmXmlPackage(XmlPackage xmlPackage)
@@ -73,7 +77,7 @@ namespace WebMoney.XmlInterfaces.Utility
 
             var text = SelectNotEmptyString(xPath);
 
-            if ("0000-00-00 00:00:00" == text)
+            if (text.Equals("0000-00-00 00:00:00", StringComparison.OrdinalIgnoreCase))
                 return default(DateTime);
 
             WmDateTime wmDateTime;
