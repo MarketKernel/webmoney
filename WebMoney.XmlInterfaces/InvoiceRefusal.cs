@@ -26,9 +26,6 @@ namespace WebMoney.XmlInterfaces
 
         public InvoiceRefusal(WmId wmId, uint invoiceId)
         {
-            if (AuthorizationMode.Classic != Initializer.Mode)
-                throw new InvalidOperationException("AuthorizationMode.Classic != Initializer.Mode");
-            
             WmId = wmId;
             InvoiceId = invoiceId;
         }
@@ -42,6 +39,9 @@ namespace WebMoney.XmlInterfaces
         {
             if (null == xmlRequestBuilder)
                 throw new ArgumentNullException(nameof(xmlRequestBuilder));
+
+            if (AuthorizationMode.Classic != Initializer.Mode)
+                throw new InvalidOperationException("AuthorizationMode.Classic != Initializer.Mode");
 
             xmlRequestBuilder.WriteStartElement("invoicerefuse"); // <invoicerefuse>
 

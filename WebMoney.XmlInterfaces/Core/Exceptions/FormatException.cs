@@ -4,6 +4,7 @@ using System.Runtime.Serialization;
 
 namespace WebMoney.XmlInterfaces.Core.Exceptions
 {
+    // TODO: удалить.
     [Serializable]
     [ComVisible(true)]
     public class FormatException : ProtocolException
