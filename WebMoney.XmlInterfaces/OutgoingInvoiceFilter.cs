@@ -15,7 +15,7 @@ namespace WebMoney.XmlInterfaces
     {
         protected override string ClassicUrl => "https://w3s.webmoney.ru/asp/XMLOutInvoices.asp";
 
-        protected override string LightUrl => "https://w3s.webmoney.ru/asp/XMLOutInvoicesCert.asp";
+        protected override string LightUrl => "https://w3s.wmtransfer.com/asp/XMLOutInvoicesCert.asp";
 
         public Purse Purse { get; set; }
         public uint InvoiceId { get; set; }

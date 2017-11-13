@@ -15,7 +15,7 @@ namespace WebMoney.XmlInterfaces
     {
         protected override string ClassicUrl => "https://w3s.webmoney.ru/asp/XMLInvoiceRefusal.asp";
 
-        protected override string LightUrl => null;
+        protected override string LightUrl => "https://w3s.wmtransfer.com/asp/XMLInvoiceRefusalCert.asp";
 
         public WmId WmId { get; set; }
         public uint InvoiceId { get; set; }
@@ -39,9 +39,6 @@ namespace WebMoney.XmlInterfaces
         {
             if (null == xmlRequestBuilder)
                 throw new ArgumentNullException(nameof(xmlRequestBuilder));
-
-            if (AuthorizationMode.Classic != Initializer.Mode)
-                throw new InvalidOperationException("AuthorizationMode.Classic != Initializer.Mode");
 
             xmlRequestBuilder.WriteStartElement("invoicerefuse"); // <invoicerefuse>
 

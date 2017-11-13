@@ -15,10 +15,16 @@ namespace WebMoney.XmlInterfaces.Utilities
     {
         public static Language GetDefaultLanguage()
         {
-            var language = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName.Equals("ru",
-                StringComparison.OrdinalIgnoreCase) ? Language.Ru : Language.En;
-
-            return language;
+            switch (Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName.ToLower())
+            {
+                case "ru": // Россия
+                case "uk": // Украина
+                case "be": // Беларусь
+                case "kk": // Казахстан
+                    return Language.Ru;
+                default:
+                    return Language.En;
+            }
         }
 
         public static string GetErrorDescription(string space, int errorNumber, Language language = Language.En)

@@ -38,8 +38,10 @@ namespace WebMoney.XmlInterfaces.Responses
 
         protected override void Fill(WmXmlPackage wmXmlPackage)
         {
-            if (null == wmXmlPackage) throw new ArgumentNullException(nameof(wmXmlPackage));
+            if (null == wmXmlPackage)
+                throw new ArgumentNullException(nameof(wmXmlPackage));
 
+            // <?xml version="1.0"?><merchant.response><trust id="65376205"><slavepurse>U731654115046</slavepurse><slavewmid>729376294758</slavewmid><masterwmid>301095414760</masterwmid></trust><retval>0</retval><retdesc></retdesc><userdesc>Trust successfull! The required trust set from member`s purse U731654115046 to merchant wmid 301095414760</userdesc></merchant.response>
             TrustId = wmXmlPackage.SelectUInt32("trust/@id");
             ClientPurse = wmXmlPackage.SelectPurse("trust/slavepurse");
             ClientWmId = wmXmlPackage.SelectWmId("trust/slavewmid");

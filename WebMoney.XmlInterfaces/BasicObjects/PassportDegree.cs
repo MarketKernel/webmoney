@@ -5,13 +5,13 @@ namespace WebMoney.XmlInterfaces.BasicObjects
     [Serializable]
     public enum PassportDegree
     {
-        None = 0,
         Alias = 100,
         Formal = 110,
         Initial = 120,
         Personal = 130,
         Merchant = 135,
         Capitaller = 136,
+        Cashier = 138,
         Developer = 140,
         Registrar = 150,
         Guarantor = 170,

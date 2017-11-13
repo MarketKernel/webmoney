@@ -3,7 +3,8 @@
     public enum ClientIdType
     {
         Phone = 0,
-        WmId,
-        Email
+        WmId = 1,
+        Email = 2,
+        Purse = 4
     }
 }

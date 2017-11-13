@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
+using System.Security;
 using WebMoney.XmlInterfaces.BasicObjects;
 using WebMoney.XmlInterfaces.Utilities;
 
@@ -33,13 +34,15 @@ namespace WebMoney.XmlInterfaces.Exceptions
         {
         }
 
+        [SecuritySafeCritical]
         protected TransferRejectorException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {
         }
-        public override string TranslateDescription(Language language)
+        public override string TranslateErrorNumber(Language language)
         {
-            return LocalizationUtility.GetErrorDescription("X14", ErrorNumber, language);
+            return LocalizationUtility.GetErrorDescription("X14", ErrorNumber, language) ??
+                   base.TranslateErrorNumber(language);
         }
     }
 }

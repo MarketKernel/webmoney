@@ -15,7 +15,7 @@ namespace WebMoney.XmlInterfaces.Sandbox
 {
     class Program
     {
-        private readonly WmId _primaryWmId = (WmId)000000000000;
+        private readonly WmId _primaryWmId = (WmId)000000000000L;
 
         //private readonly KeeperKey _primaryKeeperKey = new KeeperKey("");
         //private readonly WmId _secondaryWmId = (WmId)000000000000;
@@ -568,7 +568,7 @@ namespace WebMoney.XmlInterfaces.Sandbox
             //var transferFilter = new TransferFilter(_primaryPurse, DateTime.Now.AddMonths(-17), DateTime.Now.AddMonths(-16));
             //var transferRegister = transferFilter.Submit();
             
-            var merchantOperationFilter = new MerchantOperationObtainer(_storePurse, 17, 1);
+            var merchantOperationFilter = new MerchantOperationObtainer(_storePurse, 17, PaymentNumberKind.TransferPrimaryId);
 
             try
             {

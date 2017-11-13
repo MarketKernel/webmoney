@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Net.Mail;
+using System.Threading;
 using WebMoney.XmlInterfaces.BasicObjects;
 using WebMoney.XmlInterfaces.Core;
 using WebMoney.XmlInterfaces.Responses;
@@ -43,6 +44,7 @@ namespace WebMoney.XmlInterfaces
         public ConfirmationType ConfirmationType { get; set; }
 
         private CultureInfo _culture;
+
         public CultureInfo Culture
         {
             get { return _culture; }
@@ -66,10 +68,10 @@ namespace WebMoney.XmlInterfaces
             Description description,
             Phone clientPhone,
             ConfirmationType confirmationType,
-            CultureInfo culture)
+            CultureInfo culture = null)
         {
             if (null == culture)
-                throw new ArgumentNullException(nameof(culture));
+                culture = Thread.CurrentThread.CurrentUICulture;
 
             StorePurse = storePurse;
             OrderId = orderId;
@@ -88,10 +90,10 @@ namespace WebMoney.XmlInterfaces
             Description description,
             WmId clientWmId,
             ConfirmationType confirmationType,
-            CultureInfo culture)
+            CultureInfo culture = null)
         {
             if (null == culture)
-                throw new ArgumentNullException(nameof(culture));
+                culture = Thread.CurrentThread.CurrentUICulture;
 
             StorePurse = storePurse;
             OrderId = orderId;
@@ -110,13 +112,13 @@ namespace WebMoney.XmlInterfaces
             Description description,
             MailAddress clientEmail,
             ConfirmationType confirmationType,
-            CultureInfo culture)
+            CultureInfo culture = null)
         {
             if (null == clientEmail)
                 throw new ArgumentNullException(nameof(clientEmail));
 
             if (null == culture)
-                throw new ArgumentNullException(nameof(culture));
+                culture = Thread.CurrentThread.CurrentUICulture;
 
             StorePurse = storePurse;
             OrderId = orderId;

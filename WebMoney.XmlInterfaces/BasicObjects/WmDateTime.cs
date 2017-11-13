@@ -35,7 +35,12 @@ namespace WebMoney.XmlInterfaces.BasicObjects
         {
             _utcTime = utcTime;
         }
-        
+
+        public DateTime ToUniversalTime()
+        {
+            return _utcTime;
+        }
+
         public static implicit operator WmDateTime(DateTime value)
         {
             return new WmDateTime(value.ToUniversalTime());
@@ -44,11 +49,6 @@ namespace WebMoney.XmlInterfaces.BasicObjects
         public static implicit operator DateTime(WmDateTime value)
         {
             return value._utcTime.ToLocalTime();
-        }
-
-        public static int operator -(WmDateTime lhs, WmDateTime rhs)
-        {
-            return lhs._utcTime.Year*12 + lhs._utcTime.Month - rhs._utcTime.Year*12 - rhs._utcTime.Month;
         }
 
         public static WmDateTime Parse(string value)
@@ -65,7 +65,7 @@ namespace WebMoney.XmlInterfaces.BasicObjects
             return wmDateTime;
         }
 
-        public static WmDateTime ParseServerString(string value)
+        internal static WmDateTime ParseServerString(string value)
         {
             if (string.IsNullOrEmpty(value))
                 throw new ArgumentNullException(nameof(value));
@@ -101,7 +101,7 @@ namespace WebMoney.XmlInterfaces.BasicObjects
             return true;
         }
 
-        public static bool TryParseServerString(string value, out WmDateTime wmDateTime)
+        internal static bool TryParseServerString(string value, out WmDateTime wmDateTime)
         {
             if (string.IsNullOrEmpty(value))
             {
@@ -182,13 +182,13 @@ namespace WebMoney.XmlInterfaces.BasicObjects
             return _utcTime.ToLocalTime().ToString(LocalTemplate, CultureInfo.InvariantCulture.DateTimeFormat);
         }
 
-        public string ToServerString()
+        internal string ToServerString()
         {
             DateTime serverTime = UtcTime2ServerTime(_utcTime);
             return serverTime.ToString(Template1, CultureInfo.InvariantCulture.DateTimeFormat);
         }
 
-        public static DateTime ServerTime2UtcTime(DateTime serverTime)
+        internal static DateTime ServerTime2UtcTime(DateTime serverTime)
         {
             return serverTime.AddHours(-PutinTimeZone);
 
@@ -200,7 +200,7 @@ namespace WebMoney.XmlInterfaces.BasicObjects
             // return utcTime;
         }
 
-        public static DateTime UtcTime2ServerTime(DateTime utcTime)
+        internal static DateTime UtcTime2ServerTime(DateTime utcTime)
         {
             return utcTime.AddHours(PutinTimeZone);
 

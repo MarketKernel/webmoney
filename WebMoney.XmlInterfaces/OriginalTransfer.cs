@@ -25,7 +25,7 @@ namespace WebMoney.XmlInterfaces
         public Description Code { get; set; }
         public Description Description { get; set; }
         public uint InvoiceId { get; set; }
-        public bool AuthorizationRequired { get; set; }
+        public bool Force { get; set; }
 
         protected internal OriginalTransfer()
         {
@@ -60,7 +60,8 @@ namespace WebMoney.XmlInterfaces
             xmlRequestBuilder.WriteElement("pcode", Code);
             xmlRequestBuilder.WriteElement("desc", Description);
             xmlRequestBuilder.WriteElement("wminvid", InvoiceId);
-            xmlRequestBuilder.WriteElement("onlyauth", AuthorizationRequired ? 1 : 0);
+            xmlRequestBuilder.WriteElement("onlyauth", Force ? 0 : 1);
+            xmlRequestBuilder.WriteElement("wmb_denomination", string.Empty);
 
             xmlRequestBuilder.WriteEndElement(); // </trans>
         }

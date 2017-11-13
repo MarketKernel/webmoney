@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WebMoney.XmlInterfaces</RootNamespace>
     <AssemblyName>WebMoney.XmlInterfaces</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,17 +30,17 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>Properties\tempKey.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>Properties\key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.5\lib\net20-full\log4net.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net40-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -46,7 +48,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="WebMoney.Cryptography, Version=3.3.1.0, Culture=neutral, PublicKeyToken=7532635057d899e6, processorArchitecture=MSIL">
       <HintPath>..\packages\WebMoney.Cryptography.3.3.1\lib\net20\WebMoney.Cryptography.dll</HintPath>
-      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +60,7 @@
     <Compile Include="BasicObjects\ConfirmationFlag.cs" />
     <Compile Include="BasicObjects\ConfirmationType.cs" />
     <Compile Include="BasicObjects\ContractType.cs" />
+    <Compile Include="BasicObjects\CryptoCurrencyType.cs" />
     <Compile Include="BasicObjects\Description.cs" />
     <Compile Include="BasicObjects\ExchangeType.cs" />
     <Compile Include="BasicObjects\HashKind.cs" />
@@ -69,16 +71,24 @@
     <Compile Include="BasicObjects\PassportAppointment.cs" />
     <Compile Include="BasicObjects\PassportDegree.cs" />
     <Compile Include="BasicObjects\PassportStatus.cs" />
+    <Compile Include="BasicObjects\PaymentNumberKind.cs" />
     <Compile Include="BasicObjects\PaymentSystem.cs" />
     <Compile Include="BasicObjects\PaymerType.cs" />
     <Compile Include="BasicObjects\Phone.cs" />
     <Compile Include="BasicObjects\Purse.cs" />
     <Compile Include="BasicObjects\SmsState.cs" />
+    <Compile Include="BasicObjects\TelepatMethod.cs" />
     <Compile Include="BasicObjects\TransferType.cs" />
     <Compile Include="BasicObjects\WmCurrency.cs" />
     <Compile Include="BasicObjects\WmDate.cs" />
     <Compile Include="BasicObjects\WmDateTime.cs" />
     <Compile Include="BasicObjects\WmId.cs" />
+    <Compile Include="CardSelector.cs" />
+    <Compile Include="Responses\CardRegister.cs" />
+    <Compile Include="Responses\TLReport.cs" />
+    <Compile Include="TLObtainer.cs" />
+    <Compile Include="BLObtainer.cs" />
+    <Compile Include="ClaimsObtainer.cs" />
     <Compile Include="ClientInspector.cs" />
     <Compile Include="Configuration\AuthorizationSettings.cs" />
     <Compile Include="Configuration\ConfigurationAccessor.cs" />
@@ -90,7 +100,6 @@
     <Compile Include="Core\CertificateValidator.cs" />
     <Compile Include="Core\Client`1.cs" />
     <Compile Include="Core\Connection.cs" />
-    <Compile Include="Core\Exceptions\FormatException.cs" />
     <Compile Include="Core\Exceptions\IncorrectFormatException.cs" />
     <Compile Include="Core\Exceptions\IntegrityException.cs" />
     <Compile Include="Core\Exceptions\MissingParameterException.cs" />
@@ -135,6 +144,7 @@
     <Compile Include="OutgoingInvoiceFilter.cs" />
     <Compile Include="OutgoingTrustFilter.cs" />
     <Compile Include="PassportFinder.cs" />
+    <Compile Include="PaymerTransfer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProtectionFinisher.cs" />
     <Compile Include="ProtectionRejector.cs" />
@@ -146,6 +156,8 @@
     </Compile>
     <Compile Include="Responses\Acceptor.cs" />
     <Compile Include="Responses\AcceptorRegister.cs" />
+    <Compile Include="Responses\BLReport.cs" />
+    <Compile Include="Responses\ClaimsReport.cs" />
     <Compile Include="Responses\ClientEvidence.cs" />
     <Compile Include="Responses\ExpressPaymentReport.cs" />
     <Compile Include="Responses\ExpressPaymentResponse.cs" />
@@ -163,6 +175,7 @@
     <Compile Include="Responses\OutgoingInvoice.cs" />
     <Compile Include="Responses\OutgoingInvoiceRegister.cs" />
     <Compile Include="Responses\Passport.cs" />
+    <Compile Include="Responses\PaymerTransferReport.cs" />
     <Compile Include="Responses\ProtectionReport.cs" />
     <Compile Include="Responses\PurseInfo.cs" />
     <Compile Include="Responses\PurseInfoRegister.cs" />
@@ -171,6 +184,7 @@
     <Compile Include="Responses\RecentMessage.cs" />
     <Compile Include="Responses\RecentPurse.cs" />
     <Compile Include="Responses\RecentTransfer.cs" />
+    <Compile Include="Responses\RecentTrust.cs" />
     <Compile Include="Responses\SignatureEvidence.cs" />
     <Compile Include="Responses\Transfer.cs" />
     <Compile Include="Responses\TransferEnvelope.cs" />
@@ -185,6 +199,7 @@
     <Compile Include="TransferRejector.cs" />
     <Compile Include="Utilities\CryptographyUtility.cs" />
     <Compile Include="Utilities\LocalizationUtility.cs" />
+    <Compile Include="Utilities\Translator.cs" />
     <Compile Include="Utilities\WmXmlPackage.cs" />
     <Compile Include="WmIdFinder.cs" />
     <Compile Include="WmRequest%271.cs" />
@@ -197,8 +212,10 @@
     <EmbeddedResource Include="Properties\Resources.ru.resx" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="Properties\tempKey.snk" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\key.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

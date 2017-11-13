@@ -14,27 +14,18 @@ namespace WebMoney.XmlInterfaces
     public class ClientInspector : WmRequest<ClientEvidence>
     {
         private bool _output = true;
-
-        //protected override string ClassicUrl
-        //{
-        //    get { return "https://passport.webmoney.ru/XML/XMLCheckUser.aspx"; }
-        //}
-
-        //protected override string LightUrl
-        //{
-        //    get { return "https://passport.webmoney.ru/XML/XMLCheckUserCert.aspx"; }
-        //}
-
+        private string _cryptoCurrencyAddress;
+        
         protected override string ClassicUrl => "https://apipassport.webmoney.ru/XMLCheckUser.aspx";
 
-        protected override string LightUrl => "https://apipassport.webmoney.ru/XMLCheckUserCert.aspx";
+        protected override string LightUrl => "https://apipassportcrt.webmoney.ru/XMLCheckUserCert.aspx";
 
         public ExchangeType OperationType { get; set; }
-        
+
         public bool Output
         {
-            get { return _output; }
-            set { _output = value; }
+            get => _output;
+            set => _output = value;
         }
 
         public WmCurrency Currency { get; set; }
@@ -50,6 +41,13 @@ namespace WebMoney.XmlInterfaces
         public PaymentSystem PaymentSystem { get; set; }
         public Description PaymentId { get; set; }
         public string Phone { get; set; }
+        public CryptoCurrencyType CryptoCurrencyType { get; set; }
+
+        public string CryptoCurrencyAddress
+        {
+            get => _cryptoCurrencyAddress;
+            set => _cryptoCurrencyAddress = value ?? throw new ArgumentNullException(nameof(value));
+        }
 
         protected internal ClientInspector()
         {
@@ -135,6 +133,17 @@ namespace WebMoney.XmlInterfaces
             Phone = phone;
         }
 
+        // Crypto
+        public ClientInspector(WmCurrency currency, Amount amount, WmId wmid, CryptoCurrencyType cryptoCurrencyType, string address)
+        {
+            OperationType = ExchangeType.CryptoCurrency;
+            Currency = currency;
+            Amount = amount;
+            Wmid = wmid;
+            CryptoCurrencyType = cryptoCurrencyType;
+            CryptoCurrencyAddress = address ?? throw new ArgumentNullException(nameof(address));
+        }
+
         protected override string BuildMessage(ulong requestNumber)
         {
             return string.Format(CultureInfo.InvariantCulture, "{0}{1}{2}", requestNumber, (int)OperationType, Wmid);
@@ -177,43 +186,88 @@ namespace WebMoney.XmlInterfaces
             xmlRequestBuilder.WriteStartElement("userinfo"); // <userinfo>
 
             xmlRequestBuilder.WriteElement("wmid", Wmid.ToString());
-            xmlRequestBuilder.WriteElement("pnomer", PassportNumber);
-            xmlRequestBuilder.WriteElement("fname", SecondName);
-            xmlRequestBuilder.WriteElement("iname", FirstName);
-            xmlRequestBuilder.WriteElement("bank_name", BankName);
-            xmlRequestBuilder.WriteElement("bank_account", BankAccount.ToString());
-            xmlRequestBuilder.WriteElement("card_number", CardNumber.ToString());
 
-            string paymentSystem;
-
-            switch (PaymentSystem)
+            switch (OperationType)
             {
-                case PaymentSystem.RbkMoney:
-                    paymentSystem = "rbkmoney.ru";
+                case ExchangeType.Cash:
+                    xmlRequestBuilder.WriteElement("pnomer", PassportNumber);
+                    xmlRequestBuilder.WriteElement("fname", SecondName);
+                    xmlRequestBuilder.WriteElement("iname", FirstName);
                     break;
-                case PaymentSystem.PayPal:
-                    paymentSystem = "paypal.com";
+                case ExchangeType.OfflineSystem:
+                    xmlRequestBuilder.WriteElement("fname", SecondName);
+                    xmlRequestBuilder.WriteElement("iname", FirstName);
                     break;
-                case PaymentSystem.MoneyBookers:
-                    paymentSystem = "moneybookers.com";
+                case ExchangeType.BankAccount:
+                    xmlRequestBuilder.WriteElement("fname", SecondName);
+                    xmlRequestBuilder.WriteElement("iname", FirstName);
+                    xmlRequestBuilder.WriteElement("bank_name", BankName);
+                    xmlRequestBuilder.WriteElement("bank_account", BankAccount.ToString());
                     break;
-                case PaymentSystem.Qiwi:
-                    paymentSystem = "qiwi.ru";
+                case ExchangeType.BankCard:
+                    xmlRequestBuilder.WriteElement("fname", SecondName);
+                    xmlRequestBuilder.WriteElement("iname", FirstName);
+                    xmlRequestBuilder.WriteElement("bank_name", BankName);
+                    xmlRequestBuilder.WriteElement("card_number", CardNumber.ToString());
                     break;
-                case PaymentSystem.YandexMoney:
-                    paymentSystem = "money.yandex.ru";
+                case ExchangeType.InternetSystem:
+                {
+                    string paymentSystem;
+
+                    switch (PaymentSystem)
+                    {
+                        case PaymentSystem.PayPal:
+                            paymentSystem = "paypal.com";
+                            break;
+                        case PaymentSystem.Skrill:
+                            paymentSystem = "skrill.com";
+                            break;
+                        case PaymentSystem.Alipay:
+                            paymentSystem = "alipay.com";
+                            break;
+                        case PaymentSystem.Qiwi:
+                            paymentSystem = "qiwi.ru";
+                            break;
+                        case PaymentSystem.YandexMoney:
+                            paymentSystem = "pamoney.yandex.ru";
+                            break;
+                        default:
+                            throw new InvalidOperationException("PaymentSystem == " + PaymentSystem);
+                    }
+
+                    xmlRequestBuilder.WriteElement("emoney_name", paymentSystem);
+                    xmlRequestBuilder.WriteElement("emoney_id", PaymentId);
+                }
                     break;
-                case PaymentSystem.EasyPay:
-                    paymentSystem = "easypay.by";
+                case ExchangeType.Sms:
+                    xmlRequestBuilder.WriteElement("phone", Phone);
+                    break;
+                case ExchangeType.Mobile:
+                    xmlRequestBuilder.WriteElement("phone", Phone);
+                    break;
+                case ExchangeType.CryptoCurrency:
+                {
+                    string cryptoCurrencyName;
+
+                    switch (CryptoCurrencyType)
+                    {
+                        case CryptoCurrencyType.Bitcoin:
+                            cryptoCurrencyName = "bitcoin";
+                            break;
+                        case CryptoCurrencyType.BitcoinCash:
+                            cryptoCurrencyName = "bitcoincash";
+                            break;
+                        default:
+                            throw new InvalidOperationException("CryptoCurrencyType == " + CryptoCurrencyType);
+                    }
+
+                    xmlRequestBuilder.WriteElement("crypto_name", cryptoCurrencyName);
+                    xmlRequestBuilder.WriteElement("crypto_address", CryptoCurrencyAddress);
+                }
                     break;
                 default:
-                    paymentSystem = null;
-                    break;
+                    throw new ArgumentOutOfRangeException();
             }
-
-            xmlRequestBuilder.WriteElement("emoney_name", paymentSystem);
-            xmlRequestBuilder.WriteElement("emoney_id", PaymentId);
-            xmlRequestBuilder.WriteElement("phone", Phone);
 
             xmlRequestBuilder.WriteEndElement(); // </userinfo>
         }

@@ -6,7 +6,7 @@ namespace WebMoney.XmlInterfaces.Core
 {
     public abstract class XmlResponse : Response
     {
-        protected internal override sealed void ReadContent(Stream stream)
+        protected internal sealed override void ReadContent(Stream stream)
         {
             if (null == stream)
                 throw new ArgumentNullException(nameof(stream));

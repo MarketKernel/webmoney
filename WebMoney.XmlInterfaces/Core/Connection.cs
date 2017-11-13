@@ -12,7 +12,7 @@ namespace WebMoney.XmlInterfaces.Core
 #endif
     public class Connection
     {
-        protected HttpWebRequest HttpWebRequest { get; set; }
+        protected HttpWebRequest HttpWebRequest { get; private set; }
 
         public WebProxy Proxy { get; set; }
 
@@ -20,12 +20,18 @@ namespace WebMoney.XmlInterfaces.Core
 
         public string ContentType { get; set; }
 
-        public List<KeyValuePair<string, string>> Headers { get; set; }
+        public IList<KeyValuePair<string, string>> Headers { get; }
 
         static Connection()
         {
-            ServicePointManager.ServerCertificateValidationCallback +=
-                CertificateValidator.RemoteCertificateValidationCallback;
+            if (null == ServicePointManager.ServerCertificateValidationCallback)
+                ServicePointManager.ServerCertificateValidationCallback =
+                    CertificateValidator.RemoteCertificateValidationCallback;
+        }
+
+        public Connection()
+        {
+            Headers = new List<KeyValuePair<string, string>>();
         }
 
         public virtual void Connect(Uri requestUri, X509Certificate certificate)
@@ -34,6 +40,7 @@ namespace WebMoney.XmlInterfaces.Core
                 throw new ArgumentNullException(nameof(requestUri));
 
             HttpWebRequest = (HttpWebRequest) WebRequest.Create(requestUri);
+            HttpWebRequest.ServicePoint.ConnectionLimit = 10;
             HttpWebRequest.ServicePoint.Expect100Continue = false;
 
             if (null != UserAgent)

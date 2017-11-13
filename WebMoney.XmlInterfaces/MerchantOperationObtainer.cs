@@ -22,13 +22,13 @@ namespace WebMoney.XmlInterfaces
 
         public Purse TargetPurse { get; set; }
         public uint PaymentNumber { get; set; }
-        public int NumberType { get; set; }
+        public PaymentNumberKind NumberType { get; set; }
 
         protected internal MerchantOperationObtainer()
         {
         }
 
-        public MerchantOperationObtainer(Purse targetPurse, uint paymentNumber, int numberType)
+        public MerchantOperationObtainer(Purse targetPurse, uint paymentNumber, PaymentNumberKind numberType)
         {
             TargetPurse = targetPurse;
             PaymentNumber = paymentNumber;
@@ -72,8 +72,8 @@ namespace WebMoney.XmlInterfaces
                 throw new ArgumentNullException(nameof(xmlRequestBuilder));
 
             xmlRequestBuilder.WriteElement("lmi_payee_purse", TargetPurse.ToString());
-            xmlRequestBuilder.WriteElement("lmi_payment_no_type", "1");
-            xmlRequestBuilder.WriteElement("lmi_payment_no", NumberType);
+            xmlRequestBuilder.WriteElement("lmi_payment_no_type", (int)NumberType);
+            xmlRequestBuilder.WriteElement("lmi_payment_no", PaymentNumber);
         }
 
         protected override void BuildXmlFoot(XmlRequestBuilder xmlRequestBuilder)

@@ -30,15 +30,28 @@ namespace WebMoney.XmlInterfaces.BasicObjects
 
             _wmId = wmId;
         }
-        
+
         public static explicit operator WmId(ulong value)
         {
             return new WmId(value);
         }
 
+        public static explicit operator WmId(long value)
+        {
+            if (value < 0)
+                throw new ArgumentOutOfRangeException(nameof(value));
+
+            return new WmId((ulong)value);
+        }
+
         public static implicit operator ulong(WmId value)
         {
             return value._wmId;
+        }
+
+        public static implicit operator long(WmId value)
+        {
+            return (long) value._wmId;
         }
 
         public override string ToString()

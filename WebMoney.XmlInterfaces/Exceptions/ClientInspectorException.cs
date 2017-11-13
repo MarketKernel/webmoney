@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
-using System.Security.Permissions;
+using System.Security;
 using WebMoney.XmlInterfaces.BasicObjects;
 using WebMoney.XmlInterfaces.Utilities;
 
@@ -38,13 +38,14 @@ namespace WebMoney.XmlInterfaces.Exceptions
             Reference = reference;
         }
 
+        [SecuritySafeCritical]
         protected ClientInspectorException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {
             Reference = info.GetString("Reference");
         }
 
-        [SecurityPermission(SecurityAction.LinkDemand, Flags = SecurityPermissionFlag.SerializationFormatter)]
+        [SecurityCritical]
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             if (info == null)
@@ -54,9 +55,10 @@ namespace WebMoney.XmlInterfaces.Exceptions
             info.AddValue("Reference", Reference, typeof(String));
         }
 
-        public override string TranslateDescription(Language language)
+        public override string TranslateErrorNumber(Language language)
         {
-            return LocalizationUtility.GetErrorDescription("X19", ErrorNumber, language);
+            return LocalizationUtility.GetErrorDescription("X19", ErrorNumber, language) ??
+                   base.TranslateErrorNumber(language);
         }
     }
 }

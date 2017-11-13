@@ -7,7 +7,7 @@ namespace WebMoney.XmlInterfaces.Core
     public abstract class XmlRequest<TXmlResponse> : Request<TXmlResponse>
         where TXmlResponse : XmlResponse, new()
     {
-        protected internal override sealed void WriteContent(Stream stream)
+        protected internal sealed override void WriteContent(Stream stream)
         {
             if (null == stream)
                 throw new ArgumentNullException(nameof(stream));

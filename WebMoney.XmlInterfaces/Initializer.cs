@@ -11,51 +11,77 @@ namespace WebMoney.XmlInterfaces
     {
         private static readonly object Anchor = new object();
 
-        private ulong _lastNumber;
+        private AuthorizationMode _mode;
+        private WmId _id;
         private readonly Signer _signer;
+        private X509Certificate2 _certificate;
+        private string _secretKey;
+        private ulong _lastNumber;
+        private WebProxy _proxy;
 
         public static Initializer Instance { get; private set; }
 
-        public WebProxy Proxy { get; set; }
-
-        public AuthorizationMode Mode { get; protected set; }
+        public virtual AuthorizationMode Mode
+        {
+            get => _mode;
+            protected set => _mode = value;
+        }
 
         // WmId (для авторизацией ключами Keeper Classic или SecretKey)
-        public WmId Id { get; protected set; }
+        public virtual WmId Id
+        {
+            get => _id;
+            protected set => _id = value;
+        }
 
         // Keeper Light
-        public X509Certificate2 Certificate { get; protected set; }
+        public virtual X509Certificate2 Certificate
+        {
+            get => _certificate;
+            protected set => _certificate = value;
+        }
 
-        public string SecretKey { get; protected set; }
+        public virtual string SecretKey
+        {
+            get => _secretKey;
+            protected set => _secretKey = value;
+        }
 
-        public Initializer(WmId wmId, KeeperKey keeperKey)
+        public virtual WebProxy Proxy
+        {
+            get => _proxy;
+            protected set => _proxy = value;
+        }
+
+        public Initializer(WmId wmId, KeeperKey keeperKey, WebProxy proxy = null)
         {
             if (null == keeperKey)
                 throw new ArgumentNullException(nameof(keeperKey));
 
-            Mode = AuthorizationMode.Classic;
-            Id = wmId;
-            _signer = new Signer();
-            _signer.Initialize(keeperKey);
+            _mode = AuthorizationMode.Classic;
+            _id = wmId;
+
+            var signer = new Signer();
+            signer.Initialize(keeperKey);
+
+            _signer = signer;
+            _proxy = proxy;
         }
 
-        public Initializer(X509Certificate2 certificate)
+        public Initializer(X509Certificate2 certificate, WebProxy proxy = null)
         {
-            if (null == certificate)
-                throw new ArgumentNullException(nameof(certificate));
-
-            Mode = AuthorizationMode.Light;
-            Certificate = certificate;
+            _mode = AuthorizationMode.Light;
+            _certificate = certificate ?? throw new ArgumentNullException(nameof(certificate));
+            _proxy = proxy;
         }
 
-        public Initializer(WmId wmId, string secretKey)
+        public Initializer(WmId wmId, string secretKey, WebProxy proxy = null)
         {
-            if (null == secretKey)
-                throw new ArgumentNullException(nameof(secretKey));
+            _mode = AuthorizationMode.Merchant;
+            _id = wmId;
+            _secretKey = secretKey ?? throw new ArgumentNullException(nameof(secretKey));
+            _proxy = proxy;
 
-            Mode = AuthorizationMode.Merchant;
-            Id = wmId;
-            SecretKey = secretKey;
         }
 
         public Initializer()
@@ -70,7 +96,8 @@ namespace WebMoney.XmlInterfaces
         public virtual ulong GetRequestNumber()
         {
             string timestamp = DateTime.UtcNow.ToString("yyMMddHHmmssfff", CultureInfo.InvariantCulture.DateTimeFormat);
-            ulong requestNumber = ulong.Parse(timestamp, NumberStyles.Integer, CultureInfo.InvariantCulture.NumberFormat);
+            ulong requestNumber = ulong.Parse(timestamp, NumberStyles.Integer,
+                CultureInfo.InvariantCulture.NumberFormat);
 
             lock (Anchor)
             {
@@ -91,7 +118,10 @@ namespace WebMoney.XmlInterfaces
             if (null == _signer)
                 throw new InvalidOperationException("null == _signer");
 
-            return _signer.Sign(value);
+            lock (Anchor)
+            {
+                return _signer.Sign(value);
+            }
         }
     }
 }

@@ -27,9 +27,6 @@ namespace WebMoney.XmlInterfaces
 
         public AcceptorFilter(uint contractId)
         {
-            if (AuthorizationMode.Classic != Initializer.Mode)
-                throw new InvalidOperationException("AuthorizationMode.Classic != Initializer.Mode");
-
             ContractId = contractId;
         }
 
@@ -54,6 +51,8 @@ namespace WebMoney.XmlInterfaces
                 xmlRequestBuilder.WriteElement("wmid", Initializer.Id.ToString());
                 xmlRequestBuilder.WriteElement("sign", Initializer.Sign(BuildMessage(requestNumber)));
             }
+            else
+                throw new InvalidOperationException("AuthorizationMode.Classic != Initializer.Mode");
         }
 
         protected override void BuildXmlBody(XmlRequestBuilder xmlRequestBuilder)

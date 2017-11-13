@@ -15,7 +15,7 @@ namespace WebMoney.XmlInterfaces
     {
         protected override string ClassicUrl => "https://w3s.webmoney.ru/asp/XMLTrustList2.asp";
 
-        protected override string LightUrl => "https://w3s.webmoney.ru/asp/XMLTrustList2Cert.asp";
+        protected override string LightUrl => "https://w3s.wmtransfer.com/asp/XMLTrustList2Cert.asp";
 
         public WmId WmId { get; set; }
 

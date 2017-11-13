@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Net.Mail;
+using System.Threading;
 using WebMoney.XmlInterfaces.BasicObjects;
 using WebMoney.XmlInterfaces.Core;
 using WebMoney.XmlInterfaces.Responses;
@@ -30,6 +31,8 @@ namespace WebMoney.XmlInterfaces
 
         public WmId ClientWmId { get; set; }
 
+        public Purse ClientPurse { get; set; }
+
         public MailAddress ClientEmail { get; set; }
 
         public ClientIdType ClientIdType { get; set; }
@@ -37,6 +40,7 @@ namespace WebMoney.XmlInterfaces
         public ConfirmationType ConfirmationType { get; set; }
 
         private CultureInfo _culture;
+
         public CultureInfo Culture
         {
             get { return _culture; }
@@ -60,10 +64,10 @@ namespace WebMoney.XmlInterfaces
             Amount monthLimit,
             Phone clientPhone,
             ConfirmationType confirmationType,
-            CultureInfo culture)
+            CultureInfo culture = null)
         {
             if (null == culture)
-                throw new ArgumentNullException(nameof(culture));
+                culture = Thread.CurrentThread.CurrentUICulture;
 
             StorePurse = storePurse;
             DayLimit = dayLimit;
@@ -82,9 +86,10 @@ namespace WebMoney.XmlInterfaces
             Amount monthLimit,
             WmId clientWmId,
             ConfirmationType confirmationType,
-            CultureInfo culture)
+            CultureInfo culture = null)
         {
-            if (null == culture) throw new ArgumentNullException(nameof(culture));
+            if (null == culture)
+                culture = Thread.CurrentThread.CurrentUICulture;
 
             StorePurse = storePurse;
             DayLimit = dayLimit;
@@ -101,15 +106,37 @@ namespace WebMoney.XmlInterfaces
             Amount dayLimit,
             Amount weekLimit,
             Amount monthLimit,
+            Purse clientPurse,
+            ConfirmationType confirmationType,
+            CultureInfo culture = null)
+        {
+            if (null == culture)
+                culture = Thread.CurrentThread.CurrentUICulture;
+
+            StorePurse = storePurse;
+            DayLimit = dayLimit;
+            WeekLimit = weekLimit;
+            MonthLimit = monthLimit;
+            ClientPurse = clientPurse;
+            ClientIdType = ClientIdType.WmId;
+            ConfirmationType = confirmationType;
+            Culture = culture;
+        }
+
+        public ExpressTrustRequest(
+            Purse storePurse,
+            Amount dayLimit,
+            Amount weekLimit,
+            Amount monthLimit,
             MailAddress clientEmail,
             ConfirmationType confirmationType,
-            CultureInfo culture)
+            CultureInfo culture = null)
         {
             if (null == clientEmail)
                 throw new ArgumentNullException(nameof(clientEmail));
 
             if (null == culture)
-                throw new ArgumentNullException(nameof(culture));
+                culture = Thread.CurrentThread.CurrentCulture;
 
             StorePurse = storePurse;
             DayLimit = dayLimit;
@@ -195,6 +222,9 @@ namespace WebMoney.XmlInterfaces
                     break;
                 case ClientIdType.WmId:
                     clientId = ClientWmId.ToString();
+                    break;
+                case ClientIdType.Purse:
+                    clientId = ClientPurse.ToString();
                     break;
                 case ClientIdType.Email:
                     clientId = ClientEmail.Address;

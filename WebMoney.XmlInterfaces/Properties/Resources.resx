@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Accountant" xml:space="preserve">
     <value>accountant</value>
@@ -157,10 +157,10 @@
     <value>personal</value>
   </data>
   <data name="PrivateEntrepreneur" xml:space="preserve">
-    <value>privateEntrepreneur</value>
+    <value>private entrepreneur</value>
   </data>
   <data name="PrivatePerson" xml:space="preserve">
-    <value>privatePerson</value>
+    <value>private person</value>
   </data>
   <data name="Registrar" xml:space="preserve">
     <value>registrar</value>
@@ -1379,5 +1379,11 @@
   </data>
   <data name="X6_P000110" xml:space="preserve">
     <value>нет доступа к интерфейсу</value>
+  </data>
+  <data name="X_P000110" xml:space="preserve">
+    <value>The option can be enabled at the Web Merchant Interface service settings page in the "additional parameters" section. Enabling this option you undertake to use the "trans\onlyauth = 1" parameter. The Keeper that signs requests should have Personal passport.</value>
+  </data>
+  <data name="X_P000177" xml:space="preserve">
+    <value>The option of confirmation of operations is enabled for the WMID the settings of which are trying to be changed. Such request cannot be executed. The owner of the WMID can add the necessary WMID to the trusted list at the corresponding page of the Security service web-site.</value>
   </data>
 </root>

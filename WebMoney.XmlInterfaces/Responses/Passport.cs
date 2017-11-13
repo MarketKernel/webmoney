@@ -29,8 +29,8 @@ namespace WebMoney.XmlInterfaces.Responses
         public List<WmIdInfo> WmIdInfoList { get; protected set; }
 
         // userinfo
-        public PassportStatus? Status { get; protected set; }
-        public PassportAppointment? Appointment { get; protected set; }
+        public PassportStatus Status { get; protected set; }
+        public PassportAppointment Appointment { get; protected set; }
         public string Basis { get; protected set; }
         public string Alias { get; protected set; }
         public string Information { get; protected set; }
@@ -166,12 +166,8 @@ namespace WebMoney.XmlInterfaces.Responses
             }
 
             // userinfo
-            if (!string.IsNullOrEmpty(wmXmlPackage.SelectString("certinfo/userinfo/value/row/@ctype")))
-                Status = (PassportStatus) wmXmlPackage.SelectInt32("certinfo/userinfo/value/row/@ctype");
-
-            if (!string.IsNullOrEmpty(wmXmlPackage.SelectString("certinfo/userinfo/value/row/@jstatus")))
-                Appointment =
-                    (PassportAppointment) wmXmlPackage.SelectInt32("certinfo/userinfo/value/row/@jstatus");
+            Status = (PassportStatus) wmXmlPackage.SelectInt32("certinfo/userinfo/value/row/@ctype");
+            Appointment = (PassportAppointment) wmXmlPackage.SelectInt32("certinfo/userinfo/value/row/@jstatus");
 
             Basis = wmXmlPackage.SelectString("certinfo/userinfo/value/row/@osnovainfo");
             Alias = wmXmlPackage.SelectString("certinfo/userinfo/value/row/@nickname");
@@ -350,73 +346,17 @@ namespace WebMoney.XmlInterfaces.Responses
             if (Revoked)
                 return Resources.Revoked;
 
-            switch (Degree)
-            {
-                case PassportDegree.Alias: // Аттестат псевдонима
-                    return Resources.Alias;
-                case PassportDegree.Formal: // Формальный аттестат
-                    return Resources.Formal;
-                case PassportDegree.Initial: // Начальный аттестат
-                    return Resources.Initial;
-                case PassportDegree.Personal: // Персональный аттестат
-                    return Resources.Personal;
-                case PassportDegree.Merchant: // Аттестат продавца
-                    return Resources.Merchant;
-                case PassportDegree.Capitaller: // Аттестат Capitaller
-                    return Resources.Capitaller;
-                case PassportDegree.Developer: // Аттестат разработчика
-                    return Resources.Developer;
-                case PassportDegree.Registrar: // Аттестат регистратора
-                    return Resources.Registrar;
-                case PassportDegree.Guarantor: // Аттестат Гаранта
-                    return Resources.Guarantor;
-                case PassportDegree.Service1: // Аттестат сервиса WMT
-                    return Resources.Service1;
-                case PassportDegree.Service2:
-                    return Resources.Service2;
-                case PassportDegree.Operator: // Аттестат Оператора
-                    return Resources.Operator;
-                default:
-                    return null;
-            }
+            return Translator.Translate(Degree);
         }
 
         public string StatusToLocalString()
         {
-            if (!Status.HasValue)
-                return null;
-
-            switch (Status)
-            {
-                case PassportStatus.PrivatePerson:
-                    return Resources.PrivatePerson;
-                case PassportStatus.Entity:
-                    return Resources.Entity;
-                default:
-                    return null;
-            }
+            return Translator.Translate(Status);
         }
 
         public string AppointmentToLocalString()
         {
-            if (!Appointment.HasValue)
-                return null;
-
-            switch (Appointment)
-            {
-                case PassportAppointment.PrivatePerson:
-                    return Resources.PrivatePerson;
-                case PassportAppointment.Director:
-                    return Resources.Director;
-                case PassportAppointment.Accountant:
-                    return Resources.Accountant;
-                case PassportAppointment.Representative:
-                    return Resources.Representative;
-                case PassportAppointment.PrivateEntrepreneur:
-                    return Resources.PrivateEntrepreneur;
-                default:
-                    return null;
-            }
+            return Translator.Translate(Appointment);
         }
     }
 }

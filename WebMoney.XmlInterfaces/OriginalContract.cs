@@ -19,11 +19,11 @@ namespace WebMoney.XmlInterfaces
 
         protected override string ClassicUrl => "https://arbitrage.webmoney.ru/xml/X17_CreateContract.aspx";
 
-        protected override string LightUrl => null;
+        protected override string LightUrl => throw new NotSupportedException();
 
         public Description Name
         {
-            get { return _name; }
+            get => _name;
             set
             {
                 if (string.IsNullOrEmpty(value))
@@ -33,11 +33,11 @@ namespace WebMoney.XmlInterfaces
             }
         }
 
-        public ContractType Type { get; set; }
+        public ContractType Type => null != AcceptorList && 0 != AcceptorList.Count ? ContractType.Private : ContractType.Public;
 
         public string Text
         {
-            get { return _text; }
+            get => _text;
             set
             {
                 if (string.IsNullOrEmpty(value))
@@ -53,11 +53,8 @@ namespace WebMoney.XmlInterfaces
         {
         }
 
-        public OriginalContract(Description name, ContractType type, string text)
+        public OriginalContract(Description name, string text)
         {
-            if (AuthorizationMode.Classic != Initializer.Mode)
-                throw new InvalidOperationException("AuthorizationMode.Classic != Initializer.Mode");
-
             if (string.IsNullOrEmpty(name))
                 throw new ArgumentNullException(nameof(name));
 
@@ -65,7 +62,6 @@ namespace WebMoney.XmlInterfaces
                 throw new ArgumentNullException(nameof(text));
 
             _name = name;
-            Type = type;
             _text = text;
         }
 

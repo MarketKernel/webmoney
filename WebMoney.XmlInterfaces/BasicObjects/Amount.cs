@@ -118,7 +118,7 @@ namespace WebMoney.XmlInterfaces.BasicObjects
 
             int sepInd = value.IndexOf(Separator, StringComparison.Ordinal);
 
-            // TODO: Заменить ручной парсинг на стандартный (с указанием формата разделителей).
+            // TODO: [L] Заменить ручной парсинг на стандартный (с указанием формата разделителей).
             if (sepInd >= 0)
             {
                 string temp = value.Substring(0, sepInd + 1);

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Threading;
 using WebMoney.XmlInterfaces.Core;
 using WebMoney.XmlInterfaces.Responses;
 
@@ -42,10 +43,10 @@ namespace WebMoney.XmlInterfaces
         {
         }
 
-        public ExpressTrustConfirmation(uint reference, string confirmationCode, CultureInfo culture)
+        public ExpressTrustConfirmation(uint reference, string confirmationCode, CultureInfo culture = null)
         {
             if (null == culture)
-                throw new ArgumentNullException(nameof(culture));
+                culture = Thread.CurrentThread.CurrentUICulture;
 
             Reference = reference;
             ConfirmationCode = confirmationCode??"0";

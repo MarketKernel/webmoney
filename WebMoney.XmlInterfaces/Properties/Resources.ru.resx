@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Accountant" xml:space="preserve">
     <value>бухгалтер</value>
@@ -1379,5 +1379,11 @@
   </data>
   <data name="X6_P000110" xml:space="preserve">
     <value>нет доступа к интерфейсу</value>
+  </data>
+  <data name="X_P000110" xml:space="preserve">
+    <value>Интерфейс не подключен для вашего WMID! Для подключения зайдите на страницу настроек сервиса Web Merchant Interface. Включение производится в таблице "Дополнительные параметры".</value>
+  </data>
+  <data name="X_P000177" xml:space="preserve">
+    <value>WMID, настройки которого пытаются изменить, использует опцию подтверждения операций. Такой запрос не может быть выполнен. Владелец wmid может самостоятельно внести необходимый wmid в список доверенных на странице сервиса безопасности</value>
   </data>
 </root>

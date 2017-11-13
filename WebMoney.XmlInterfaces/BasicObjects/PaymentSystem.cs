@@ -2,11 +2,10 @@
 {
     public enum PaymentSystem
     {
-        RbkMoney,
         PayPal,
-        MoneyBookers,
+        Skrill,
+        Alipay,
         Qiwi,
-        YandexMoney,
-        EasyPay,
+        YandexMoney
     }
 }

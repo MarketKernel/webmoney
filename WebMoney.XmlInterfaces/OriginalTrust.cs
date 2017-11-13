@@ -11,18 +11,17 @@ namespace WebMoney.XmlInterfaces
     [System.Diagnostics.DebuggerNonUserCode]
 #endif
     [Serializable]
-    public class OriginalTrust : WmRequest<TrustRegister>
+    public class OriginalTrust : WmRequest<RecentTrust>
     {
         protected override string ClassicUrl => "https://w3s.webmoney.ru/asp/XMLTrustSave2.asp";
 
-        protected override string LightUrl => "https://w3s.webmoney.ru/asp/XMLTrustSave2Cert.asp";
+        protected override string LightUrl => "https://w3s.wmtransfer.com/asp/XMLTrustSave2Cert.asp";
 
         public bool InvoiceAllowed { get; set; }
         public bool TransferAllowed { get; set; }
         public bool BalanceAllowed { get; set; }
         public bool HistoryAllowed { get; set; }
         public WmId Master { get; set; }
-        public WmId Slave { get; set; }
         public Purse Purse { get; set; }
         public Amount Limit { get; set; }
         public Amount DayLimit { get; set; }
@@ -36,14 +35,13 @@ namespace WebMoney.XmlInterfaces
         public OriginalTrust(WmId master, Purse purse)
         {
             Master = master;
-            Slave = master;
             Purse = purse;
         }
 
         protected override string BuildMessage(ulong requestNumber)
         {
-            return string.Format(CultureInfo.InvariantCulture, "{0}{1}{2}", Initializer.Id, Purse,
-                                     requestNumber);
+            return string.Format(CultureInfo.InvariantCulture, "{0}{1}{2}{3}", Initializer.Id, Purse, Master,
+                requestNumber);
         }
 
         protected override void BuildXmlBody(XmlRequestBuilder xmlRequestBuilder)
@@ -59,7 +57,7 @@ namespace WebMoney.XmlInterfaces
             xmlRequestBuilder.AppendAttribute("transhist", HistoryAllowed ? 1 : 0);
 
             xmlRequestBuilder.WriteElement("masterwmid", Master.ToString());
-            xmlRequestBuilder.WriteElement("slavewmid", Slave.ToString());
+            xmlRequestBuilder.WriteElement("slavewmid", Initializer.Id.ToString());
             xmlRequestBuilder.WriteElement("purse", Purse.ToString());
 
             xmlRequestBuilder.WriteElement("limit", Limit.ToString());

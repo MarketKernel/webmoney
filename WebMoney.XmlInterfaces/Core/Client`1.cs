@@ -45,7 +45,7 @@ namespace WebMoney.XmlInterfaces.Core
                 throw new ArgumentNullException(nameof(request));
 
             int attempt = 1;
-            
+
             while (true)
             {
                 try
@@ -107,7 +107,12 @@ namespace WebMoney.XmlInterfaces.Core
 
             _connection.Proxy = request.Proxy;
             _connection.ContentType = request.ContentType;
-            _connection.Headers = request.Headers;
+
+            foreach (var requestHeader in request.Headers)
+            {
+                _connection.Headers.Add(requestHeader);
+            }
+
             _connection.Connect(request.Url, request.Certificate);
 
             return _connection;

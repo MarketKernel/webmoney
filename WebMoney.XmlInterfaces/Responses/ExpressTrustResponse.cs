@@ -21,6 +21,8 @@ namespace WebMoney.XmlInterfaces.Responses
 
         public string Info { get; protected set; }
 
+        public string SmsReference { get; protected set; }
+
         protected override void Inspect(XmlPackage xmlPackage)
         {
             if (null == xmlPackage)
@@ -39,6 +41,7 @@ namespace WebMoney.XmlInterfaces.Responses
             Reference = wmXmlPackage.SelectUInt32("trust/@purseid");
             ConfirmationType = (ConfirmationType)wmXmlPackage.SelectInt32("trust/realsmstype");
             Info = wmXmlPackage.SelectString("userdesc");
+            SmsReference = wmXmlPackage.SelectString("smssecureid");
         }
     }
 }

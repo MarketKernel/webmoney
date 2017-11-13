@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Security.Cryptography.X509Certificates;
 using WebMoney.XmlInterfaces.BasicObjects;
 using WebMoney.XmlInterfaces.Core;
 using WebMoney.XmlInterfaces.Responses;
@@ -18,6 +19,8 @@ namespace WebMoney.XmlInterfaces
         protected override string LightUrl => "https://passport.webmoney.ru/asp/XMLGetWMPassport.asp";
 
         public WmId WmId { get; set; }
+
+        protected internal override X509Certificate Certificate => null;
 
         protected internal PassportFinder()
         {
@@ -43,12 +46,12 @@ namespace WebMoney.XmlInterfaces
             ulong requestNumber = Initializer.GetRequestNumber();
 
             xmlRequestBuilder.WriteStartElement("request"); // <request>
+            xmlRequestBuilder.WriteElement("wmid", Initializer.Id.ToString());
 
-            if (AuthorizationMode.Classic == Initializer.Mode)
-            {
-                xmlRequestBuilder.WriteElement("wmid", Initializer.Id.ToString());
-                xmlRequestBuilder.WriteElement("sign", Initializer.Sign(BuildMessage(requestNumber)));
-            }
+            xmlRequestBuilder.WriteElement("sign",
+                AuthorizationMode.Classic == Initializer.Mode
+                    ? Initializer.Sign(BuildMessage(requestNumber))
+                    : string.Empty);
         }
 
         protected override void BuildXmlBody(XmlRequestBuilder xmlRequestBuilder)
@@ -62,7 +65,7 @@ namespace WebMoney.XmlInterfaces
 
             xmlRequestBuilder.WriteElement("dict", 0);
             xmlRequestBuilder.WriteElement("info", 1);
-            xmlRequestBuilder.WriteElement("mode", 1);
+            xmlRequestBuilder.WriteElement("mode", AuthorizationMode.Classic == Initializer.Mode ? 1 : 0);
 
             xmlRequestBuilder.WriteEndElement(); // </params>
         }

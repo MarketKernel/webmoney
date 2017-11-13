@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
-using System.Security.Permissions;
 using System.Globalization;
+using System.Security;
 using WebMoney.XmlInterfaces.BasicObjects;
 using WebMoney.XmlInterfaces.Properties;
 using WebMoney.XmlInterfaces.Utilities;
@@ -21,18 +21,18 @@ namespace WebMoney.XmlInterfaces.Exceptions
             get
             {
                 var serverMessage = base.Message;
-                var translation = TranslateDescription();
+                var errorNumberTranslation = TranslateErrorNumber();
 
-                if (!string.IsNullOrEmpty(serverMessage) && !string.IsNullOrEmpty(translation))
+                if (!string.IsNullOrEmpty(serverMessage) && !string.IsNullOrEmpty(errorNumberTranslation))
                 {
                     return string.Format(CultureInfo.InvariantCulture, "{0}: {1}. --> {2} --> {3}", Resources.Error,
-                        ErrorNumber, translation, serverMessage);
+                        ErrorNumber, errorNumberTranslation, serverMessage);
                 }
 
-                if (!string.IsNullOrEmpty(translation))
+                if (!string.IsNullOrEmpty(errorNumberTranslation))
                 {
                     return string.Format(CultureInfo.InvariantCulture, "{0}: {1}. --> {2}", Resources.Error,
-                        ErrorNumber, translation);
+                        ErrorNumber, errorNumberTranslation);
                 }
 
                 if (!string.IsNullOrEmpty(serverMessage))
@@ -44,7 +44,7 @@ namespace WebMoney.XmlInterfaces.Exceptions
                 return string.Format(CultureInfo.InvariantCulture, "{0}: {1}.", Resources.Error, ErrorNumber);
             }
         }
-        
+
         public int ErrorNumber { get; private set; }
 
         public WmException(string message)
@@ -69,13 +69,14 @@ namespace WebMoney.XmlInterfaces.Exceptions
             ErrorNumber = errorNumber;
         }
 
+        [SecuritySafeCritical]
         protected WmException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {
             ErrorNumber = info.GetInt32("ErrorNumber");
         }
 
-        [SecurityPermission(SecurityAction.LinkDemand, Flags = SecurityPermissionFlag.SerializationFormatter)]
+        [SecurityCritical]
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             if (info == null)
@@ -85,14 +86,14 @@ namespace WebMoney.XmlInterfaces.Exceptions
             info.AddValue("ErrorNumber", ErrorNumber, typeof(int));
         }
 
-        public string TranslateDescription()
+        public string TranslateErrorNumber()
         {
-            return TranslateDescription(LocalizationUtility.GetDefaultLanguage());
+            return TranslateErrorNumber(LocalizationUtility.GetDefaultLanguage());
         }
 
-        public virtual string TranslateDescription(Language language)
+        public virtual string TranslateErrorNumber(Language language)
         {
-            return null;
+            return LocalizationUtility.GetErrorDescription("X", ErrorNumber, language);
         }
     }
 }

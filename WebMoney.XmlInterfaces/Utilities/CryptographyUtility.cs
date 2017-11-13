@@ -16,7 +16,7 @@ namespace WebMoney.XmlInterfaces.Utilities
         public static string ComputeHash(string value, HashKind hashKind = HashKind.MD5)
         {
             HashAlgorithm hashAlgorithm;
-            
+
             switch (hashKind)
             {
                 case HashKind.MD5:

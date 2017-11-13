@@ -20,7 +20,7 @@ namespace WebMoney.XmlInterfaces.Core
 
         protected internal virtual string ContentType => null;
 
-        protected internal virtual List<KeyValuePair<string, string>> Headers { get; private set; }
+        protected internal virtual IList<KeyValuePair<string, string>> Headers { get; }
 
         protected internal abstract Encoding RequestEncoding { get; }
 

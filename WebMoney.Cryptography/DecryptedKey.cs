@@ -329,7 +329,7 @@ namespace WebMoney.Cryptography
                 Array.Clear(combination, 0, combination.Length);
             }
         }
-        
+
         protected byte[] Transform(byte[] input, byte[] combination)
         {
             if (null == input)

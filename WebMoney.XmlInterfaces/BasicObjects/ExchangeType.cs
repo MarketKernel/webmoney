@@ -12,6 +12,7 @@ namespace WebMoney.XmlInterfaces.BasicObjects
         BankCard = 4,
         InternetSystem = 5,
         Sms = 6,
-        Mobile = 7
+        Mobile = 7,
+        CryptoCurrency = 8
     }
 }

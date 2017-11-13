@@ -28,6 +28,7 @@ namespace WebMoney.XmlInterfaces.Responses
         public byte EnumFlag { get; protected set; }
         public IPAddress IpAddress { get; protected set; }
         public string TelepatPhone { get; protected set; }
+        public TelepatMethod? TelepatMethod { get; protected set; }
         public string PaymerNumber { get; protected set; }
         public string PaymerEmail { get; protected set; }
         public PaymerType PaymerType { get; protected set; }
@@ -64,7 +65,7 @@ namespace WebMoney.XmlInterfaces.Responses
                             PaymentInfoCreateTime = wmXmlPackage.SelectWmDateTime("errorlog/datecrt"),
                             PaymentInfoUpdateTime = wmXmlPackage.SelectWmDateTime("errorlog/dateupd")
                         };
-                        
+
                         var enterTimeValue = wmXmlPackage.SelectString("errorlog/date_s");
 
                         if (!string.IsNullOrEmpty(enterTimeValue))
@@ -83,8 +84,8 @@ namespace WebMoney.XmlInterfaces.Responses
                             errorExtendedInfo.ConfirmationTime =
                                 WmDateTime.ParseServerString(confirmationTimeValue);
 
-                        errorExtendedInfo.SiteId = wmXmlPackage.SelectInt32("errorlog/siteid"); // TODO: расшифровать
-                        errorExtendedInfo.PaymentMethod = wmXmlPackage.SelectString("errorlog/att"); // TODO: расшифровать
+                        errorExtendedInfo.SiteId = wmXmlPackage.SelectInt32("errorlog/siteid"); // TODO: [L] Расшифровать errorlog/siteid
+                        errorExtendedInfo.PaymentMethod = wmXmlPackage.SelectString("errorlog/att"); // TODO: [L] Расшифровать errorlog/att
                     }
                 }
 
@@ -119,12 +120,20 @@ namespace WebMoney.XmlInterfaces.Responses
 
             IpAddress = IPAddress.Parse(wmXmlPackage.SelectNotEmptyString("operation/IPAddress"));
             TelepatPhone = wmXmlPackage.SelectString("operation/telepat_phone");
+
+            // TelepatMethod
+            var telepatMethod = wmXmlPackage.SelectString("operation/telepat_paytype");
+
+            if (!string.IsNullOrEmpty(telepatMethod) && !"null".Equals(telepatMethod))
+                TelepatMethod =
+                    (TelepatMethod)int.Parse(telepatMethod, NumberStyles.Integer, CultureInfo.InvariantCulture.NumberFormat);
+
             PaymerNumber = wmXmlPackage.SelectString("operation/paymer_number");
             PaymerEmail = wmXmlPackage.SelectString("operation/paymer_email");
 
             string paymerType = wmXmlPackage.SelectString("operation/paymer_type");
 
-            if (!string.IsNullOrEmpty(paymerType) && "null" != paymerType)
+            if (!string.IsNullOrEmpty(paymerType) && !"null".Equals(paymerType))
                 PaymerType =
                     (PaymerType)int.Parse(paymerType, NumberStyles.Integer, CultureInfo.InvariantCulture.NumberFormat);
             else

@@ -26,6 +26,11 @@ namespace WebMoney.XmlInterfaces.BasicObjects
             _utcTime = utcTime;
         }
 
+        public DateTime ToUniversalTime()
+        {
+            return _utcTime;
+        }
+
         public static explicit operator WmDate(DateTime value)
         {
             return new WmDate(value.ToUniversalTime());
@@ -34,11 +39,6 @@ namespace WebMoney.XmlInterfaces.BasicObjects
         public static implicit operator DateTime(WmDate value)
         {
             return value._utcTime.ToLocalTime();
-        }
-
-        public static int operator -(WmDate lhs, WmDate rhs)
-        {
-            return lhs._utcTime.Year*12 + lhs._utcTime.Month - rhs._utcTime.Year*12 - rhs._utcTime.Month;
         }
 
         public static WmDate Parse(string value)
@@ -55,7 +55,7 @@ namespace WebMoney.XmlInterfaces.BasicObjects
             return wmDate;
         }
 
-        public static WmDate ParseServerString(string value)
+        internal static WmDate ParseServerString(string value)
         {
             if (string.IsNullOrEmpty(value))
                 throw new ArgumentNullException(nameof(value));
@@ -91,7 +91,7 @@ namespace WebMoney.XmlInterfaces.BasicObjects
             return true;
         }
 
-        public static bool TryParseServerString(string value, out WmDate wmDate)
+        internal static bool TryParseServerString(string value, out WmDate wmDate)
         {
             if (string.IsNullOrEmpty(value))
             {
@@ -102,13 +102,13 @@ namespace WebMoney.XmlInterfaces.BasicObjects
             DateTime serverTime;
 
             if (!DateTime.TryParseExact(value, Template1, CultureInfo.InvariantCulture.DateTimeFormat,
-                                        DateTimeStyles.None, out serverTime))
+                DateTimeStyles.None, out serverTime))
             {
                 if (!DateTime.TryParseExact(value, Template2, CultureInfo.InvariantCulture.DateTimeFormat,
-                                            DateTimeStyles.None, out serverTime))
+                    DateTimeStyles.None, out serverTime))
                 {
                     if (!DateTime.TryParseExact(value, Template3, CultureInfo.InvariantCulture.DateTimeFormat,
-                                                DateTimeStyles.None, out serverTime))
+                        DateTimeStyles.None, out serverTime))
                     {
                         wmDate = default(WmDate);
                         return false;
@@ -116,17 +116,18 @@ namespace WebMoney.XmlInterfaces.BasicObjects
                 }
             }
 
-            wmDate = new WmDate(WmDateTime.ServerTime2UtcTime(serverTime.AddHours(12)));
+            serverTime = new DateTime(serverTime.Year, serverTime.Month, serverTime.Day, 0, 0, 0);
+            wmDate = new WmDate(WmDateTime.ServerTime2UtcTime(serverTime));
             return true;
         }
 
-        public string ToServerString()
+        internal string ToServerString()
         {
             DateTime serverDate = WmDateTime.UtcTime2ServerTime(_utcTime);
             return serverDate.ToString(Template1, CultureInfo.InvariantCulture.DateTimeFormat);
         }
 
-        public string ToServerString(string format)
+        internal string ToServerString(string format)
         {
             DateTime serverDate = WmDateTime.UtcTime2ServerTime(_utcTime);
             return serverDate.ToString(format, CultureInfo.InvariantCulture.DateTimeFormat);

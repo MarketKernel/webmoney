@@ -25,6 +25,8 @@ namespace WebMoney.XmlInterfaces
         public Description Address { get; set; }
         public byte Period { get; set; }
         public byte Expiration { get; set; }
+        public bool Force { get; set; }
+        public int? ShopId { get; set; }
 
         protected internal OriginalInvoice()
         {
@@ -60,6 +62,10 @@ namespace WebMoney.XmlInterfaces
             xmlRequestBuilder.WriteElement("address", Address);
             xmlRequestBuilder.WriteElement("period", Period);
             xmlRequestBuilder.WriteElement("expiration", Expiration);
+            xmlRequestBuilder.WriteElement("onlyauth", Force ? 0 : 1);
+
+            if (null != ShopId)
+                xmlRequestBuilder.WriteElement("lmi_shop_id", ShopId.Value);
 
             xmlRequestBuilder.WriteEndElement(); // </invoice>
         }

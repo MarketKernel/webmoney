@@ -178,7 +178,7 @@ namespace WebMoney.XmlInterfaces.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to privateEntrepreneur.
+        ///   Looks up a localized string similar to private entrepreneur.
         /// </summary>
         internal static string PrivateEntrepreneur {
             get {
@@ -187,7 +187,7 @@ namespace WebMoney.XmlInterfaces.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to privatePerson.
+        ///   Looks up a localized string similar to private person.
         /// </summary>
         internal static string PrivatePerson {
             get {
@@ -237,6 +237,24 @@ namespace WebMoney.XmlInterfaces.Properties {
         internal static string Service2 {
             get {
                 return ResourceManager.GetString("Service2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The option can be enabled at the Web Merchant Interface service settings page in the &quot;additional parameters&quot; section. Enabling this option you undertake to use the &quot;trans\onlyauth = 1&quot; parameter. The Keeper that signs requests should have Personal passport..
+        /// </summary>
+        internal static string X_P000110 {
+            get {
+                return ResourceManager.GetString("X_P000110", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The option of confirmation of operations is enabled for the WMID the settings of which are trying to be changed. Such request cannot be executed. The owner of the WMID can add the necessary WMID to the trusted list at the corresponding page of the Security service web-site..
+        /// </summary>
+        internal static string X_P000177 {
+            get {
+                return ResourceManager.GetString("X_P000177", resourceCulture);
             }
         }
         

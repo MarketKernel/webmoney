@@ -15,7 +15,7 @@ namespace WebMoney.XmlInterfaces.BasicObjects
     public struct Purse : IXmlSerializable
     {
         private const string Format = "000000000000";
-        private const string Pattern = @"^[Z|E|R|U|B|Y|G|D|C|X]\d{12}$";
+        private const string Pattern = @"^[A-Z]\d{12}$";
 
         private ulong _number;
         private WmCurrency _type;
@@ -64,88 +64,20 @@ namespace WebMoney.XmlInterfaces.BasicObjects
 
         public static WmCurrency LetterToCurrency(char letter)
         {
-            WmCurrency currency;
-
-            switch (letter)
-            {
-                case 'Z':
-                    currency = WmCurrency.Z;
-                    break;
-                case 'E':
-                    currency = WmCurrency.E;
-                    break;
-                case 'R':
-                    currency = WmCurrency.R;
-                    break;
-                case 'U':
-                    currency = WmCurrency.U;
-                    break;
-                case 'B':
-                    currency = WmCurrency.B;
-                    break;
-                case 'Y':
-                    currency = WmCurrency.Y;
-                    break;
-                case 'G':
-                    currency = WmCurrency.G;
-                    break;
-                case 'D':
-                    currency = WmCurrency.D;
-                    break;
-                case 'C':
-                    currency = WmCurrency.C;
-                    break;
-                case 'X':
-                    currency = WmCurrency.X;
-                    break;
-                default:
-                    throw new FormatException("letter == " + letter);
-            }
-
-            return currency;
+            return (WmCurrency) Enum.Parse(typeof(WmCurrency), letter.ToString());
         }
 
         public static char CurrencyToLetter(WmCurrency currency)
         {
-            char letter;
+            if (WmCurrency.None == currency)
+                throw new ArgumentOutOfRangeException(nameof(currency));
 
-            switch (currency)
-            {
-                case WmCurrency.Z:
-                    letter = 'Z';
-                    break;
-                case WmCurrency.E:
-                    letter = 'E';
-                    break;
-                case WmCurrency.Y:
-                    letter = 'Y';
-                    break;
-                case WmCurrency.R:
-                    letter = 'R';
-                    break;
-                case WmCurrency.U:
-                    letter = 'U';
-                    break;
-                case WmCurrency.B:
-                    letter = 'B';
-                    break;
-                case WmCurrency.G:
-                    letter = 'G';
-                    break;
-                case WmCurrency.D:
-                    letter = 'D';
-                    break;
-                case WmCurrency.C:
-                    letter = 'C';
-                    break;
-                case WmCurrency.X:
-                    letter = 'X';
-                    break;
-                default:
-                    throw new FormatException("currency == " + currency);
-            }
+            var letter = currency.ToString();
 
-            return letter;
+            if (1 != letter.Length)
+                throw new ArgumentOutOfRangeException(nameof(currency));
+
+            return letter[0];
         }
 
         public static Purse Parse(string value)

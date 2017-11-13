@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Threading;
 using WebMoney.XmlInterfaces.BasicObjects;
 using WebMoney.XmlInterfaces.Core;
 using WebMoney.XmlInterfaces.Responses;
@@ -37,7 +38,7 @@ namespace WebMoney.XmlInterfaces
             {
                 if (null == value)
                     throw new ArgumentNullException(nameof(value));
-                
+
                 _culture = value;
             }
         }
@@ -49,7 +50,7 @@ namespace WebMoney.XmlInterfaces
         public ExpressPaymentConfirmation(Purse storePurse, string confirmationCode, uint invoiceId, CultureInfo culture)
         {
             if (null == culture)
-                throw new ArgumentNullException(nameof(culture));
+                culture = Thread.CurrentThread.CurrentUICulture;
 
             StorePurse = storePurse;
             ConfirmationCode = confirmationCode ?? "0";

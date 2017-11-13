@@ -27,7 +27,7 @@ namespace WebMoney.XmlInterfaces.Responses
             Id = wmXmlPackage.SelectUInt32("@id");
             Purse = wmXmlPackage.SelectPurse("pursename");
             Amount = wmXmlPackage.SelectAmount("amount");
-            Description = (Description) wmXmlPackage.SelectNotEmptyString("desc");
+            Description = (Description) wmXmlPackage.SelectString("desc");
             Enable = wmXmlPackage.SelectBool("outsideopen");
             LastIncomingTransfer = wmXmlPackage.SelectUInt32("lastintr");
             LastOutgoingTransfer = wmXmlPackage.SelectUInt32("lastouttr");

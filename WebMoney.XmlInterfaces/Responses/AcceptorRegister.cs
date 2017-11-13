@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Xml.Serialization;
+using WebMoney.XmlInterfaces.Core.Exceptions;
 using WebMoney.XmlInterfaces.Utilities;
 
 namespace WebMoney.XmlInterfaces.Responses
@@ -24,7 +25,15 @@ namespace WebMoney.XmlInterfaces.Responses
             foreach (var innerPackage in packageList)
             {
                 var acceptor = new Acceptor();
-                acceptor.Fill(new WmXmlPackage(innerPackage));
+
+                try
+                {
+                    acceptor.Fill(new WmXmlPackage(innerPackage));
+                }
+                catch (Exception e) when(e is MissingParameterException)
+                {
+                    continue;
+                }
 
                 AcceptorList.Add(acceptor);
             }

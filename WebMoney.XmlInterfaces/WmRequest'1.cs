@@ -26,7 +26,10 @@ namespace WebMoney.XmlInterfaces
         {
             get
             {
-                switch (Initializer.Mode)
+                if (null == _initializer)
+                    return new Uri(ClassicUrl);
+
+                switch (_initializer.Mode)
                 {
                     case AuthorizationMode.Light:
                         return new Uri(LightUrl);
@@ -36,23 +39,26 @@ namespace WebMoney.XmlInterfaces
             }
         }
 
-        protected internal override sealed Encoding RequestEncoding => Encoding.GetEncoding("windows-1251");
+        protected internal sealed override Encoding RequestEncoding => Encoding.GetEncoding("windows-1251");
 
         protected internal override X509Certificate Certificate
         {
             get
             {
-                switch (Initializer.Mode)
+                if (null == _initializer)
+                    return null;
+
+                switch (_initializer.Mode)
                 {
                     case AuthorizationMode.Light:
-                        return Initializer.Certificate;
+                        return _initializer.Certificate;
                     default:
                         return null;
                 }
             }
         }
 
-        protected internal override WebProxy Proxy => Initializer.Proxy;
+        protected internal override WebProxy Proxy => _initializer?.Proxy;
 
         protected abstract string ClassicUrl { get; }
         protected abstract string LightUrl { get; }
